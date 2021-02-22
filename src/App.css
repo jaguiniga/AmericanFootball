@@ -1,22 +1,15 @@
 .App {
+  background: rgb(107, 189, 118);
+  width: 900px;
   text-align: center;
+  margin: auto;
 }
 
 .active-link {
-  color:blue;
+  color:rgb(94, 255, 0);
   border-bottom:1px solid white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -33,11 +26,37 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+*{
+  background: #222831;
+  font-family: 'Robot Mono', monospace;
+  color: #eee;
 }
+
+.input-btn{
+ 
+  position: relative;
+  margin: 20px;
+  outline: 0;
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-size: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #4b00ff;
+  background: #0004ff;
+  color: #0f5339;
+  font-weight: 500;
+  transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
+  border-radius: 25px;
+}
+​
+.input-btn:focus{
+  outline: 1px dashed red;
+}
+
+.input-btn:hover { 
+  color: rgba(22, 247, 236, 0.993); 
+  border: 1px solid #1900ff;
+  box-shadow: 0 0 20px #14ff3b; 
+} 

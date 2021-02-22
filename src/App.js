@@ -13,6 +13,7 @@ function App() {
       <Switch>
         <Route exact path='/form' component={Form} />
         <Route exact path='/' component={FirstPage} />
+        <Route render={() => <h1>ERROR NOT FOUND</h1>} />
       </Switch>
     </div>
   );

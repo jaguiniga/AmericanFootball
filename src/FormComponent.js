@@ -1,5 +1,5 @@
 import { Component } from "react";
-
+import './App.css';
 
 class Form extends Component {
     constructor(props) {
@@ -24,8 +24,8 @@ class Form extends Component {
         return (
             <div>
                 <h1>Sign Up Form</h1>
-                <form onSubmit={this.handleSubmit}>
-                    <div>
+                <form className= "input-btn" onSubmit={this.handleSubmit}>
+                    <div className= "input-btn">
                     <label htmlFor='text'>Name: </label>
                         <input
                             type='text'
@@ -35,7 +35,7 @@ class Form extends Component {
                             onChange={this.handleChange}
                         />
                     </div>
-                    <div>
+                    <div className= "input-btn">
                     <label htmlFor='email'>Email: </label>
                         <input
                             type='email'
@@ -45,17 +45,17 @@ class Form extends Component {
                             onChange={this.handleChange}
                         />
                     </div>
-                    <div>
+                    <div className= "input-btn">
                     <label htmlFor='password'>Password: </label>
                         <input
-                            type='text'
+                            type='password'
                             name='password'
                             placeholder='password'
                             value={this.state.password}
                             onChange={this.handleChange}
                         />
                     </div>
-                    <div>
+                    <div className= "input-btn">
                         <label htmlFor='team'>Team: </label>
                         <input
                             type='team'
@@ -65,7 +65,7 @@ class Form extends Component {
                             onChange={this.handleChange}
                         />
                     </div>
-                    <button>Submit</button>
+                    <button className= "input-btn">Submit</button>
                 </form>
         </div>
         )
