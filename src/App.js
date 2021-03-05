@@ -1,5 +1,6 @@
 import {Route, Switch, NavLink} from "react-router-dom";
 import './App.css';
+import './Footer.css'
 import Form from './FormComponent';
 import FirstPage from './FirstPage';
 
