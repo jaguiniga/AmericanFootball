@@ -65,7 +65,7 @@ class Form extends Component {
                             onChange={this.handleChange}
                         />
                     </div>
-                    <button className= "input-btn">Submit</button>
+                    <button type="submit"  className= "input-btn">Submit</button>
                 </form>
         </div>
         )

@@ -1,5 +1,5 @@
 .App {
-  background: rgb(107, 189, 118);
+  background: rgb(107, 189, 185);
   width: 900px;
   text-align: center;
   margin: auto;
@@ -44,7 +44,7 @@
   overflow: hidden;
   cursor: pointer;
   border: 1px solid #4b00ff;
-  background: #0004ff;
+  background: #1900ff;
   color: #0f5339;
   font-weight: 500;
   transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
