@@ -2,6 +2,7 @@ import {Component} from "react";
 import './Images.css';
 import Logo from './s.png';
 import Footer from './FooterComponent';
+import Login from './LoginComponent';
 class FirstPage extends Component {
     render() {
         return (
@@ -12,6 +13,9 @@ class FirstPage extends Component {
                  <Footer>
 
                  </Footer>
+                 <Login>
+                     
+                 </Login>
             </div>
         );
     }
