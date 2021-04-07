@@ -55,6 +55,7 @@
 - **Colophon**
   - Credits -- everyone who has contributed code, libraries from which we've borrowed code.
 
-## Formatting
+## Development Environment/Framework
+
 
 ## Supporting Documentation
