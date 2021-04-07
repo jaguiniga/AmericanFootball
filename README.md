@@ -59,7 +59,9 @@
   - Credits -- everyone who has contributed code, libraries from which we've borrowed code.
 
 ## Development Environment/Framework Setup
-- **Node**
+- **Node.js**
+  - How to install, https://nodejs.dev/learn/how-to-install-nodejs
+  - How to use, https://nodejs.dev/learn
 - **Bootstrap 4**
 
 
