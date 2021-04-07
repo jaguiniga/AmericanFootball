@@ -1,3 +1,5 @@
+## Project Proposal
+
 - **American Football**
 
   - With football fans stuck at home, we wanted to build a fun
@@ -39,6 +41,7 @@
   9. FTP (FileZilla and Secure Shell)
   10. Postman (Test REST API)
   11. Wireshark (Network Protocol Analyzer)
+  12. Bootstrap 4
 
 - **Site Design**
 
@@ -55,7 +58,9 @@
 - **Colophon**
   - Credits -- everyone who has contributed code, libraries from which we've borrowed code.
 
-## Development Environment/Framework
+## Development Environment/Framework Setup
+- **Node**
+- **Bootstrap 4**
 
 
 ## Supporting Documentation
