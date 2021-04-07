@@ -1,5 +1,6 @@
 import { Component } from "react";
 import './App.css';
+import catchingfootball from "./assets/catchingfootball.jpg";
 
 class Form extends Component {
     constructor(props) {
@@ -22,7 +23,11 @@ class Form extends Component {
     
     render() {
         return (
+
+          
             <div>
+               <div><img src = {catchingfootball}  alt ="sign up page picture"/></div> 
+
                 <h1>Sign Up Form</h1>
                 <form className= "form" onSubmit={this.handleSubmit}>
                     <div className= "input-btn">
