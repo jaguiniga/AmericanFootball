@@ -27,9 +27,9 @@
 }
 
 *{
-  background: #d1d2d4;
+  background: #f6f7f8;
   font-family: 'Robot Mono', monospace;
-  color: #eee;
+  color: rgb(97, 8, 8);
 }
 
 .form {
