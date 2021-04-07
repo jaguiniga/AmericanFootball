@@ -24,9 +24,9 @@ class Form extends Component {
         return (
             <div>
                 <h1>Sign Up Form</h1>
-                <form className= "input-btn" onSubmit={this.handleSubmit}>
+                <form className= "form" onSubmit={this.handleSubmit}>
                     <div className= "input-btn">
-                    <label htmlFor='text'>Name: </label>
+                    <label htmlFor='text'>Name</label>
                         <input
                             type='text'
                             name='username'
@@ -36,7 +36,7 @@ class Form extends Component {
                         />
                     </div>
                     <div className= "input-btn">
-                    <label htmlFor='email'>Email: </label>
+                    <label htmlFor='email'>Email</label>
                         <input
                             type='email'
                             name='email'
@@ -46,7 +46,7 @@ class Form extends Component {
                         />
                     </div>
                     <div className= "input-btn">
-                    <label htmlFor='password'>Password: </label>
+                    <label htmlFor='password'>Password</label>
                         <input
                             type='password'
                             name='password'
@@ -56,7 +56,7 @@ class Form extends Component {
                         />
                     </div>
                     <div className= "input-btn">
-                        <label htmlFor='team'>Team: </label>
+                        <label htmlFor='team'>Team</label>
                         <input
                             type='team'
                             name='team'

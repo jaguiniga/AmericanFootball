@@ -1,5 +1,5 @@
 .App {
-  background: rgb(107, 189, 185);
+  background: rgb(255, 255, 255);
   width: 900px;
   text-align: center;
   margin: auto;
@@ -27,24 +27,43 @@
 }
 
 *{
-  background: #222831;
+  background: #d1d2d4;
   font-family: 'Robot Mono', monospace;
   color: #eee;
 }
 
+.form {
+  margin-left: 25%;
+  margin-right:25%;
+  width: 50%;
+  padding: 10px;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #b11111; 
+  border-radius: 25px;
+  border: 1px solid #2b0388;
+  
+}
+
 .input-btn{
- 
+  padding: 20px 40px;
+  text-align: center;
+  width: fit-content;
+  flex-direction: column;
+  align-items: flex-start;
   position: relative;
   margin: 20px;
   outline: 0;
-  position: relative;
-  display: inline-block;
-  padding: 10px;
+  display: flex;
+  border: 2px solid rgb(179, 255, 0);
+  border-bottom: 2px solid rgb(89, 0, 255);
   font-size: 20px;
   overflow: hidden;
   cursor: pointer;
-  border: 1px solid #4b00ff;
-  background: #1900ff;
+  
+  background: #e6dfdf;
   color: #0f5339;
   font-weight: 500;
   transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
