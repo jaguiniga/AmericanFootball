@@ -46,7 +46,7 @@
 - **Site Design**
 
   - https://www.figma.com/file/M6VZtPJcjw595p0NdS8Kdq/Figma-Basics?node-id=0%3A286
-  - ![image](https://user-images.githubusercontent.com/48134688/113912018-860c4280-978f-11eb-8edf-894670f86516.png)
+  ![image](https://user-images.githubusercontent.com/48134688/113912018-860c4280-978f-11eb-8edf-894670f86516.png)
 
 
 - **Detailed Usage**
