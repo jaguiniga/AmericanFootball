@@ -23,13 +23,14 @@ class Form extends Component {
     
     render() {
         return (
-
-          
             <div>
-               <div><img src = {catchingfootball}  alt ="sign up page picture"/></div> 
+               <div className = "split Sign-up-image">
+                   <img src = {catchingfootball}  alt ="sign up page picture"/>
+                </div> 
 
+            <div >
+                <form className= "split form" onSubmit={this.handleSubmit}>
                 <h1>Sign Up Form</h1>
-                <form className= "form" onSubmit={this.handleSubmit}>
                     <div className= "input-btn">
                     <label htmlFor='text'>Name</label>
                         <input
@@ -72,6 +73,7 @@ class Form extends Component {
                     </div>
                     <button type="submit"  className= "input-btn">Submit</button>
                 </form>
+            </div>
         </div>
         )
     }
