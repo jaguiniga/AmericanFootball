@@ -1,6 +1,8 @@
 import { Component } from "react";
-import './App.css';
-
+import './Login.css';
+import facebooklogo from './assets/facebooklogo.png';
+import instagram3 from './assets/instagram3.jpg';
+import google2 from './assets/google2.png';
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -23,37 +25,17 @@ class Login extends Component {
     render() {
         return (
             <div>
+               
+                <form className= "form2" onSubmit={this.handleSubmit}>
                 <h1>Login With:</h1>
-                <form className= "form" onSubmit={this.handleSubmit}>
                     <div className= "input-btn">
-                    <label htmlFor='text'>Facebook</label>
-                        <input
-                            type='text'
-                            name='Facebook'
-                            placeholder='Facebook'
-                            value={this.state.facebook}
-                            onChange={this.handleChange}
-                        />
+                    <img src ={facebooklogo} alt =""/>
                     </div>
                     <div className= "input-btn">
-                    <label htmlFor='text'>Instagram</label>
-                        <input
-                            type='text'
-                            name='Instagram'
-                            placeholder='Instagram'
-                            value={this.state.instagram}
-                            onChange={this.handleChange}
-                        />
+                    <img src ={instagram3} alt =""/>
                     </div>
                     <div className= "input-btn">
-                    <label htmlFor='google'>Google</label>
-                        <input
-                            type='text'
-                            name='Google'
-                            placeholder='Google'
-                            value={this.state.Google}
-                            onChange={this.handleChange}
-                        />
+                    <img src ={google2} alt =""/>
                       </div>
                       <div>
                       <div className= "email">
