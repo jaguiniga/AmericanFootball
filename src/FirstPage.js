@@ -1,6 +1,6 @@
 import {Component} from "react";
 import './Images.css';
-import Logo from './s.png';
+import Logo from './assets/s.png';
 import Footer from './FooterComponent';
 import Login from './LoginComponent';
 class FirstPage extends Component {
