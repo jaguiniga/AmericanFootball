@@ -1,3 +1,5 @@
+## Project Proposal
+
 - **American Football**
 
   - With football fans stuck at home, we wanted to build a fun
@@ -39,10 +41,13 @@
   9. FTP (FileZilla and Secure Shell)
   10. Postman (Test REST API)
   11. Wireshark (Network Protocol Analyzer)
+  12. Bootstrap 4
 
 - **Site Design**
 
   - https://www.figma.com/file/M6VZtPJcjw595p0NdS8Kdq/Figma-Basics?node-id=0%3A286
+  ![image](https://user-images.githubusercontent.com/48134688/113912018-860c4280-978f-11eb-8edf-894670f86516.png)
+
 
 - **Detailed Usage**
 
@@ -55,6 +60,11 @@
 - **Colophon**
   - Credits -- everyone who has contributed code, libraries from which we've borrowed code.
 
-## Formatting
+## Development Environment/Framework Setup
+- **Node.js**
+  - How to install, https://nodejs.dev/learn/how-to-install-nodejs
+  - How to use, https://nodejs.dev/learn
+- **Bootstrap 4**
+
 
 ## Supporting Documentation
