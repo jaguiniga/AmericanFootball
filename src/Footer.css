@@ -1,6 +1,6 @@
 .footer {
   bottom: 0;
-  /* padding: 4% 15% 2% 5%; */
+   /* padding: 4% 15% 2% 5%;  */
   background-color: gray;
 }
 .ft-text {
@@ -14,7 +14,7 @@
   font-family:  "sans-serif";
 }
 .col {
-  margin-left: 5%;
+  margin-left: 15%;
 }
 .ft-link {
   text-align: center;

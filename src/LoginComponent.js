@@ -26,7 +26,7 @@ class Login extends Component {
         return (
             <div>
                
-                <form className= "form2" onSubmit={this.handleSubmit}>
+                <aside className= "form2" onSubmit={this.handleSubmit}>
                 <h1>Login With:</h1>
                     <div className= "input-btn">
                     <img src ={facebooklogo} alt =""/>
@@ -64,7 +64,7 @@ class Login extends Component {
                     </div>
                     <button type="submit"  className= "input-btn">Submit</button>
                     <button type="create"  className= "input-btn">Create Account?</button>
-                </form>
+                </aside>
         </div>
         )
     }
