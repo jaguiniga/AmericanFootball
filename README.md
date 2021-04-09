@@ -48,10 +48,10 @@
   - https://www.figma.com/file/M6VZtPJcjw595p0NdS8Kdq/Figma-Basics?node-id=0%3A286
 
   - Login
-  ![image](https://user-images.githubusercontent.com/48134688/114250967-4773b500-9954-11eb-93fb-7e6497c71a13.png)
+  - ![image](https://user-images.githubusercontent.com/48134688/114250967-4773b500-9954-11eb-93fb-7e6497c71a13.png)
  
   - Main Feed Page
-  ![image](https://user-images.githubusercontent.com/48134688/114250995-607c6600-9954-11eb-9fdb-79ca4b33b31e.png)
+  - ![image](https://user-images.githubusercontent.com/48134688/114250995-607c6600-9954-11eb-9fdb-79ca4b33b31e.png)
 
 - **Detailed Usage**
 
