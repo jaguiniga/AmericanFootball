@@ -1,6 +1,8 @@
 import { Component } from "react";
 import './App.css';
 import catchingfootball from "./assets/catchingfootball.jpg";
+import Footer from './FooterComponent';
+import {Route, Switch, NavLink} from "react-router-dom";
 
 class Form extends Component {
     constructor(props) {
@@ -23,13 +25,11 @@ class Form extends Component {
     
     render() {
         return (
+            <div style = {{backgroundImage: `url(${catchingfootball})`, backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'}}>
             <div>
-               <div className = "split Sign-up-image">
-                   <img src = {catchingfootball}  alt ="sign up page picture"/>
-                </div> 
-
-            <div >
-                <form className= "split form" onSubmit={this.handleSubmit}>
+                <form className= "form" onSubmit={this.handleSubmit}>
                 <h1>Sign Up Form</h1>
                     <div className= "input-btn">
                     <label htmlFor='text'>Name</label>
@@ -71,8 +71,15 @@ class Form extends Component {
                             onChange={this.handleChange}
                         />
                     </div>
-                    <button type="submit"  className= "input-btn">Submit</button>
+                    <button type="submit"  className= "input-btn">Create Account</button>
+
+                    <div>
+                        <p>Already Registered?</p> <NavLink to='/'>Login</NavLink>
+                    </div>
                 </form>
+                <div >
+                   <Footer/>
+                </div> 
             </div>
         </div>
         )
