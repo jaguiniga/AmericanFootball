@@ -69,6 +69,7 @@
   - How to install, https://nodejs.dev/learn/how-to-install-nodejs
   - How to use, https://nodejs.dev/learn
 - **Bootstrap 4**
+  - npm install bootstrap@next 
 
 
 ## Supporting Documentation
