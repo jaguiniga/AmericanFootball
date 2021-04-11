@@ -10,30 +10,22 @@
   border-bottom:1px solid white;
 }
 
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Loginwith{
+  background-color: white;
+   
+  font-family: 'Robot Mono', monospace;
+  color: rgb(97, 8, 8);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-*{
-  background: #f6f7f8;
+.email{
+  background-color: white;
+   
   font-family: 'Robot Mono', monospace;
   color: rgb(97, 8, 8);
 }
 
 .form2 {
-  margin-right: 99%;
+  margin-right: 102%;
   width: 50%; 
   padding: 10px; 
   margin-top: -40em;
@@ -45,17 +37,18 @@
   border: 1px solid #2b0388;
   text-align: left;
   float: right;
+  height: 600px;  
   /* font-size: 1.6vh; */
   
   
   
 }
 
-.input-btn{
-  padding: 20px 40px;
+.input-btn2{
+  padding: 2px 40px; 
   text-align: center;
   width: fit-content;
-  flex-direction: column;
+  /* flex-direction: row; */
   align-items: flex-start;
   position: relative;
   margin: 20px;
@@ -63,7 +56,7 @@
   display: flex;
   border: 2px solid rgb(179, 255, 0);
   border-bottom: 2px solid rgb(89, 0, 255);
-  font-size: 20px;
+  font-size: 15px;
   overflow: hidden;
   cursor: pointer;
   

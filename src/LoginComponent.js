@@ -27,23 +27,23 @@ class Login extends Component {
             <div>
                
                 <aside className= "form2" onSubmit={this.handleSubmit}>
-                <h1>Login With:</h1>
-                    <div className= "input-btn">
+               <div className = "Loginwith"> <h1>Login With:</h1></div>
+                    <div className= "input-btn2">
                     <img src ={facebooklogo} alt =""/>
                     </div>
-                    <div className= "input-btn">
+                    <div className= "input-btn2">
                     <img src ={instagram3} alt =""/>
                     </div>
-                    <div className= "input-btn">
+                    <div className= "input-btn2">
                     <img src ={google2} alt =""/>
                       </div>
                       <div>
                       <div className= "email">
-                      <label htmlFor='google'>Or Enter Your Email:</label>
+                      <label htmlFor='email'>Or Enter Your Email:</label>
                       </div>
                       </div>
-                    <div className= "input-btn">
-                        <label htmlFor='team'>Email</label>
+                    <div className= "input-btn2">
+                        <label htmlFor='email'>Email</label>
                         <input
                             type='text'
                             name='Email'
@@ -52,7 +52,7 @@ class Login extends Component {
                             onChange={this.handleChange}
                         />
                     </div>
-                    <div className= "input-btn">
+                    <div className= "input-btn2">
                         <label htmlFor='password'>Password</label>
                         <input
                             type='text'
@@ -62,8 +62,9 @@ class Login extends Component {
                             onChange={this.handleChange}
                         />
                     </div>
-                    <button type="submit"  className= "input-btn">Submit</button>
-                    <button type="create"  className= "input-btn">Create Account?</button>
+                    <button type="submit"  className= "input-btn2">Submit</button>
+                    <button type="create"  className= "input-btn2">Create Account?</button>
+                    
                 </aside>
         </div>
         )
