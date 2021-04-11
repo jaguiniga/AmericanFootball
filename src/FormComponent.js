@@ -2,7 +2,7 @@ import { Component } from "react";
 import './App.css';
 import catchingfootball from "./assets/catchingfootball.jpg";
 import Footer from './FooterComponent';
-import {Route, Switch, NavLink} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 
 class Form extends Component {
     constructor(props) {
@@ -74,7 +74,7 @@ class Form extends Component {
                     <button type="submit"  className= "input-btn">Create Account</button>
 
                     <div>
-                        <p>Already Registered?</p> <NavLink to='/'>Login</NavLink>
+                        <p>Already Registered ?</p> <NavLink to='/'>Login</NavLink>
                     </div>
                 </form>
                 <div >

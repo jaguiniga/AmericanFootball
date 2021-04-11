@@ -1,6 +1,6 @@
 .footer {
   bottom: 0;
-  /* padding: 4% 15% 2% 5%; */
+   /* padding: 4% 15% 2% 5%;  */
   background-color: gray;
 }
 .ft-text {
@@ -14,11 +14,12 @@
   font-family:  "sans-serif";
 }
 .col {
-  margin-left: 5%;
+  margin-left: 15%;
+  background-color: white;
 }
 .ft-link {
   text-align: center;
-  font-size: 1.6vh;
+  font-size: 1.5vh;
   font-family:  "sans-serif";
   text-decoration: none;
   color: #222831;
@@ -33,4 +34,11 @@
   font-family:   "sans-serif";
   background-color: white;
   
+}
+.col-lg{
+  /* background-color: lightblue; */
+  margin-left: 10%;
+  margin-right: 10%;
+  color: skyblue;
+  font-weight: 500;
 }
