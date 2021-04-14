@@ -5,10 +5,7 @@
 }
 
 
-* {
-  font-family: 'Robot Mono', monospace;
-  color: rgb(15, 51, 255);
-}
+
 
 
 .Sign-up-image {
@@ -23,7 +20,7 @@
 
   
   
-  margin-left: 20%;
+  margin-left: 12%;
   width: fit-content;
   height: 100%;
  
@@ -52,10 +49,11 @@
   overflow: hidden;
   cursor: pointer;
   background: #faf8f8;
-  color: #0f5339;
+  color: black;
   font-weight: 500;
   transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
   border-radius: 25px;
+  
 }
 ​
 .input-btn:focus{

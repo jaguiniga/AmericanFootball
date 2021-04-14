@@ -2,6 +2,7 @@ import { Component } from "react";
 import './App.css';
 import catchingfootball from "./assets/catchingfootball.jpg";
 import Footer from './FooterComponent';
+
 import {NavLink} from "react-router-dom";
 
 class Form extends Component {

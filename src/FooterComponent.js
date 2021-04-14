@@ -58,7 +58,7 @@ export default class Footer extends Component {
         <div className="row">
           <p className="col-lg">
             © 2021 All Rights Reserved ~ Authored by Sherrod Ware, Poul Nichols,
-            Johart Aguina
+            Johart Aguiniga
           </p>
         </div>
       </div>

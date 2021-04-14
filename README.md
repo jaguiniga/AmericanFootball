@@ -1,3 +1,5 @@
+## Project Proposal
+
 - **American Football**
 
   - With football fans stuck at home, we wanted to build a fun
@@ -39,10 +41,17 @@
   9. FTP (FileZilla and Secure Shell)
   10. Postman (Test REST API)
   11. Wireshark (Network Protocol Analyzer)
+  12. Bootstrap 4
 
 - **Site Design**
 
   - https://www.figma.com/file/M6VZtPJcjw595p0NdS8Kdq/Figma-Basics?node-id=0%3A286
+
+  - Login
+  - ![image](https://user-images.githubusercontent.com/48134688/114250967-4773b500-9954-11eb-93fb-7e6497c71a13.png)
+ 
+  - Main Feed Page
+  - ![image](https://user-images.githubusercontent.com/48134688/114250995-607c6600-9954-11eb-9fdb-79ca4b33b31e.png)
 
 - **Detailed Usage**
 
@@ -55,6 +64,15 @@
 - **Colophon**
   - Credits -- everyone who has contributed code, libraries from which we've borrowed code.
 
-## Formatting
+## Development Environment/Framework Setup
+- **Node.js**
+  - How to install, https://nodejs.dev/learn/how-to-install-nodejs
+  - How to use, https://nodejs.dev/learn
+- **Bootstrap**
+  - https://getbootstrap.com/ 
+  - npm install bootstrap@next 
+- **React Style Components**
+  - https://scalablecss.com/styled-components-quickstart-guide/
+  - npm install styled-components 
 
 ## Supporting Documentation
