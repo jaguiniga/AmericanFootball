@@ -25,7 +25,7 @@ class Login extends Component {
     
     render() {
         return (
-            <div>
+            <div >
                
                 <aside className= "form2" onSubmit={this.handleSubmit}>
                <div className = "Loginwith"> <h1>Login With:</h1></div>
