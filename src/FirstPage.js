@@ -11,13 +11,13 @@ class FirstPage extends Component {
                 <h1 >Welcome To American Football</h1>
                 
                 <img src = {Logo}  alt =""/>
-                <Footer>
+                <Footer/>
 
-                 </Footer>
+               
                  
-                 <Login>
+                 <Login/>
                      
-                 </Login>
+                
                </div>
            
                  

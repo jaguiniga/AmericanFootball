@@ -78,9 +78,11 @@ class Form extends Component {
                         <p>Already Registered ?</p> <NavLink to='/'>Login</NavLink>
                     </div>
                 </form>
+
                 <div >
                    <Footer/>
                 </div> 
+                
             </div>
         </div>
         )

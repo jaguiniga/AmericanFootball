@@ -3,6 +3,7 @@ import './Login.css';
 import facebooklogo from './assets/facebooklogo.png';
 import instagram3 from './assets/instagram3.jpg';
 import google2 from './assets/google2.png';
+
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -38,7 +39,7 @@ class Login extends Component {
                     <img src ={google2} alt =""/>
                       </div>
                       <div>
-                      <div className= "email">
+                      <div className= "emailbox">
                       <label htmlFor='email'>Or Enter Your Email:</label>
                       </div>
                       </div>

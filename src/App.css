@@ -5,9 +5,6 @@
 }
 
 
-
-
-
 .Sign-up-image {
   background-position: center;
   background-repeat: no-repeat;
@@ -17,13 +14,9 @@
 }
 
 .form {
-
-  
-  
   margin-left: 12%;
   width: fit-content;
   height: 100%;
- 
   padding: 20px;
   margin-top: 2em;
   display: flex;
