@@ -1,4 +1,4 @@
-.App {
+.App2 {
   background: rgb(255, 255, 255);
   width: 880px;
   text-align: center;
@@ -37,7 +37,7 @@
   border: 1px solid #2b0388;
   text-align: left;
   float: right;
-  height: 600px;  
+  height: 600px; 
   /* font-size: 1.6vh; */
   
   
@@ -67,11 +67,11 @@
   border-radius: 25px;
 }
 ​
-.input-btn:focus{
+.input-btn2:focus{
   outline: 1px dashed blue;
 }
 
-.input-btn:hover { 
+.input-btn2:hover { 
   color: rgba(22, 247, 236, 0.993); 
   border: 1px solid #1900ff;
   box-shadow: 0 0 20px #14ff3b; 

@@ -3,10 +3,11 @@ import {Component} from "react";
 import Logo from './assets/s.png';
 import Footer from './FooterComponent';
 import Login from './LoginComponent';
+
 class FirstPage extends Component {
     render() {
         return (
-            <div> 
+            <div className="App2"> 
              
                 <h1 >Welcome To American Football</h1>
                 
@@ -18,6 +19,7 @@ class FirstPage extends Component {
                  <Login>
                      
                  </Login>
+
                </div>
            
                  
