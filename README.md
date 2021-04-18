@@ -65,6 +65,11 @@
   - Credits -- everyone who has contributed code, libraries from which we've borrowed code.
 
 ## Development Environment/Framework Setup
+- **React Developer Tools**
+  - Add the "React Developer Tools" extension to you browser.
+  - Mozzila  https://addons.mozilla.org/en-US/firefox/addon/react-devtools/
+  - MS Edge  https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil
+  - Chrome   https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
 - **Node.js**
   - How to install, https://nodejs.dev/learn/how-to-install-nodejs
   - How to use, https://nodejs.dev/learn
