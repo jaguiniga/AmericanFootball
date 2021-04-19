@@ -5,12 +5,13 @@
 }
 .ft-text {
   font-weight: bolder;
-  font-size: 1vh;
-  line-height: 110%;
+   font-size: 1vh; 
+   line-height: 110%; 
   font-family: "sans-serif";
+  padding-left: 20px;
 }
 .ft-text li {
-  font-size: 2.5vh;
+  font-size: 4.5vh;
   font-family:  "sans-serif";
 }
 .col {
@@ -19,7 +20,7 @@
 }
 .ft-link {
   text-align: center;
-  font-size: 1.5vh;
+  font-size: 1.3vh;
   font-family:  "sans-serif";
   text-decoration: none;
   color: #222831;
@@ -36,7 +37,6 @@
   
 }
 .col-lg{
-  /* background-color: lightblue; */
   margin-left: 10%;
   margin-right: 10%;
   color: skyblue;

@@ -1,10 +1,11 @@
-.App2 {
-  background: rgb(255, 255, 255);
-  width: 880px;
+/*  .App2 {
+  background: pink;
+  width: 1500px;
   text-align: center;
   margin: auto;
-}
-
+  margin-left: 15%;
+} 
+ */
 .active-link {
   color:rgb(94, 255, 0);
   border-bottom:1px solid white;
@@ -24,8 +25,8 @@
 }
 
 .form2 {
-  margin-right: 102%;
-  width: 50%; 
+  margin-right: 100.5%;
+  width: 40%; 
   padding: 10px; 
   margin-top: -40em;
   display: flex;
@@ -36,7 +37,7 @@
   border: 1px solid #2b0388;
   text-align: left;
   float: right;
-  height: 600px; 
+  height: 580px; 
   /* font-size: 1.6vh; */
   
   

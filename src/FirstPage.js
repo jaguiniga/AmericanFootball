@@ -7,9 +7,9 @@ import Login from './LoginComponent';
 class FirstPage extends Component {
     render() {
         return (
-            <div className="App2"> 
+            <div > 
              
-                <h1 >Welcome To American Football</h1>
+                <h1>Welcome To American Football</h1>
                 
                 <img src = {Logo}  alt =""/>
                 <Footer/>

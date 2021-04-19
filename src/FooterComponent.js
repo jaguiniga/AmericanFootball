@@ -25,7 +25,7 @@ export default class Footer extends Component {
                 {" "}
                 <li>
                   <a href="url" className="ft-link">
-                  <NavLink exact activeClassName="active-link" to="/help"> Help Center </NavLink>
+                  <NavLink exact activeClassName="active-link" to="/help"> HELP CENTER </NavLink>
                   </a>
                 </li>
               </div>
@@ -49,7 +49,7 @@ export default class Footer extends Component {
                 {" "}
                 <li>
                   <a href="url" className="ft-link">
-                  <NavLink exact activeClassName="active-link" to="/privacy">Privacy Policy </NavLink>
+                  <NavLink exact activeClassName="active-link" to="/privacy">PRIVACY POLICY </NavLink>
                   </a>
                 </li>
               </div>
@@ -60,7 +60,7 @@ export default class Footer extends Component {
         <div className="row">
           <p className="col-lg">
             © 2021 All Rights Reserved ~ Authored by  Poul Nichols,
-            Johart Aguiniga, Sherrod Ware,
+            Johart Aguiniga, Sherrod Ware
           </p>
         </div>
       </div>
