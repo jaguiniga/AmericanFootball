@@ -46,9 +46,9 @@ class Login extends Component {
                     <div className= "input-btn2">
                         <label htmlFor='email'>Email</label>
                         <input
-                            type='text'
-                            name='Email'
-                            placeholder='Email'
+                            type='email'
+                            name='email'
+                            placeholder='email'
                             value={this.state.email}
                             onChange={this.handleChange}
                         />
@@ -56,9 +56,9 @@ class Login extends Component {
                     <div className= "input-btn2">
                         <label htmlFor='password'>Password</label>
                         <input
-                            type='text'
-                            name='Password'
-                            placeholder='Password'
+                            type='password'
+                            name='password'
+                            placeholder='password'
                             value={this.state.password}
                             onChange={this.handleChange}
                         />

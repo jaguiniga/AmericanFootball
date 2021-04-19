@@ -8,7 +8,7 @@ const Help= () => {
       <h1>HELP CENTER</h1>
       <h2>Last Modified 04/14/2021</h2>
       
-      <p>WE NEED TO FIGURE OUT WHAT SHOULD GO ON THIS PABE</p>
+      <p>WE NEED TO FIGURE OUT WHAT SHOULD GO ON THIS PAGE</p>
 
 
 
