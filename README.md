@@ -76,9 +76,9 @@
 - **Bootstrap**
   - https://getbootstrap.com/ 
   - Installing React Bootstrap
-      npm install react-bootstrap
-      In order to ensure that React Bootstrap is working smoothly and perfectly, you must install Bootstrap too. Use the following code to install Bootstrap.
-      npm install bootstrap
+      - npm install react-bootstrap
+      - In order to ensure that React Bootstrap is working smoothly and perfectly, you must install Bootstrap too. Use the following code to install Bootstrap.
+      - npm install bootstrap
 - **React Style Components**
   - https://scalablecss.com/styled-components-quickstart-guide/
   - npm install styled-components 
