@@ -4,6 +4,7 @@ import facebooklogo from './assets/facebooklogo.png';
 import instagram3 from './assets/instagram3.jpg';
 import google2 from './assets/google2.png';
 
+
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -30,6 +31,7 @@ class Login extends Component {
                 <aside className= "form2" onSubmit={this.handleSubmit}>
                <div className = "Loginwith"> <h1>Login With:</h1></div>
                     <div className= "input-btn2">
+                    {/* <!-- Facebook --> */}
                     <img src ={facebooklogo} alt =""/>
                     </div>
                     <div className= "input-btn2">
