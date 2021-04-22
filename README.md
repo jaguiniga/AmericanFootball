@@ -87,3 +87,5 @@
   - npm install styled-components 
 
 ## Supporting Documentation
+- **Image Icons**
+ - ref: https://findicons.com 
