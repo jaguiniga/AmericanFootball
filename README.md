@@ -65,14 +65,27 @@
   - Credits -- everyone who has contributed code, libraries from which we've borrowed code.
 
 ## Development Environment/Framework Setup
+- **React Developer Tools**
+  - Add the "React Developer Tools" extension to you browser.
+  - Mozzila  https://addons.mozilla.org/en-US/firefox/addon/react-devtools/
+  - MS Edge  https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil
+  - Chrome   https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
 - **Node.js**
   - How to install, https://nodejs.dev/learn/how-to-install-nodejs
   - How to use, https://nodejs.dev/learn
 - **Bootstrap**
   - https://getbootstrap.com/ 
-  - npm install bootstrap@next 
+  - Installing React Bootstrap (ref: https://www.bootstrapdash.com/use-bootstrap-4-with-reactjs/)
+      - npm install react-bootstrap
+      - In order to ensure that React Bootstrap is working smoothly and perfectly, you must install Bootstrap too. Use the following code to install Bootstrap.
+      - npm install bootstrap
+- **React Router DOM**
+  - ref: https://www.npmjs.com/package/react-router-dom
+  - npm install --save react-router-dom
 - **React Style Components**
   - https://scalablecss.com/styled-components-quickstart-guide/
   - npm install styled-components 
 
 ## Supporting Documentation
+- **Image Icons**
+  - ref: https://findicons.com 
