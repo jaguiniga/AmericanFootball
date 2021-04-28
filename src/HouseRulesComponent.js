@@ -8,6 +8,7 @@ import { NavLink} from "react-router-dom";
 
 const HouseRules = () => {
   return (
+    <div className='pages'>
     <section >
       <div className="house-rules"> 
         <h1 >PJ'S.com House Rules</h1>
@@ -145,15 +146,6 @@ const HouseRules = () => {
                         REASON OR NO REASON AT ALL
                 </strong> 
           </p>
-        
-
-
-        
-
-
-
-
-
 
     </div>
      
@@ -163,7 +155,7 @@ const HouseRules = () => {
       <Footer/>
       </div>
     </section>
-    
+    </div>
   );
 };
 

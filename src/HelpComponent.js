@@ -4,6 +4,7 @@ import './Footer.css'
 import { NavLink} from "react-router-dom";
 const Help= () => {
   return (
+    <div className='pages'>
     <section >
       <h1>HELP CENTER</h1>
       <h2>Last Modified 04/14/2021</h2>
@@ -35,7 +36,7 @@ const Help= () => {
       <Footer/>
       </div>
     </section>
-    
+    </div>
   );
 };
 

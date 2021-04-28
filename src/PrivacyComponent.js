@@ -4,6 +4,7 @@ import './Footer.css'
 
 const Privacy= () => {
   return (
+    <div className='pages'>
     <section >
       <h1>Privacy Policy</h1>
       <h2>Last Modified 04/14/2021</h2>
@@ -142,7 +143,7 @@ const Privacy= () => {
       <Footer/>
       </div>
     </section>
-    
+    </div>
   );
 };
 

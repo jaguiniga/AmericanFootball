@@ -9,32 +9,39 @@ import Help from '../HelpComponent';
 import TermsRules from '../TermsRulesComponent'
 
 import { Button } from './Button';
-import Dropdown from "./MenuItem";
+import Dropdown from './Dropdown';
 import './NavBar.css';
 
 
+function Navbar() {
+  const [click, setClick] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
-class NavBar extends Component {
-  state =  {clicked:false}
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
-  DROPDOWN = [dropdown, setDropdown] = useState(false);
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+  };
 
-  handleClick = () => {
-    this.setState({ clicked: !this.state.clicked })
-  }
-
-  closeMobileMenu = () => {
-    this.setState(false)
-  }
-
-
-    render(){
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(false);
+    }
+  };
         return(    
                 <div>         
                   <>
                     <nav className = 'navbar'>
                       <NavLink exact activeClassName="active-link" to="/" className = 'navbar-logo'>
                         American Football
+                        <i class='fab fa-firstdraft' />
                       </NavLink>
                       <div className = 'menu-icon' onClick = {handleClick}>
                         <i className = {click ? 'fas fa-times' :'fas fa-bars'}/>
@@ -53,24 +60,13 @@ class NavBar extends Component {
                         
                         <li className = 'nav-item'>
                           <NavLink exact
-                            className='nav-links'
-                            to='/services'
-                            onClick={this.closeMobileMenu}
-                          >
-                            Services <i className='fas fa-caret-down'/>
-                          </NavLink>
-                          {DROPDOWN && <Dropdown/>}
-                        </li>
-
-                        <li className = 'nav-item'>
-                          <NavLink exact
                             className='nav-links-mobile'
-                            to='/sign-up'
-                            onClick={this.closeMobileMenu}
+                            to='/form'
+                            onClick={closeMobileMenu}
                           >
                             Sign Up <i className='fas fa-caret-down'/>
                           </NavLink>
-                          {DROPDOWN && <Dropdown/>}
+                          {dropdown && <Dropdown />}
                         </li>
 
                       </ul>
@@ -94,7 +90,7 @@ class NavBar extends Component {
             
                 </div>
         );
-     }
+     
 }
 
-export default NavBar;
+export default Navbar;

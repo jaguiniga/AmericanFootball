@@ -5,6 +5,7 @@ import './Footer.css'
 
 const About = () => {
   return (
+    <div className='pages'>
     <section >
       <div className="about-h1"> 
         <h1 >About PJ'S</h1>
@@ -24,21 +25,12 @@ const About = () => {
         Our company includes many different brands. When you visit,  create an account with us, or use sites and applications, 
         your information is controlled by a member of PJ'S.
         </p>
-
-
-
-
-
-
     </div>
-     
-
-   
       <div >
       <Footer/>
       </div>
     </section>
-    
+    </div>
   );
 };
 

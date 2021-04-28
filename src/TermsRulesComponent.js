@@ -4,6 +4,7 @@ import './Footer.css';
 
 const Termsrules= () => {
   return (
+    <div className='pages'>
     <section >
       <h1>TERMS OF SERVICE/RULES</h1>
       <h2>Last Modified 04/14/2021</h2>
@@ -15,7 +16,7 @@ const Termsrules= () => {
       <Footer/>
       </div>
     </section>
-    
+    </div>
   );
 };
 
