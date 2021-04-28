@@ -1,9 +1,16 @@
-
-
+.Body {
+  background: #f9f9f9;
+  width: 880px;
+  text-align: center;
+  margin: auto;
+}  
+ 
 .active-link {
   color:rgb(94, 255, 0);
   border-bottom:1px solid white;
+  
 }
+ 
 
 .Loginwith{
   background-color: white;

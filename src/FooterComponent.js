@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink} from "react-router-dom";
+
 export default class Footer extends Component {
   render() {
     return (
@@ -25,7 +26,7 @@ export default class Footer extends Component {
                 {" "}
                 <li>
                   <a href="url" className="ft-link">
-                  <NavLink exact activeClassName="active-link" to="/help"> Help Center </NavLink>
+                  <NavLink exact activeClassName="active-link" to="/help"> HELP CENTER </NavLink>
                   </a>
                 </li>
               </div>
@@ -49,7 +50,7 @@ export default class Footer extends Component {
                 {" "}
                 <li>
                   <a href="url" className="ft-link">
-                  <NavLink exact activeClassName="active-link" to="/privacy">Privacy Policy </NavLink>
+                  <NavLink exact activeClassName="active-link" to="/privacy">PRIVACY POLICY </NavLink>
                   </a>
                 </li>
               </div>
@@ -59,8 +60,7 @@ export default class Footer extends Component {
         </div>
         <div className="row">
           <p className="col-lg">
-            © 2021 All Rights Reserved ~ Authored by  Poul Nichols,
-            Johart Aguiniga, Sherrod Ware,
+            © 2021 All Rights Reserved ~ Authored by PJ'S
           </p>
         </div>
       </div>
