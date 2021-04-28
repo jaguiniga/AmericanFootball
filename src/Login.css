@@ -1,12 +1,5 @@
-  .Body {
-  background: #f9f9f9;
-  width: 880px;
-  text-align: center;
-  margin: auto;
-  
-  
-}  
- 
+
+
 .active-link {
   color:rgb(94, 255, 0);
   border-bottom:1px solid white;
@@ -44,17 +37,12 @@
   text-align: left;
   float: right;
   height: 580px; 
-  /* font-size: 1.6vh; */
-  
-  
-  
 }
 
 .input-btn2{
   padding: 2px 40px; 
   text-align: center;
   width: fit-content;
-  /* flex-direction: row; */
   align-items: flex-start;
   position: relative;
   margin: 20px;
