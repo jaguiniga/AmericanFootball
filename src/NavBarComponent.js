@@ -6,7 +6,9 @@ import FirstPage from './FirstPage';
 import About from './AboutComponent';
 import Privacy from './PrivacyComponent';
 import Help from './HelpComponent';
-import TermsRules from './TermsRulesComponent'
+import TermsRules from './TermsRulesComponent';
+import HouseRules from "./HouseRulesComponent";
+import Password from "./PasswordComponent";
 
 class NavBar extends Component {
 
@@ -26,6 +28,8 @@ class NavBar extends Component {
                     <Route exact path='/privacy' component={Privacy} />
                     <Route exact path='/help' component={Help} />
                     <Route exact path='/termsrules' component={TermsRules} />
+                    <Route exact path="/houserules" component={HouseRules} />
+                    <Route exact path="/password" component={Password} />
                     <Route render={() => <h1>ERROR NOT FOUND</h1>} />
                   </Switch>
             

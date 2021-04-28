@@ -1,8 +1,8 @@
 import { Component } from "react";
 import './Login.css';
-import facebooklogo from './assets/facebooklogo.png';
-import instagram3 from './assets/instagram3.jpg';
-import google2 from './assets/google2.png';
+import facebooklogo from './images/facebooklogo.png';
+import instagram3 from './images/instagram3.jpg';
+import google2 from './images/google2.png';
 
 
 class Login extends Component {

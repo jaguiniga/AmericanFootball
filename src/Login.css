@@ -1,15 +1,21 @@
-/*  .App2 {
-  background: pink;
-  width: 1500px;
+  .Body {
+  background: #f9f9f9;
+  width: 880px;
   text-align: center;
   margin: auto;
-  margin-left: 15%;
-} 
- */
+  
+  
+}  
+ 
 .active-link {
   color:rgb(94, 255, 0);
   border-bottom:1px solid white;
+  
 }
+ 
+ 
+
+
 
 .Loginwith{
   background-color: white;
