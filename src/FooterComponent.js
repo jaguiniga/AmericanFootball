@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { NavLink} from "react-router-dom";
 
+
 export default class Footer extends Component {
   render() {
     return (
@@ -62,6 +63,7 @@ export default class Footer extends Component {
           <p className="col-lg">
             © 2021 All Rights Reserved ~ Authored by PJ'S
           </p>
+         
         </div>
       </div>
     );

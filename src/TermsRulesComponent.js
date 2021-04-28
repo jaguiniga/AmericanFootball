@@ -1,7 +1,6 @@
 import React from "react";
 import Footer from './FooterComponent';
 import './Footer.css';
-import { NavLink} from "react-router-dom";
 
 const Termsrules= () => {
   return (
