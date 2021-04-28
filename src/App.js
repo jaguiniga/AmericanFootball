@@ -1,8 +1,6 @@
 
-
 import React from 'react';
-import FirstPage from './FirstPage';
-import NavBar from './NavBarComponent';
+import NavBar from './Navbar/NavBarComponent';
 
 
 

@@ -1,9 +1,4 @@
-.App2 {
-  background: rgb(255, 255, 255);
-  width: 880px;
-  text-align: center;
-  margin: auto;
-}
+
 
 .active-link {
   color:rgb(94, 255, 0);
@@ -24,8 +19,8 @@
 }
 
 .form2 {
-  margin-right: 102%;
-  width: 50%; 
+  margin-right: 100.5%;
+  width: 40%; 
   padding: 10px; 
   margin-top: -40em;
   display: flex;
@@ -36,18 +31,13 @@
   border: 1px solid #2b0388;
   text-align: left;
   float: right;
-  height: 600px; 
-  /* font-size: 1.6vh; */
-  
-  
-  
+  height: 580px; 
 }
 
 .input-btn2{
   padding: 2px 40px; 
   text-align: center;
   width: fit-content;
-  /* flex-direction: row; */
   align-items: flex-start;
   position: relative;
   margin: 20px;
