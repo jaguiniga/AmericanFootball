@@ -1,8 +1,10 @@
 import { Component } from "react";
 import './Login.css';
-import facebooklogo from './assets/facebooklogo.png';
-import instagram3 from './assets/instagram3.jpg';
-import google2 from './assets/google2.png';
+import facebooklogo from './images/facebooklogo.png';
+import instagram3 from './images/instagram3.jpg';
+import google2 from './images/google2.png';
+
+
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -24,11 +26,12 @@ class Login extends Component {
     
     render() {
         return (
-            <div>
+            <div >
                
                 <aside className= "form2" onSubmit={this.handleSubmit}>
                <div className = "Loginwith"> <h1>Login With:</h1></div>
                     <div className= "input-btn2">
+                    {/* <!-- Facebook --> */}
                     <img src ={facebooklogo} alt =""/>
                     </div>
                     <div className= "input-btn2">
@@ -38,16 +41,16 @@ class Login extends Component {
                     <img src ={google2} alt =""/>
                       </div>
                       <div>
-                      <div className= "email">
+                      <div className= "emailbox">
                       <label htmlFor='email'>Or Enter Your Email:</label>
                       </div>
                       </div>
                     <div className= "input-btn2">
                         <label htmlFor='email'>Email</label>
                         <input
-                            type='text'
-                            name='Email'
-                            placeholder='Email'
+                            type='email'
+                            name='email'
+                            placeholder='email'
                             value={this.state.email}
                             onChange={this.handleChange}
                         />
@@ -55,9 +58,9 @@ class Login extends Component {
                     <div className= "input-btn2">
                         <label htmlFor='password'>Password</label>
                         <input
-                            type='text'
-                            name='Password'
-                            placeholder='Password'
+                            type='password'
+                            name='password'
+                            placeholder='password'
                             value={this.state.password}
                             onChange={this.handleChange}
                         />

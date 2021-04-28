@@ -1,24 +1,15 @@
+
+import React from 'react';
+import NavBar from './Navbar/NavBarComponent';
 import {Route, Switch, NavLink} from "react-router-dom";
-import './App.css';
-import './Footer.css'
-import Form from './FormComponent';
-import FirstPage from './FirstPage';
 
 
 
 function App() {
   return (
-    <div className="App">
-      <NavLink exact activeClassName="active-link" to="/form"> Sign Up </NavLink>
-      <NavLink exact activeClassName="active-link" to="/"> Main Page </NavLink>
-      
-
-      <Switch>
-        <Route exact path='/form' component={Form} />
-        <Route exact path='/' component={FirstPage} />
-        <Route render={() => <h1>ERROR NOT FOUND</h1>} />
-      </Switch>
-
+    
+    <div >
+      <NavBar />
     </div>
   );
 }

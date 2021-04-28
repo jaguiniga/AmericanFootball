@@ -1,16 +1,25 @@
 .footer {
   bottom: 0;
-   /* padding: 4% 15% 2% 5%;  */
+  /* padding: 4% 15% 2% 5%;  */
   background-color: gray;
+  text-align: center;
+}
+
+.pages{
+  text-align: center;
+  width: 880px;
+  margin: auto;
+
 }
 .ft-text {
   font-weight: bolder;
-  font-size: 1vh;
-  line-height: 110%;
+  font-size: 1vh; 
+  line-height: 110%; 
   font-family: "sans-serif";
+  padding-left: 5px;
 }
 .ft-text li {
-  font-size: 2.5vh;
+  font-size: 5.5vh;
   font-family:  "sans-serif";
 }
 .col {
@@ -19,7 +28,7 @@
 }
 .ft-link {
   text-align: center;
-  font-size: 1.5vh;
+  font-size: 1.25vh;
   font-family:  "sans-serif";
   text-decoration: none;
   color: #222831;
@@ -36,9 +45,16 @@
   
 }
 .col-lg{
-  /* background-color: lightblue; */
-  margin-left: 10%;
+  margin-left: 30%;
   margin-right: 10%;
   color: skyblue;
   font-weight: 500;
 }
+
+/* .about-h1{
+  margin-left: 10%;
+  margin-right: 10%;
+  color: black;
+  font-weight: 500;
+}
+ */

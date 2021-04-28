@@ -1,14 +1,16 @@
-.App {
-  background: rgb(255, 255, 255);
+.Body {
+  background: #f9f9f9;
   width: 880px;
   text-align: center;
   margin: auto;
-}
-
+}  
+ 
 .active-link {
   color:rgb(94, 255, 0);
   border-bottom:1px solid white;
+  
 }
+ 
 
 .Loginwith{
   background-color: white;
@@ -17,16 +19,15 @@
   color: rgb(97, 8, 8);
 }
 
-.email{
+.emailbox{
   background-color: white;
-   
   font-family: 'Robot Mono', monospace;
   color: rgb(97, 8, 8);
 }
 
 .form2 {
-  margin-right: 102%;
-  width: 50%; 
+  margin-right: 100.5%;
+  width: 40%; 
   padding: 10px; 
   margin-top: -40em;
   display: flex;
@@ -37,18 +38,13 @@
   border: 1px solid #2b0388;
   text-align: left;
   float: right;
-  height: 600px;  
-  /* font-size: 1.6vh; */
-  
-  
-  
+  height: 580px; 
 }
 
 .input-btn2{
   padding: 2px 40px; 
   text-align: center;
   width: fit-content;
-  /* flex-direction: row; */
   align-items: flex-start;
   position: relative;
   margin: 20px;
@@ -59,7 +55,6 @@
   font-size: 15px;
   overflow: hidden;
   cursor: pointer;
-  
   background: #e6dfdf;
   color: #0f5339;
   font-weight: 500;
@@ -67,11 +62,11 @@
   border-radius: 25px;
 }
 ​
-.input-btn:focus{
+.input-btn2:focus{
   outline: 1px dashed blue;
 }
 
-.input-btn:hover { 
+.input-btn2:hover { 
   color: rgba(22, 247, 236, 0.993); 
   border: 1px solid #1900ff;
   box-shadow: 0 0 20px #14ff3b; 

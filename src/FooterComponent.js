@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { NavLink} from "react-router-dom";
+
 export default class Footer extends Component {
   render() {
     return (
@@ -10,7 +12,8 @@ export default class Footer extends Component {
               <div className="ft-text">
                 <li>
                   <a href="url" className="ft-link">
-                    ABOUT
+                  <NavLink exact activeClassName="active-link" to="/about"> ABOUT </NavLink>
+                    
                   </a>
                 </li>
               </div>
@@ -23,7 +26,7 @@ export default class Footer extends Component {
                 {" "}
                 <li>
                   <a href="url" className="ft-link">
-                    HELP CENTER
+                  <NavLink exact activeClassName="active-link" to="/help"> HELP CENTER </NavLink>
                   </a>
                 </li>
               </div>
@@ -35,7 +38,7 @@ export default class Footer extends Component {
                 {" "}
                 <li>
                   <a href="url" className="ft-link">
-                    TERMS OF SERVICE/RULES
+                  <NavLink exact activeClassName="active-link" to="/termsrules"> TERMS OF SERVICE/RULES </NavLink>
                   </a>
                 </li>
               </div>
@@ -47,7 +50,7 @@ export default class Footer extends Component {
                 {" "}
                 <li>
                   <a href="url" className="ft-link">
-                    PRIVACY POLICY
+                  <NavLink exact activeClassName="active-link" to="/privacy">PRIVACY POLICY </NavLink>
                   </a>
                 </li>
               </div>
@@ -57,8 +60,7 @@ export default class Footer extends Component {
         </div>
         <div className="row">
           <p className="col-lg">
-            © 2021 All Rights Reserved ~ Authored by Sherrod Ware, Poul Nichols,
-            Johart Aguiniga
+            © 2021 All Rights Reserved ~ Authored by PJ'S
           </p>
         </div>
       </div>

@@ -1,24 +1,28 @@
 import {Component} from "react";
-
-import Logo from './assets/s.png';
+import './Login.css'
+import Logo from './images/s.png';
 import Footer from './FooterComponent';
 import Login from './LoginComponent';
+
 class FirstPage extends Component {
     render() {
         return (
-            <div> 
-             
+            <div style={{width: "880px", margin: "0px auto 20px auto"}}> 
+
+            <div className='Body'>
+        
                 <h1 >Welcome To American Football</h1>
                 
                 <img src = {Logo}  alt =""/>
-                <Footer>
+               <Footer />
+                
 
-                 </Footer>
+               
                  
-                 <Login>
-                     
-                 </Login>
-               </div>
+                 <Login/>
+                 </div>
+                </div>
+        
            
                  
                

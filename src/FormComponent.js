@@ -1,6 +1,6 @@
 import { Component } from "react";
 import './App.css';
-import catchingfootball from "./assets/catchingfootball.jpg";
+import catchingfootball from "./images/catchingfootball.jpg";
 import Footer from './FooterComponent';
 
 import {NavLink} from "react-router-dom";
@@ -78,9 +78,11 @@ class Form extends Component {
                         <p>Already Registered ?</p> <NavLink to='/'>Login</NavLink>
                     </div>
                 </form>
+
                 <div >
                    <Footer/>
                 </div> 
+                
             </div>
         </div>
         )
