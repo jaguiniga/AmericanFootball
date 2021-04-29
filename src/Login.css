@@ -1,4 +1,9 @@
-
+.Body {
+  background: #F9F9F9;
+  width: 880px;
+  text-align: center;
+  margin: auto;
+}
 
 .active-link {
   color:rgb(94, 255, 0);
