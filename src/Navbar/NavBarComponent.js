@@ -1,5 +1,4 @@
-import React, {Component, useState} from "react";
-
+import React, { useState } from "react";
 import {Route, Switch, NavLink} from "react-router-dom";
 import Form from '../FormComponent';
 import FirstPage from '../FirstPage';
@@ -36,22 +35,23 @@ function Navbar() {
       setDropdown(false);
     }
   };
-        return(    
+        return (    
                 <div>         
                   <>
                     <nav className = 'navbar'>
                       <NavLink exact activeClassName="active-link" to="/" className = 'navbar-logo'>
-                        American Football
-                        <i class='fab fa-firstdraft' />
+                        American Football 
+                        <i class="fas fa-football-ball fa-fw" />
                       </NavLink>
+                      
                       <div className = 'menu-icon' onClick = {handleClick}>
-                        <i className = {click ? 'fas fa-times' :'fas fa-bars'}/>
+                        <i className = {click ? 'fas fa-times' : 'fas fa-bars'} />
                       </div>
-                      <ul className = {click ? 'nac-menu active' : 'nav-menu'}>
+                      <ul className = {click ? 'nav-menu active' : 'nav-menu'}>
                         
                         <li className = 'nav-item'>
                           <NavLink exact 
-                            activeClassName = 'nav-links' 
+                            className = 'nav-links' 
                             to = "/" 
                             onClick = {closeMobileMenu}
                             >
@@ -61,23 +61,19 @@ function Navbar() {
                         
                         <li className = 'nav-item'>
                           <NavLink exact
-                            className='nav-links-mobile'
-                            to='/form'
+                            className='nav-links'
+                            to="/form"
                             onClick={closeMobileMenu}
                           >
-                            Sign Up <i className='fas fa-caret-down'/>
+                            Sign Up 
                           </NavLink>
                           {dropdown && <Dropdown />}
                         </li>
 
                       </ul>
-                      <Button />
+                   
                     </nav>
-                  </>
-
-                  <NavLink exact activeClassName="active-link" to="/form"> Sign Up </NavLink>
-                  <NavLink exact activeClassName="active-link" to="/"> Main Page </NavLink>
-                  
+                  </>      
             
                   <Switch>
                     <Route exact path='/form' component={Form} />

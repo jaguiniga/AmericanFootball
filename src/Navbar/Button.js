@@ -4,7 +4,7 @@ import {Route, Switch, NavLink} from "react-router-dom";
 
 export function Button (){
     return(
-        <NavLink to='sign-up'>
+        <NavLink to='/form'>
             <button className='btn'> Sign Up</button>
         </NavLink>
     );
