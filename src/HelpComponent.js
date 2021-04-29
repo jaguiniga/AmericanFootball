@@ -12,7 +12,7 @@ const Help= () => {
       <img src = {Logo}  alt =""/>
       <p>What do you need help with?</p>
 
-
+      <img src = {Logo}  alt =""/>
 
       <p>General</p>
       <p><NavLink exact activeClassName="active-link" to="/termsrules"> 1. Terms of Service - Conditions; Conduct; Liability; Trademarks and more. 
