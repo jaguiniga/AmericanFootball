@@ -42,6 +42,7 @@
   10. Postman (Test REST API)
   11. Wireshark (Network Protocol Analyzer)
   12. Bootstrap 4
+  13. Font Awesome
 
 - **Site Design**
 
