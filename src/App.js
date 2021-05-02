@@ -6,6 +6,7 @@ import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
 import Login from "./components/LoginComponent";
 import Footer from "./FooterComponent";
+import "bootstrap/dist/css/bootstrap.css";
 
 class MainPage extends Component {
   render() {
