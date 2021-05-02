@@ -22,16 +22,13 @@
 
 #loginForm {
   background-color: #14ff3b;
-  border-width: 1px;
-  width: 100%;
+  width: 275px;
 }
 
 .input-btn2 {
-  width: 100%;
+  width: 100px;
   height: 30px;
-
   outline: 0;
-
   border: 2px solid rgb(179, 255, 0);
   border-bottom: 2px solid rgb(89, 0, 255);
   font-size: 15px;

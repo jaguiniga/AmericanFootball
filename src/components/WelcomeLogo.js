@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Logo from "../images/welcomeLogo.png";
+import "../css/WelcomeLogo.css";
 
 function WelcomeLogo() {
   return (

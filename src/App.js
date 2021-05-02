@@ -1,13 +1,13 @@
 import React from "react";
+import { Component } from "react";
 import NavBar from "./Navbar/NavBarComponent";
 import "./App.css";
 import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
 import Login from "./components/LoginComponent";
 import Footer from "./FooterComponent";
-import { Route, Switch, NavLink } from "react-router-dom";
 
-class MainPage extends React.Component {
+class MainPage extends Component {
   render() {
     return (
       <div id="main-page-body">

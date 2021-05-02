@@ -51,12 +51,14 @@
 .boxLeft {
   height: 200px;
   width: 275px;
+  margin: 5px;
   border-radius: 15px;
   background-color: white;
 }
 .boxRight {
   height: 200px;
   width: 275px;
+  margin: 5px;
   border-radius: 15px;
   background-color: white;
 }
@@ -64,6 +66,7 @@
 .boxMain {
   height: 400px;
   width: 670px;
+  margin: 5px;
   border-radius: 15px;
   background-color: white;
 }
