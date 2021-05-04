@@ -77,7 +77,7 @@ function Navbar() {
 
       <Switch>
         <Route exact path="/form" component={Form} />
-        <Route exact path="/" component={App} />
+        <Route exact path="/app" component={App} />
         <Route exact path="/about" component={About} />
         <Route exact path="/privacy" component={Privacy} />
         <Route exact path="/help" component={Help} />

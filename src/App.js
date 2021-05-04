@@ -8,31 +8,29 @@ import Login from "./components/LoginComponent";
 import Footer from "./FooterComponent";
 import "bootstrap/dist/css/bootstrap.css";
 
-class MainPage extends Component {
-  render() {
-    return (
-      <div id="main-page-body">
-        <div id="main-header-scoreboard">
-          <CarouselSlider />
-        </div>
-        <div id="main-page-nav">
-          <NavBar />
-        </div>
-        <div id="main-page-wrapper">
-          <div className="boxLeft">
-            <Login />
-          </div>
-          <div className="boxMain">
-            <WelcomeLogo />
-          </div>
-          <div className="boxRight">Right box</div>
-        </div>
-        <div id="main-footer">
-          <Footer />
-        </div>
+function MainPage() {
+  return (
+    <div id="main-page-body">
+      <div id="main-header-scoreboard">
+        <CarouselSlider />
       </div>
-    );
-  }
+      <div id="main-page-nav">
+        <NavBar />
+      </div>
+      <div id="main-page-wrapper">
+        <div className="boxLeft">
+          <Login />
+        </div>
+        <div className="boxMain">
+          <WelcomeLogo />
+        </div>
+        <div className="boxRight">Right box</div>
+      </div>
+      <div id="main-footer">
+        <Footer />
+      </div>
+    </div>
+  );
 }
 
 export default MainPage;
