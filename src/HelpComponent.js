@@ -11,8 +11,10 @@ const Help= () => {
       <h2>Last Modified 04/14/2021</h2>
       <img src = {Logo}  alt =""/>
       <p>What do you need help with?</p>
+      
 
       <p>General</p>
+      
       <p><NavLink exact activeClassName="active-link" to="/termsrules"> 1. Terms of Service - Conditions; Conduct; Liability; Trademarks and more. 
       </NavLink>
       </p>

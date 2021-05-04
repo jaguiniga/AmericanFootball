@@ -7,7 +7,7 @@ import Privacy from '../PrivacyComponent';
 import Help from '../HelpComponent';
 import TermsRules from '../TermsRulesComponent';
 import HouseRules from '../HouseRulesComponent';
-import Password from '../PasswordComponent';
+import Password from "../PasswordComponent";
 import { Button } from './Button';
 import Dropdown from './Dropdown';
 import './NavBar.css';
@@ -84,7 +84,6 @@ function Navbar() {
                     <Route exact path='/termsrules' component={TermsRules} />
                     <Route exact path='/houserules' component={HouseRules} />
                     <Route exact path='/password' component={Password} />
-                    <Route exact path='/headlines' component={Headlines} />
                     <Route render={() => <h1>ERROR NOT FOUND</h1>} />
                   </Switch>
             
