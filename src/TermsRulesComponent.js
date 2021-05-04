@@ -6,7 +6,7 @@ import Logo from './images/s.png';
 
 const Termsrules= () => {
   return (
-    <div className='pages'>
+     <div className='pages'>
     <section >
       <h1>TERMS OF SERVICE/RULES</h1>
       <h2>Last Modified 04/14/2021</h2>
