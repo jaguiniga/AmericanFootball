@@ -4,7 +4,7 @@ import NavBar from "./Navbar/NavBarComponent";
 import "./App.css";
 import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
-import Login from "./components/LoginComponent";
+import LoginComponent from "./components/LoginComponent";
 import Footer from "./FooterComponent";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -19,7 +19,7 @@ function MainPage() {
       </div>
       <div id="main-page-wrapper">
         <div className="boxLeft">
-          <Login />
+          <LoginComponent />
         </div>
         <div className="boxMain">
           <WelcomeLogo />

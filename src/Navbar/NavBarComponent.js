@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Route, Switch, NavLink } from "react-router-dom";
 import Form from "../FormComponent";
 import App from "../App";
+import FirstPage from "../FirstPage";
 import About from "../AboutComponent";
 import Privacy from "../PrivacyComponent";
 import Help from "../HelpComponent";
@@ -42,7 +43,7 @@ function Navbar() {
           <NavLink
             exact
             activeClassName="active-link"
-            to="/"
+            to="/firstpage"
             className="navbar-logo">
             American Football
             <i class="fas fa-football-ball fa-fw" />
@@ -79,6 +80,7 @@ function Navbar() {
       <Switch>
         <Route exact path="/form" component={Form} />
         <Route exact path="/app" component={App} />
+        <Route exact path="/firstpage" component={FirstPage} />
         <Route exact path="/about" component={About} />
         <Route exact path="/privacy" component={Privacy} />
         <Route exact path="/help" component={Help} />
