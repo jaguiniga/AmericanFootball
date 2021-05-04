@@ -11,6 +11,7 @@ import Password from "../PasswordComponent";
 import { Button } from "./Button";
 import Dropdown from "./Dropdown";
 import "./NavBar.css";
+import Headlines from "../HeadlinesComponent";
 
 function Navbar() {
   const [click, setClick] = useState(false);

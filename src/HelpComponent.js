@@ -13,8 +13,6 @@ const Help= () => {
       <p>What do you need help with?</p>
       
 
-
-
       <p>General</p>
       
       <p><NavLink exact activeClassName="active-link" to="/termsrules"> 1. Terms of Service - Conditions; Conduct; Liability; Trademarks and more. 
