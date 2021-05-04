@@ -11,7 +11,7 @@ import Password from '../PasswordComponent';
 import { Button } from './Button';
 import Dropdown from './Dropdown';
 import './NavBar.css';
-
+import Headlines from '../HeadlinesComponent';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -84,6 +84,7 @@ function Navbar() {
                     <Route exact path='/termsrules' component={TermsRules} />
                     <Route exact path='/houserules' component={HouseRules} />
                     <Route exact path='/password' component={Password} />
+                    <Route exact path='/headlines' component={Headlines} />
                     <Route render={() => <h1>ERROR NOT FOUND</h1>} />
                   </Switch>
             
