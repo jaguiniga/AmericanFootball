@@ -18,13 +18,23 @@ function MainPage() {
         <NavBar />
       </div>
       <div id="main-page-wrapper">
-        <div className="boxLeft">
+        <div className="column_left">
           <LoginComponent />
         </div>
-        <div className="boxMain">
-          <WelcomeLogo />
+        <div className="column_center">
+          <p>
+            center sdgsdgsdgfsdgsdgdsfgdfgdgfdgdsgdsfgdsg sfsfasfafas
+            dfsafasfasfasf asdfsafasfasdfas sdfasfasdfasdf sadfasfasdfsafsa
+            asdfasdfasfas asdfasfasdfas asdasfasdfsadf asdfasdfasf sadfsafsafdas
+            center
+          </p>
         </div>
-        <div className="boxRight">Right box</div>
+        <div className="column_right">
+          <p>
+            Right dgsdfgsdgsdgdsfgdfsgsdfgdfgdgdfgdgddfgds fsdgdfgfd dgsddsg
+            dfdsgdf this
+          </p>
+        </div>
       </div>
       <div id="main-footer">
         <Footer />

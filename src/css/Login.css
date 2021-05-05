@@ -1,19 +1,20 @@
 :root {
-  --input-padding-x: 0.5rem;
-  --input-padding-y: 0.75rem;
+  --input-padding-x: .5rem;
+  --input-padding-y: .75rem;
 }
 
 .Body {
-  background: black;
+  background: #F9F9F9;
   width: 880px;
   text-align: center;
   margin: auto;
 }
 
 .active-link {
-  color: rgb(94, 255, 0);
-  border-bottom: 1px solid white;
-}
+  color:rgb(94, 255, 0);
+  border-bottom:1px solid white;
+  
+} 
 /* .container{
   
     margin-right: 100.5%;
@@ -37,13 +38,13 @@
   border: 0;
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-  width: 100%;
+   width: 100%;  
   /* margin-left: 50%; */
-  padding: 10px;
+  padding: 10px; 
   margin-right: 200%;
-  background-color: blue;
+  background-color: blue; 
   float: right;
-  height: 580px;
+  height: 580px; 
   text-align: left;
   margin-top: -40em;
   position: relative;
@@ -64,38 +65,43 @@
   width: 100%;
   /* margin: 50px; */
   margin-right: 50px;
+  
 }
 
 .form-signin {
   width: 100%;
-  float: left;
+  float:left;
 }
 
 .form-signin .btn {
   font-size: 80%;
   border-radius: 5rem;
-  letter-spacing: 0.1rem;
+   letter-spacing: .1rem; 
   font-weight: bold;
   padding: 1rem;
   transition: all 0.2s;
+  
 }
 
 .form-label-group {
   position: relative;
   margin-bottom: 1rem;
+  
 }
 
 .form-label-group input {
   height: auto;
   border-radius: 2rem;
+  
 }
 
-.form-label-group > input,
-.form-label-group > label {
+.form-label-group>input,
+.form-label-group>label {
   padding: var(--input-padding-y) var(--input-padding-x);
+  
 }
 
-.form-label-group > label {
+.form-label-group>label {
   position: absolute;
   top: 0;
   left: 0;
@@ -106,8 +112,8 @@
   line-height: 1.5;
   color: #495057;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
-  transition: all 0.1s ease-in-out;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
 }
 
 .form-label-group input::-webkit-input-placeholder {
@@ -135,7 +141,7 @@
   padding-bottom: calc(var(--input-padding-y) / 3);
 }
 
-.form-label-group input:not(:placeholder-shown) ~ label {
+.form-label-group input:not(:placeholder-shown)~label {
   padding-top: calc(var(--input-padding-y) / 3);
   padding-bottom: calc(var(--input-padding-y) / 3);
   font-size: 12px;
@@ -156,7 +162,7 @@
 -------------------------------------------------- */
 
 @supports (-ms-ime-align: auto) {
-  .form-label-group > label {
+  .form-label-group>label {
     display: none;
   }
   .form-label-group input::-ms-input-placeholder {
@@ -167,8 +173,9 @@
 /* Fallback for IE
 -------------------------------------------------- */
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .form-label-group > label {
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  .form-label-group>label {
     display: none;
   }
   .form-label-group input:-ms-input-placeholder {
