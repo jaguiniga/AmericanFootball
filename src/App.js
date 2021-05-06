@@ -8,7 +8,7 @@ import Footer from "./FooterComponent";
 import Headlines from "./components/HeadlinesComponent";
 import "bootstrap/dist/css/bootstrap.css";
 
-function MainPage() {
+function App() {
   return (
     <div id="main-page-body">
       <div id="main-header-scoreboard">
@@ -43,4 +43,4 @@ function MainPage() {
   );
 }
 
-export default MainPage;
+export default App;
