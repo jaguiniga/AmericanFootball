@@ -26,7 +26,6 @@ function MainPage() {
             center sdgsdgsdgfsdgsdgdsfgdfgdgfdgdsgdsfgdsg sfsfasfafas
             dfsafasfasfasf asdfsafasfasdfas sdfasfasdfasdf sadfasfasdfsafsa
             asdfasdfasfas asdfasfasdfas asdasfasdfsadf asdfasdfasf sadfsafsafdas
-            center
           </p>
         </div>
         <div className="column_right">
