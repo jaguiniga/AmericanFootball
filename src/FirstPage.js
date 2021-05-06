@@ -1,6 +1,6 @@
 import {Component} from "react";
 import './Login.css';
-// import './Headlines.css';
+import './Headlines.css';
 import Logo from './images/s.png';
 import Footer from './FooterComponent';
 import Login from './LoginComponent';

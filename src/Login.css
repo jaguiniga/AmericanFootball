@@ -15,7 +15,7 @@
   border-bottom:1px solid white;
   
 } 
-/* .container{
+/*  .container{
   
     margin-right: 100.5%;
     width: 40%; 
@@ -30,26 +30,27 @@
     text-align: left;
     float: right;
     height: 580px; 
-  } 
+  }  */
 
- */
+ 
 
 .card-signin {
   border: 0;
   border-radius: 1rem;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-   width: 100%;  
+  width: 100%;  
   /* margin-left: 50%; */
   padding: 10px; 
   margin-right: 200%;
-  background-color: blue; 
+  background-color: gray; 
   float: right;
-  height: 580px; 
+  height: 600px; 
   text-align: left;
-  margin-top: -40em;
+  margin-top: -83em;
   position: relative;
   border: 3px solid black;
-  margin-top: -40em;
+  
+  
 }
 
 .card-signin .card-title {
@@ -161,14 +162,14 @@
 /* Fallback for Edge
 -------------------------------------------------- */
 
-@supports (-ms-ime-align: auto) {
+ @supports (-ms-ime-align: auto) {
   .form-label-group>label {
     display: none;
   }
   .form-label-group input::-ms-input-placeholder {
     color: #777;
   }
-}
+ } 
 
 /* Fallback for IE
 -------------------------------------------------- */

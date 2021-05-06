@@ -1,8 +1,9 @@
 import React from "react";
 import { NavLink} from "react-router-dom";
+import './Headlines.css';
 const Headlines = () => {
   return (
-    <section >
+    <section>
       <div className="headlines"> 
         <h1 ><strong>Top Headlines</strong></h1>
         
@@ -17,8 +18,6 @@ const Headlines = () => {
       </p>
 
     </div>
-      <div >
-      </div>
     </section>
 
   );
