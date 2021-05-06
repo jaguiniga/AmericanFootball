@@ -38,6 +38,7 @@
 
 .column_left {
   background-color: blue;
+  padding: 0.5em;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -46,14 +47,18 @@
 .column_right {
   background-color: rebeccapurple;
   display: flex;
+  padding: 0.5em;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   flex: 1;
 }
 
 .column_center {
   background-color: aqua;
   width: 650px;
-  flex: 0;
+  padding: 0.5em;
+  /* flex: 0; */
 }
 
 /*Need to reveiw the folloing styling classes*/

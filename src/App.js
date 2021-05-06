@@ -2,10 +2,12 @@ import React from "react";
 import { Component } from "react";
 import NavBar from "./Navbar/NavBarComponent";
 import "./App.css";
+
 import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
 import LoginComponent from "./components/LoginComponent";
 import Footer from "./FooterComponent";
+import Headlines from "./components/HeadlinesComponent";
 import "bootstrap/dist/css/bootstrap.css";
 
 function MainPage() {
@@ -19,20 +21,14 @@ function MainPage() {
       </div>
       <div id="main-page-wrapper">
         <div className="column_left">
-          <LoginComponent />
+          <Headlines />
         </div>
         <div className="column_center">
-          <p>
-            center sdgsdgsdgfsdgsdgdsfgdfgdgfdgdsgdsfgdsg sfsfasfafas
-            dfsafasfasfasf asdfsafasfasdfas sdfasfasdfasdf sadfasfasdfsafsa
-            asdfasdfasfas asdfasfasdfas asdasfasdfsadf asdfasdfasf sadfsafsafdas
-          </p>
+          <WelcomeLogo />
         </div>
         <div className="column_right">
-          <p>
-            Right dgsdfgsdgsdgdsfgdfsgsdfgdfgdgdfgdgddfgds fsdgdfgfd dgsddsg
-            dfdsgdf this
-          </p>
+          <Headlines />
+          <Headlines />
         </div>
       </div>
       <div id="main-footer">
