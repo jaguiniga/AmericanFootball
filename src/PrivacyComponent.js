@@ -1,13 +1,14 @@
 import React from "react";
 import Footer from './FooterComponent';
 import './Footer.css'
-
+import Logo from './images/s.png';
 const Privacy= () => {
   return (
     <div className='pages'>
     <section >
       <h1>Privacy Policy</h1>
       <h2>Last Modified 04/14/2021</h2>
+      <img src = {Logo}  alt =""/>
       <h3>SCOPE OF THIS POLICY</h3>
       <p>This privacy policy describes the processing of information provided or collected on the sites and applications where this privacy policy is posted, 
          whether on our digital properties or on applications we make available on third-party sites or platforms. 

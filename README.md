@@ -42,6 +42,7 @@
   10. Postman (Test REST API)
   11. Wireshark (Network Protocol Analyzer)
   12. Bootstrap 4
+  13. Font Awesome
 
 - **Site Design**
 
@@ -79,6 +80,13 @@
       - npm install react-bootstrap
       - In order to ensure that React Bootstrap is working smoothly and perfectly, you must install Bootstrap too. Use the following code to install Bootstrap.
       - npm install bootstrap
+- **Font Awesome**
+  - Free library for styles, icons and fonts to be used in the application
+  - https://fontawesome.com/
+  - Register for a free account and recieve a link as a kit code for the library
+  - copy kit code link and paste in react application src folder index.html inside the <head> tags 
+  - run the code npm install in a terminal 
+  - use the tutorials on how to use the library from the website link 
 - **React Router DOM**
   - ref: https://www.npmjs.com/package/react-router-dom
   - npm install --save react-router-dom

@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from './FooterComponent';
-import './Footer.css'
-
+import './Footer.css';
+import Logo from './images/s.png';
 
 const About = () => {
   return (
@@ -9,6 +9,7 @@ const About = () => {
     <section >
       <div className="about-h1"> 
         <h1 >About PJ'S</h1>
+        <img src = {Logo}  alt =""/>
       <p>For 4 years, we have been in shcool learing Web Development and Application Development. The three of us decided that we wanted to create 
         something fun that the public could interact with.  Ah yes,  we came up with the idea to 
         build a social media blog that would be fun for everyone. On this site you are

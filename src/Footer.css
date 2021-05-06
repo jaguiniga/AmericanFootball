@@ -5,22 +5,16 @@
   text-align: center;
 }
 
-.pages{
-  text-align: center;
-  width: 880px;
-  margin: auto;
-
-}
 .ft-text {
   font-weight: bolder;
-  font-size: 1vh; 
-  line-height: 110%; 
+  font-size: 1vh;
+  line-height: 110%;
   font-family: "sans-serif";
   padding-left: 5px;
 }
 .ft-text li {
   font-size: 5.5vh;
-  font-family:  "sans-serif";
+  font-family: "sans-serif";
 }
 .col {
   margin-left: 15%;
@@ -29,7 +23,7 @@
 .ft-link {
   text-align: center;
   font-size: 1.25vh;
-  font-family:  "sans-serif";
+  font-family: "sans-serif";
   text-decoration: none;
   color: #222831;
   cursor: pointer;
@@ -40,21 +34,12 @@
   font-weight: 300;
   text-decoration: none;
   color: #222831;
-  font-family:   "sans-serif";
+  font-family: "sans-serif";
   background-color: white;
-  
 }
-.col-lg{
-  margin-left: 30%;
+.col-lg {
+  margin-left: 10%;
   margin-right: 10%;
   color: skyblue;
   font-weight: 500;
 }
-
-/* .about-h1{
-  margin-left: 10%;
-  margin-right: 10%;
-  color: black;
-  font-weight: 500;
-}
- */

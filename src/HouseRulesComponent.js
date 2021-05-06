@@ -1,8 +1,8 @@
 import React from "react";
 import Footer from './FooterComponent';
-import './Footer.css'
+import './Footer.css';
 import { NavLink} from "react-router-dom";
-
+import Logo from './images/s.png';
 
 
 
@@ -12,7 +12,8 @@ const HouseRules = () => {
     <section >
       <div className="house-rules"> 
         <h1 >PJ'S.com House Rules</h1>
-      <p>Welcome to ESPN.com. While we set the standards for what is acceptable here, 
+        <img src = {Logo}  alt =""/>
+      <p>Welcome to PJ'S.com. While we set the standards for what is acceptable here, 
         we must all take responsibility for the quality of our experience. In this spirit, 
         we have drawn up some rules to help everyone understand what is acceptable and what is not acceptable on PJ'S.com. We are obligated to have our lawyers 
         put the house rules in legal terms, but they provide the same end - to make PJ'S.com a quality environment for all of our members. PJ's.com is a 
