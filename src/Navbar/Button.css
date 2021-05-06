@@ -10,7 +10,7 @@
   font-size: 18px;
   color: #fff;
   cursor: pointer;
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
 }
 
 .btn:hover {
