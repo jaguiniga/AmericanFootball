@@ -1,18 +1,8 @@
 import React, { useState } from "react";
-import { Route, Switch, NavLink } from "react-router-dom";
-import Form from "../FormComponent";
-import App from "../App";
-import FirstPage from "../FirstPage";
-import About from "../AboutComponent";
-import Privacy from "../PrivacyComponent";
-import Help from "../HelpComponent";
-import TermsRules from "../TermsRulesComponent";
-import HouseRules from "../HouseRulesComponent";
-import Password from "../PasswordComponent";
-import { Button } from "./Button";
+import { NavLink } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import "./NavBar.css";
-import Headlines from "../HeadlinesComponent";
+// import Headlines from "../HeadlinesComponent";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -76,19 +66,6 @@ function Navbar() {
           </ul>
         </nav>
       </>
-
-      <Switch>
-        <Route exact path="/form" component={Form} />
-        <Route exact path="/app" component={App} />
-        <Route exact path="/firstpage" component={FirstPage} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/privacy" component={Privacy} />
-        <Route exact path="/help" component={Help} />
-        <Route exact path="/termsrules" component={TermsRules} />
-        <Route exact path="/houserules" component={HouseRules} />
-        <Route exact path="/password" component={Password} />
-        {/* <Route render={() => <h1>ERROR NOT FOUND</h1>} /> */}
-      </Switch>
     </div>
   );
 }
