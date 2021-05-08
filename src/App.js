@@ -3,7 +3,6 @@ import NavBar from "./Navbar/NavBarComponent";
 import "./App.css";
 import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
-import LoginComponent from "./components/LoginComponent";
 import Footer from "./FooterComponent";
 import Headlines from "./components/HeadlinesComponent";
 import "bootstrap/dist/css/bootstrap.css";
