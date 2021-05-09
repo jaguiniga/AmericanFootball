@@ -10,6 +10,7 @@ import Help from "./HelpComponent";
 import TermsRules from "./TermsRulesComponent";
 import HouseRules from "./HouseRulesComponent";
 import Password from "./PasswordComponent";
+import PageNotFound404 from "./components/PageNotFound404";
 
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
@@ -28,6 +29,7 @@ const routing = (
         <Route path="/termsrules" component={TermsRules} />
         <Route path="/houserules" component={HouseRules} />
         <Route path="/password" component={Password} />
+        <Route path="*" component={PageNotFound404} />
       </Switch>
     </React.StrictMode>
   </Router>
