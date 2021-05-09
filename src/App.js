@@ -1,10 +1,10 @@
 import React from "react";
 import NavBar from "./Navbar/NavBarComponent";
-import "./App.css";
 import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
 import Footer from "./FooterComponent";
 import Headlines from "./components/HeadlinesComponent";
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 function App() {

@@ -1,21 +1,39 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import Form from "./FormComponent";
 import FirstPage from "./FirstPage";
+import About from "./AboutComponent";
+import Privacy from "./PrivacyComponent";
+import Help from "./HelpComponent";
+import TermsRules from "./TermsRulesComponent";
+import HouseRules from "./HouseRulesComponent";
+import Password from "./PasswordComponent";
+
+import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 const routing = (
   <Router>
-    <Switch>
-      <Route exact path="/" component={App} />
-      <Route exact path="/form" component={Form} />
-      <Route exact path="/firstpage" component={FirstPage} />
-    </Switch>
+    <React.StrictMode>
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route path="/jaguiniga/AmericanFootball.git" component={App} />
+        <Route path="/form" component={Form} />
+        <Route path="/firstpage" component={FirstPage} />
+        <Route path="/about" component={About} />
+        <Route path="/privacy" component={Privacy} />
+        <Route path="/help" component={Help} />
+        <Route path="/termsrules" component={TermsRules} />
+        <Route path="/houserules" component={HouseRules} />
+        <Route path="/password" component={Password} />
+      </Switch>
+    </React.StrictMode>
   </Router>
 );
+
+console.log(routing);
 
 ReactDOM.render(routing, document.getElementById("root"));
 
