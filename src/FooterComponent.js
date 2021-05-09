@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { NavLink} from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
+import "./Footer.css";
 
 export default class Footer extends Component {
   render() {
@@ -13,8 +13,10 @@ export default class Footer extends Component {
               <div className="ft-text">
                 <li>
                   <a href="url" className="ft-link">
-                  <NavLink exact activeClassName="active-link" to="/about"> ABOUT </NavLink>
-                    
+                    <NavLink exact activeClassName="active-link" to="/about">
+                      {" "}
+                      ABOUT{" "}
+                    </NavLink>
                   </a>
                 </li>
               </div>
@@ -27,7 +29,10 @@ export default class Footer extends Component {
                 {" "}
                 <li>
                   <a href="url" className="ft-link">
-                  <NavLink exact activeClassName="active-link" to="/help"> HELP CENTER </NavLink>
+                    <NavLink exact activeClassName="active-link" to="/help">
+                      {" "}
+                      HELP CENTER{" "}
+                    </NavLink>
                   </a>
                 </li>
               </div>
@@ -39,7 +44,13 @@ export default class Footer extends Component {
                 {" "}
                 <li>
                   <a href="url" className="ft-link">
-                  <NavLink exact activeClassName="active-link" to="/termsrules"> TERMS OF SERVICE/RULES </NavLink>
+                    <NavLink
+                      exact
+                      activeClassName="active-link"
+                      to="/termsrules">
+                      {" "}
+                      TERMS OF SERVICE/RULES{" "}
+                    </NavLink>
                   </a>
                 </li>
               </div>
@@ -51,7 +62,9 @@ export default class Footer extends Component {
                 {" "}
                 <li>
                   <a href="url" className="ft-link">
-                  <NavLink exact activeClassName="active-link" to="/privacy">PRIVACY POLICY </NavLink>
+                    <NavLink exact activeClassName="active-link" to="/privacy">
+                      PRIVACY POLICY{" "}
+                    </NavLink>
                   </a>
                 </li>
               </div>
@@ -63,7 +76,6 @@ export default class Footer extends Component {
           <p className="col-lg">
             © 2021 All Rights Reserved ~ Authored by PJ'S
           </p>
-         
         </div>
       </div>
     );

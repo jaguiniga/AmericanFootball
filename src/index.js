@@ -1,18 +1,41 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import Form from "./FormComponent";
+import FirstPage from "./FirstPage";
+import About from "./AboutComponent";
+import Privacy from "./PrivacyComponent";
+import Help from "./HelpComponent";
+import TermsRules from "./TermsRulesComponent";
+import HouseRules from "./HouseRulesComponent";
+import Password from "./PasswordComponent";
 
-ReactDOM.render(
-  <BrowserRouter>
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+
+const routing = (
+  <Router>
     <React.StrictMode>
-      <App />
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route path="/jaguiniga/AmericanFootball.git" component={App} />
+        <Route path="/form" component={Form} />
+        <Route path="/firstpage" component={FirstPage} />
+        <Route path="/about" component={About} />
+        <Route path="/privacy" component={Privacy} />
+        <Route path="/help" component={Help} />
+        <Route path="/termsrules" component={TermsRules} />
+        <Route path="/houserules" component={HouseRules} />
+        <Route path="/password" component={Password} />
+      </Switch>
     </React.StrictMode>
-  </BrowserRouter>,
-  document.getElementById("root")
+  </Router>
 );
+
+console.log(routing);
+
+ReactDOM.render(routing, document.getElementById("root"));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

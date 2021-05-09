@@ -5,7 +5,7 @@ import "../css/Headlines.css";
 const Headlines = () => {
   return (
     <section>
-      <div className="headlines">
+      <div className="main-headlines">
         <h1>
           <strong>Top Headlines</strong>
         </h1>
