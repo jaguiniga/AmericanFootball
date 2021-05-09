@@ -7,10 +7,13 @@ import LoginComponent from "./components/LoginComponent";
 import Footer from "./FooterComponent";
 import Headlines from "./components/HeadlinesComponent";
 import "bootstrap/dist/css/bootstrap.css";
+import { AuthProvider } from './auth/Auth';
+
 
 function App() {
   return (
     <div id="main-page-body">
+       <AuthProvider>
       <div id="main-header-scoreboard">
         <CarouselSlider />
       </div>
@@ -39,6 +42,7 @@ function App() {
       <div id="main-footer">
         <Footer />
       </div>
+      </AuthProvider>
     </div>
   );
 }
