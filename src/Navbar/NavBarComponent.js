@@ -27,44 +27,42 @@ function Navbar() {
   };
   return (
     <div>
-      <>
-        <nav className="navbar">
-          <NavLink
-            exact
-            activeClassName="active-link"
-            to="/firstpage"
-            className="navbar-logo">
-            American Football
-            <i class="fas fa-football-ball fa-fw" />
-          </NavLink>
+      <nav className="navbar">
+        <NavLink
+          exact
+          activeClassName="active-link"
+          to="/firstpage"
+          className="navbar-logo">
+          American Football
+          <i class="fas fa-football-ball fa-fw" />
+        </NavLink>
 
-          <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"} />
-          </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <NavLink
-                exact
-                className="nav-links"
-                to="/"
-                onClick={closeMobileMenu}>
-                Home
-              </NavLink>
-            </li>
+        <div className="menu-icon" onClick={handleClick}>
+          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+        </div>
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li className="nav-item">
+            <NavLink
+              exact
+              className="nav-links"
+              to="/"
+              onClick={closeMobileMenu}>
+              Home
+            </NavLink>
+          </li>
 
-            <li className="nav-item">
-              <NavLink
-                exact
-                className="nav-links"
-                to="/form"
-                onClick={closeMobileMenu}>
-                Sign Up
-              </NavLink>
-              {dropdown && <Dropdown />}
-            </li>
-          </ul>
-        </nav>
-      </>
+          <li className="nav-item">
+            <NavLink
+              exact
+              className="nav-links"
+              to="/form"
+              onClick={closeMobileMenu}>
+              Sign Up
+            </NavLink>
+            {dropdown && <Dropdown />}
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }
