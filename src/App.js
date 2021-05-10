@@ -5,7 +5,6 @@ import WelcomeLogo from "./components/WelcomeLogo";
 import Footer from "./FooterComponent";
 import Headlines from "./components/HeadlinesComponent";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
