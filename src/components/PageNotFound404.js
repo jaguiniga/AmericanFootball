@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import NavBar from "../Navbar/NavBarComponent";
+import NavBar from "./Navbar/NavBarComponent";
 import CarouselSlider from "./CarouselSlider";
 import Footer from "../FooterComponent";
 import "../App.css";
