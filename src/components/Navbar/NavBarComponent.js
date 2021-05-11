@@ -28,10 +28,10 @@ function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-md bg-dark navbar-dark">
-        <a className="navbar-brand navbar-logo" href="/">
+        {/* <a className="navbar-brand" href="/">
           American Football
           <i className="fas fa-football-ball fa-fw" />
-        </a>
+        </a> */}
         <div className="ml-auto">
           <button
             className="navbar-toggler"
