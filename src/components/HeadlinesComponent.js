@@ -7,7 +7,7 @@ const Headlines = () => {
     <section>
       <div className="headlines">
         <h1>
-          <strong>Top Headlines</strong>
+          <bold>Top Headlines</bold>
         </h1>
 
         <p>
