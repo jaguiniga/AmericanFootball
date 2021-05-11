@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import Dropdown from "./Dropdown";
+// import { NavLink } from "react-router-dom";
+// import Dropdown from "./Dropdown";
 import "../../css/NavBar.css";
 
 function Navbar() {
