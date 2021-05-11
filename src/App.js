@@ -1,13 +1,10 @@
 import React from "react";
-import NavBar from "./Navbar/NavBarComponent";
-import "./App.css";
-import "./css/Login.css";
+import NavBar from "./components/Navbar/NavBarComponent";
 import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
-import Login from "./components/LoginComponent";
 import Footer from "./FooterComponent";
 import Headlines from "./components/HeadlinesComponent";
-import "bootstrap/dist/css/bootstrap.css";
+import "./App.css";
 
 function App() {
   return (
