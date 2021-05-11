@@ -5,7 +5,7 @@ import Logo from "./images/s.png";
 import Footer from "./FooterComponent";
 import Login from "./LoginComponent";
 import Headlines from "./HeadlinesComponent";
-import NavBar from "./Navbar/NavBarComponent";
+import NavBar from "./components/Navbar/NavBarComponent";
 
 class FirstPage extends Component {
   render() {

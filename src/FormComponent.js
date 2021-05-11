@@ -1,7 +1,7 @@
 import { Component } from "react";
 import "./App.css";
 import catchingfootball from "./images/catchingfootball.jpg";
-import NavBar from "./Navbar/NavBarComponent";
+import NavBar from "./components/Navbar/NavBarComponent";
 import Footer from "./FooterComponent";
 
 import { NavLink } from "react-router-dom";

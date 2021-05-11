@@ -11,8 +11,11 @@ import TermsRules from "./TermsRulesComponent";
 import HouseRules from "./HouseRulesComponent";
 import Password from "./PasswordComponent";
 import PageNotFound404 from "./components/PageNotFound404";
-
 import "./index.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+
 import reportWebVitals from "./reportWebVitals";
 
 const routing = (
