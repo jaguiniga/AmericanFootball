@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import ScoreCard from "./ScoreCard";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const ControlledCarousel = (props) => {
@@ -12,7 +13,10 @@ const ControlledCarousel = (props) => {
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
-        1st ScoreCard Component goes here
+        <div className="align-self-end">
+          <ScoreCard />
+          <ScoreCard />
+        </div>
         <Carousel.Caption>
           <h3>First slide label</h3>
         </Carousel.Caption>
