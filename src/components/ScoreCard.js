@@ -8,13 +8,11 @@ function ScoreCard() {
     <div className="container">
       <div className="row">
         <div className="col-sm-4 col-sm-4">
-          <div className="card">
+          <div className="card" style={{ width: "150px", height: "60px" }}>
             <div className="card-body">
-              <h4 className="card-title">Why you should use skin masks ?</h4>
-              <p className="card-text">
-                Skin masks help us to make are skin fresh and also they protect
-                our skin from the harm rays of sun
-              </p>
+              <h6 className="card-title">score</h6>
+              <p className="card-text">Team 1</p>
+              <p className="card-text">Team 2</p>
               <button type="button" className="btn btn-warning">
                 Read More
               </button>

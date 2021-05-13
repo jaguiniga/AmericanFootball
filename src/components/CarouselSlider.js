@@ -13,7 +13,8 @@ const ControlledCarousel = (props) => {
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
-        <div className="align-self-end">
+        <div className="row">
+          <ScoreCard />
           <ScoreCard />
           <ScoreCard />
         </div>
