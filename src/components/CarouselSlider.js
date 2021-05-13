@@ -12,28 +12,24 @@ const ControlledCarousel = (props) => {
 
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item>
-        <div className="row">
-          <ScoreCard />
-          <ScoreCard />
-          <ScoreCard />
-        </div>
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        2nd ScoreCard Component goes here
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        3rd ScoreCard Component goes here
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-        </Carousel.Caption>
-      </Carousel.Item>
+      <div
+        className="align-items-center"
+        style={{
+          display: "flex",
+          jusitfyContent: "space-between",
+          alignItems: "center",
+        }}>
+        <ScoreCard />
+        <ScoreCard />
+        <ScoreCard />
+        <ScoreCard />
+        <ScoreCard />
+        <ScoreCard />
+        <ScoreCard />
+        <ScoreCard />
+        <ScoreCard />
+        <ScoreCard />
+      </div>
     </Carousel>
   );
 };
