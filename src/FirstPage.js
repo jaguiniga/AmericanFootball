@@ -1,9 +1,9 @@
 import {Component} from "react";
-import "./Login.css";
-import "./Headlines.css";
+import "./css/Login.css";
+import "./css/Headlines.css";
 import Logo from "./images/s.png";
 import Footer from "./FooterComponent";
-import Login from "./LoginComponent";
+import Login from "./components/LoginComponent";
 import Headlines from "./HeadlinesComponent";
 import NavBar from "./components/Navbar/NavBarComponent";
 

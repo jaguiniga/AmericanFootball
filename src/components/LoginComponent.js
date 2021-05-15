@@ -24,7 +24,7 @@ class Login extends Component {
             <div >
                
                 <aside className= "form2" onSubmit={this.handleSubmit}>
-               <div className = "Loginwith"> <h1><strong>Sign In</strong></h1></div>
+               <div className = "Loginwith"> <h1><strong>Login</strong></h1></div>
                     <div className= "facebook">
                     {/* <!-- Facebook --> */}
                     <button class="btn btn-sm btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f fa-fw"></i>  Facebook</button>
@@ -33,7 +33,7 @@ class Login extends Component {
                     <button class="btn btn-sm btn-instagram btn-block text-uppercase" type="submit"><i class="fab fa-instagram fa-fw"></i>  Instagram</button>
                     </div>
                     <div className= "google">
-                    <button class="btn btn-sm btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google  fa-fw"></i>  Google</button>
+                    <button class="btn btn-sm btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google fa-fw"></i>  Google</button>
                       </div>
                       <div>
                       <div className= "emailbox">
@@ -67,7 +67,7 @@ class Login extends Component {
                     </p> 
                     </p>
                     <button type="submit"  className= "input-btn2">Submit</button>
-                    <button type="create"  className= "input-btn2">Create Account?</button>
+                    <button type="create"  className= "input-btn2"><NavLink exact activeClassName="active-link" to="/form">Create Account? </NavLink></button>
                     
                 </aside>
         </div>

@@ -4,6 +4,7 @@ import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
 import Footer from "./FooterComponent";
 import Headlines from "./components/HeadlinesComponent";
+import Login from "./components/LoginComponent";
 import "./App.css";
 
 function App() {

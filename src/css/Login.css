@@ -19,6 +19,7 @@
   font-weight: 300;
   font-size: 1.5rem;
   text-align: center;
+ 
 }
 
 
@@ -29,11 +30,11 @@
 }
 
 .form2 {
-  margin-right: 100.5%;
-  width: 90%; 
+  /* margin-right: 99.5%; */
+  width: 100%; 
   padding: 10px; 
   /* margin-top: 40em; */
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   background: gray; 
@@ -44,32 +45,33 @@
   /* height: 280px;  */
 }
 .input-btn2{
-  padding: 2px 40px; 
+  /* padding: 1px 10px; */
   text-align: center;
-  width: fit-content;
+  width: 200px; 
   align-items: flex-start;
   position: relative;
-  margin: 20px;
+  margin: 2px;
   outline: 0;
   display: flex;
   border: 2px solid rgb(179, 255, 0);
   border-bottom: 2px solid rgb(89, 0, 255);
-  font-size: 15px;
+  font-size: 12px;
   overflow: hidden;
   cursor: pointer;
   background: #e6dfdf;
-  /* color: #1613c2; */
+  justify-content: space-evenly;
   font-weight: 500;
   transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
   border-radius: 25px;
+
 }
 .facebook{
-  padding: 2px 40px; 
+  padding: 1px 20px; 
   text-align: center;
-  width: fit-content;
+  width: 200px;
   align-items: flex-start;
   position: relative;
-  margin: 20px;
+  margin: 10px;
   outline: 0;
   display: flex;
   border: 2px solid rgb(89, 0, 255);
@@ -85,12 +87,12 @@
 }
 
 .instagram{
-  padding: 2px 40px; 
+  padding: 1px 20px; 
   text-align: center;
-  width: fit-content;
+  width: 200px;
   align-items: flex-start;
   position: relative;
-  margin: 20px;
+  margin: 10px;
   outline: 0;
   display: flex;
   border: 2px solid rgb(11, 12, 8);
@@ -108,10 +110,10 @@
 .google{
   padding: 2px 40px; 
   text-align: center;
-  width: fit-content;
+  width: 200px;
   align-items: flex-start;
   position: relative;
-  margin: 20px;
+  margin: 10px;
   outline: 0;
   display: flex;
   border: 2px solid rgb(233, 77, 77);
