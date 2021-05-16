@@ -24,14 +24,16 @@ class Login extends Component {
             <div >
                
                 <aside className= "form2" onSubmit={this.handleSubmit}>
-               <div className = "Loginwith"> <h1><strong>Login</strong></h1></div>
+               <div className = "Loginwith"><strong>Login</strong></div>
                     <div className= "facebook">
                     {/* <!-- Facebook --> */}
                     <button class="btn btn-sm btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f fa-fw"></i>  Facebook</button>
                     </div>
+                    {/* <!-- Instagram --> */}
                     <div className= "instagram">
                     <button class="btn btn-sm btn-instagram btn-block text-uppercase" type="submit"><i class="fab fa-instagram fa-fw"></i>  Instagram</button>
                     </div>
+                    {/* <!-- Google --> */}
                     <div className= "google">
                     <button class="btn btn-sm btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google fa-fw"></i>  Google</button>
                       </div>

@@ -13,11 +13,10 @@
  
 
 .Loginwith{
-  /* background-color: white; */
+  background-color: white; 
   color: black;
-  /* margin-bottom: 2rem; */
-  font-weight: 300;
-  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.0rem;
   text-align: center;
  
 }
@@ -30,19 +29,15 @@
 }
 
 .form2 {
-  /* margin-right: 99.5%; */
   width: 100%; 
   padding: 15px; 
-  /* margin-top: 40em; */
-  /* display: flex; */
   flex-direction: column;
   align-items: center;
-  background: gray; 
+  background: #e4e4eb; 
   border-radius: 25px;
   border: 1px solid #2b0388;
   text-align: left;
-  /* float: right; */
-  /* height: 280px;  */
+  
 }
 .input-btn2{
   /* padding: 1px 10px; */
