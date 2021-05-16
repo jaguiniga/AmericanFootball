@@ -4,6 +4,7 @@ import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
 import Footer from "./FooterComponent";
 import Headlines from "./components/HeadlinesComponent";
+import Login from "./components/LoginComponent";
 import "./App.css";
 
 function App() {
@@ -18,8 +19,9 @@ function App() {
       <div id="main-page-wrapper">
         {/* Left Side */}
         <div className="column_left">
+        <Login/>
           <Headlines />
-          <Headlines />
+          
         </div>
 
         {/* Center */}
