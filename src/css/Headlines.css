@@ -1,8 +1,8 @@
-.headlines {
+.main-headlines {
   /* margin-left: 100.5%; */
   width: 100%;
   /* flex: 1; */
-  padding: 0.5em;
+  padding: 7px 0;
   margin: 0.5em auto;
   /* display: flex; */
   /* flex-direction: column; */
@@ -13,4 +13,12 @@
   /* text-align: left; */
   /* float: left; */
   height: 400px;
+  font-size: 15px;
+  /* font-weight: 400; */
+
+}
+
+.links{
+  font-size: 11.5px;
+   
 }

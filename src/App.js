@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
-import NavBar from "./Navbar/NavBarComponent";
 import "./App.css";
+import NavBar from "./components/Navbar/NavBarComponent";
 import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
-import LoginComponent from "./components/LoginComponent";
 import Footer from "./FooterComponent";
 import Headlines from "./components/HeadlinesComponent";
 import "bootstrap/dist/css/bootstrap.css";
 import { UserContext } from './auth/UserProvider';
 import UserProvider from "./auth/UserProvider";
 
+import Login from "./components/LoginComponent";
+import "./App.css";
 
 function App() {
   const user = useContext(UserContext);
@@ -25,8 +26,9 @@ function App() {
       <div id="main-page-wrapper">
         {/* Left Side */}
         <div className="column_left">
+        <Login/>
           <Headlines />
-          <Headlines />
+          
         </div>
 
         {/* Center */}

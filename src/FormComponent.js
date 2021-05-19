@@ -158,16 +158,15 @@ function Form () {
                     }} 
                         className= "input-btn">Create Account</button>
 
-                    <div>
-                        <p>Already Registered ?</p> <NavLink to='/'>Login</NavLink>
-                    </div>
-                </form>
+              <div>
+                <p>Already Registered ?</p> <NavLink to="/">Login</NavLink>
+              </div>
+            </form>
 
-                <div >
-                   <Footer/>
-                </div> 
-                
+            <div>
+              <Footer />
             </div>
+          </div>
         </div>
         </div>
         );

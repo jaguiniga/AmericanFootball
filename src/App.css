@@ -6,9 +6,11 @@
   padding: 0;
   margin: 0;
 }
+
 #main-page-body {
   background-color: #edeef0;
 }
+
 #main-header-scoreboard {
   background-color: #edeef0;
   height: 65px;
