@@ -2,27 +2,50 @@ import React, { useState, useEffect, Fragment, useContext } from 'react';
 import './App.css';
 import catchingfootball from "./images/catchingfootball.jpg";
 import Footer from './FooterComponent';
-import firebase from './Firebase/firebase';
+import { auth, signInWithGoogle, generateUserDocument } from "./Firebase/firebase";
 import { v4 as uuidv4 } from 'uuid';
-import { AuthContext } from './auth/Auth';
+import { UserContext } from "./auth/UserProvider";
 import {NavLink} from "react-router-dom";
 
+
 function Form () {
-    const { currentUser } = useContext(AuthContext);
-    const currentUserId = currentUser ? currentUser.uid : null;
-    const [users, setUsers] = useState([]);
-    const [loading, setLoading] = useState(false);
-
-
-    const [username, setUsername] = useState('');
+    const [displayName, setDisplayName] = useState("");
     const [email, setEmail] = useState('');
-    const [team, setTeam] = useState('');
+    const [team, SetTeam] = useState("")
     const [password, setPassword] = useState('');
+    const [error, setError] = useState(null);
     
-    // Constant for databse fire store connection
-    const ref = firebase.firestore().collection('users');
+    const createUserWithEmailAndPasswordHandler = async (event, email, password) => {
+        event.preventDefault();
+        try{
+          const {user} = await auth.createUserWithEmailAndPassword(email, password);
+          generateUserDocument(user, {displayName});
+        }
+        catch(error){
+          setError('Error Signing up with email and password');
+        }
+        alert("You just signed up");
+        SetTeam("");
+        setError(null);
+        setEmail("");
+        setPassword("");
+        setDisplayName("");
+      };
+    
 
-    //REALTIME GET FUNCTION
+      const onChangeHandler = event => {
+        const { name, value } = event.currentTarget;
+    
+        if (name === "userEmail") {
+          setEmail(value);
+        } else if (name === "userPassword") {
+          setPassword(value);
+        } else if (name === "displayName") {
+          setDisplayName(value);
+        }
+      };
+
+    /* //REALTIME GET FUNCTION
     function getUsers() {
         setLoading(true);
         ref
@@ -54,6 +77,8 @@ function Form () {
             email: email,
             team: team,
             password: password,
+            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+            lastUpdate: firebase.firestore.FieldValue.serverTimestamp(),
         })
         .then(() => {
             setLoading(false);
@@ -69,81 +94,69 @@ function Form () {
         setPassword("");
         setTeam("");
   };
-
-    //DELETE FUNCTION
-    function deleteUsers(user) {
-        ref
-        .doc(user.id)
-        .delete()
-        .catch((err) => {
-            console.error(err);
-        });
-    }
-
-    // EDIT FUNCTION
-    function editUsers(user) {
-        const updatedUser = {
-        
-        lastUpdate: firebase.firestore.FieldValue.serverTimestamp(),
-        };
-        setLoading();
-        ref
-        .doc(user.id)
-        .update(updatedUser)
-        .catch((err) => {
-            console.error(err);
-        });
-    }
+ */
 
         return (
-            <Fragment>
+            <div>
             <div style = {{backgroundImage: `url(${catchingfootball})`, backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'}}>
             <div>
-                <form  className= "form" onSubmit={addUser} >
+            {error !== null && (
+                <div>
+                    {error}
+                </div>
+            )}
+                <form  className= "form">
                 <h1>Sign Up Form</h1>
                     <div className= "input-btn">
-                    <label htmlFor='text'>Name</label>
+                    <label htmlFor='displayName'>UserName: </label>
                         <input
                             type='text'
-                            name='username'
+                            name='displayName'
                             placeholder='username'
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
+                            value={displayName}
+                            id="displayName"
+                            onChange={event => onChangeHandler(event)}
                         />
                     </div>
                     <div className= "input-btn">
-                    <label htmlFor='email'>Email</label>
+                    <label htmlFor='userEmail'>Email</label>
                         <input
                             type='email'
-                            name='email'
+                            name='userEmail'
                             placeholder='email'
                             value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            id="userEmail"
+                            onChange={event => onChangeHandler(event)}
                         />
                     </div>
                     <div className= "input-btn">
-                    <label htmlFor='password'>Password</label>
+                    <label htmlFor='userPassword'>Password</label>
                         <input
                             type='password'
-                            name='password'
+                            name='userPassword'
                             placeholder='password'
                             value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            id="userPassword"
+                            onChange={event => onChangeHandler(event)}
                         />
                     </div>
                     <div className= "input-btn">
-                        <label htmlFor='team'>Team</label>
+                        <label htmlFor='userTeam'>Team</label>
                         <input
-                            type='team'
+                            type='text'
                             name='team'
                             placeholder='team'
                             value={team}
-                            onChange={(e) => setTeam(e.target.value)}
+                            id="userTeam"
+                            onChange={event => onChangeHandler(event)}
                         />
                     </div>
-                    <button type="submit" className= "input-btn">Create Account</button>
+                    <button onClick={event => {
+                        createUserWithEmailAndPasswordHandler(event, email, password);
+                    }} 
+                        className= "input-btn">Create Account</button>
 
                     <div>
                         <p>Already Registered ?</p> <NavLink to='/'>Login</NavLink>
@@ -156,8 +169,8 @@ function Form () {
                 
             </div>
         </div>
-        </Fragment>
+        </div>
         );
     
-}
+};
 export default Form;

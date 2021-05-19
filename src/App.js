@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import NavBar from "./Navbar/NavBarComponent";
 import "./App.css";
 import CarouselSlider from "./components/CarouselSlider";
@@ -7,13 +7,15 @@ import LoginComponent from "./components/LoginComponent";
 import Footer from "./FooterComponent";
 import Headlines from "./components/HeadlinesComponent";
 import "bootstrap/dist/css/bootstrap.css";
-import { AuthProvider } from './auth/Auth';
+import { UserContext } from './auth/UserProvider';
+import UserProvider from "./auth/UserProvider";
 
 
 function App() {
+  const user = useContext(UserContext);
   return (
     <div id="main-page-body">
-       <AuthProvider>
+    <UserProvider>
       <div id="main-header-scoreboard">
         <CarouselSlider />
       </div>
@@ -42,7 +44,7 @@ function App() {
       <div id="main-footer">
         <Footer />
       </div>
-      </AuthProvider>
+    </UserProvider>
     </div>
   );
 }
