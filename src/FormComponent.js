@@ -45,57 +45,6 @@ function Form () {
         }
       };
 
-    /* //REALTIME GET FUNCTION
-    function getUsers() {
-        setLoading(true);
-        ref
-            .onSnapshot((querySnapshot) => {
-                const items = [];
-                querySnapshot.forEach((doc) => {
-                items.push(doc.data());
-            });
-        setUsers(items);
-        setLoading(false);
-      });
-    }
-
-    useEffect(() => {
-        getUsers();
-    // eslint-disable-next-line
-    }, []);
-
-    // ADD FUNCTION
-    const addUser = (e) => {
-    
-        const owner = currentUser ? currentUser.uid : 'unknown';
-        const ownerEmail = currentUser ? currentUser.email : 'unknown';
-        e.preventDefault();
-        setLoading(true);
-
-        ref.add({
-            username: username,
-            email: email,
-            team: team,
-            password: password,
-            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-            lastUpdate: firebase.firestore.FieldValue.serverTimestamp(),
-        })
-        .then(() => {
-            setLoading(false);
-            alert("Your profile has been created👍");
-        })
-        .catch((error) => {
-            alert(error.message);
-            setLoading(false);
-        });
-
-        setUsername("");
-        setEmail("");
-        setPassword("");
-        setTeam("");
-  };
- */
-
         return (
             <div>
             <div style = {{backgroundImage: `url(${catchingfootball})`, backgroundPosition: 'center',
@@ -110,7 +59,7 @@ function Form () {
                 <form  className= "form">
                 <h1>Sign Up Form</h1>
                     <div className= "input-btn">
-                    <label htmlFor='displayName'>UserName: </label>
+                    <label htmlFor='displayName'>UserName </label>
                         <input
                             type='text'
                             name='displayName'
@@ -129,7 +78,7 @@ function Form () {
                             value={email}
                             id="userEmail"
                             onChange={event => onChangeHandler(event)}
-                        />
+                    />
                     </div>
                     <div className= "input-btn">
                     <label htmlFor='userPassword'>Password</label>
@@ -153,8 +102,8 @@ function Form () {
                             onChange={event => onChangeHandler(event)}
                         />
                     </div>
-                    <button onClick={event => {
-                        createUserWithEmailAndPasswordHandler(event, email, password);
+                    <button 
+                        onClick={event => {createUserWithEmailAndPasswordHandler(event, email, password);
                     }} 
                         className= "input-btn">Create Account</button>
 
