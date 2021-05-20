@@ -53,7 +53,13 @@ function Login () {
                    
                     <div className= "google">
                          {/* <!-- Google --> */}
-                        <button className="btn btn-sm btn-google btn-block text-uppercase" type="submit">
+                        <button  
+                            onClick={() => {
+                                signInWithGoogle();
+                              }}
+                            className="btn btn-sm btn-google btn-block text-uppercase" 
+                            type="submit"
+                        >
                             <i className="fab fa-google fa-fw"></i>  Google
                         </button>
                     </div>
@@ -109,10 +115,7 @@ function Login () {
                         <NavLink exact activeClassName="active-link" to="/form">
                             Create Account ? 
                         </NavLink>
-                    </button>
-
-               
-                    
+                    </button> 
             </aside>
         </div>
     );
