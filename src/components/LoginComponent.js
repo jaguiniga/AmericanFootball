@@ -68,7 +68,7 @@ class Login extends Component {
                                </NavLink></strong>
                     </p> 
                     </p>
-                    <button type="submit"  className= "input-btn2">Submit</button>
+                    <button type="submit"  className= "input-btn2">Login</button>
                     <button type="create"  className= "input-btn2"><NavLink exact activeClassName="active-link" to="/form">Create Account? </NavLink></button>
                     
                 </aside>
