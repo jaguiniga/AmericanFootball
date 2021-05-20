@@ -1,84 +1,122 @@
 import { Component } from "react";
-import "../css/Login.css";
-/* import facebooklogo from './images/facebooklogo.png';
-import instagram3 from './images/instagram3.jpg';
-import google2 from './images/google2.png';
- */
-const Login = () => {
-  return (
-    <body>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-            <div class="card card-signin my-5">
-              <div class="card-body">
-                <h5 class="card-title text-center">Log In</h5>
-                <form class="form-signin">
-                  <div class="form-label-group">
-                    <input
-                      type="email"
-                      id="inputEmail"
-                      class="form-control"
-                      placeholder="Email address"
-                      required
-                      autofocus
-                    />
-                    <label for="inputEmail">Email address</label>
-                  </div>
+import { NavLink} from "react-router-dom";
+import React, {useState} from "react";
+import { auth, signInWithGoogle, generateUserDocument } from "../Firebase/firebase";
 
-                  <div class="form-label-group">
-                    <input
-                      type="password"
-                      id="inputPassword"
-                      class="form-control"
-                      placeholder="Password"
-                      required
-                    />
-                    <label for="inputPassword">Password</label>
-                  </div>
-                  <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
-                  </p>
-                  <div class="custom-control custom-checkbox mb-3">
-                    <input
-                      type="checkbox"
-                      class="custom-control-input"
-                      id="customCheck1"
-                    />
-                    <label class="custom-control-label" for="customCheck1">
-                      Remember password
-                    </label>
-                  </div>
 
-                  <button
-                    class="btn btn-lg btn-primary btn-block text-uppercase"
-                    type="submit">
-                    Sign in
-                  </button>
-                  <hr class="my-4"></hr>
-                  <button
-                    class="btn btn-lg btn-google btn-block text-uppercase"
-                    type="submit">
-                    <i class="fab fa-google mr-2"></i> Sign in with Google
-                  </button>
-                  <button
-                    class="btn btn-lg btn-instagram btn-block text-uppercase"
-                    type="submit">
-                    <i class="fab fa-instagram-f mr-2"></i> Sign in with
-                    Instagram
-                  </button>
-                  <button
-                    class="btn btn-lg btn-facebook btn-block text-uppercase"
-                    type="submit">
-                    <i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook
-                  </button>
+function Login () {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState(null);
+
+    const signInWithEmailAndPasswordHandler = (event,email, password) => {
+        event.preventDefault();
+        auth.signInWithEmailAndPassword(email, password).catch(error => {
+        setError("Error signing in with password and email!");
+          console.error("Error signing in with password and email", error);
+        });
+      };
+      
+      const onChangeHandler = (event) => {
+          const {name, value} = event.currentTarget;
+        
+          if(name === 'userEmail') {
+              setEmail(value);
+          }
+          else if(name === 'userPassword'){
+            setPassword(value);
+          }
+      };
+
+    return (
+        <div>
+               
+            <aside className= "form2">
+                    
+                    <div className = "Loginwith">
+                        <strong>Login</strong>
+                    </div>
+                    
+                    <div className= "facebook">
+                        {/* <!-- Facebook --> */}
+                        <button class="btn btn-sm btn-facebook btn-block text-uppercase" type="submit">
+                            <i class="fab fa-facebook-f fa-fw"></i>  Facebook
+                        </button>
+                    </div>
+
+                    <div className= "instagram">
+                        {/* <!-- Instagram --> */}
+                        <button className="btn btn-sm btn-instagram btn-block text-uppercase" type="submit">
+                            <i className="fab fa-instagram fa-fw"></i>  Instagram
+                        </button>
+                    </div>
+                   
+                    <div className= "google">
+                         {/* <!-- Google --> */}
+                        <button className="btn btn-sm btn-google btn-block text-uppercase" type="submit">
+                            <i className="fab fa-google fa-fw"></i>  Google
+                        </button>
+                    </div>
+                    {error !== null && (
+                        <div>
+                            {error}
+                        </div>
+                    )}
+                <form>
+                    
+                    <div className= "input-btn2">
+                        <label htmlFor='userEmail'>Email</label>
+                            <input
+                                type='email'
+                                name='userEmail'
+                                placeholder='email'
+                                value={email}
+                                id="userEmail"
+                                onChange={event => onChangeHandler(event)}
+                            />
+                    </div>
+
+                    <div className= "input-btn2">
+                        <label htmlFor='userPassword'>Password</label>
+                        <input
+                            type='password'
+                            name='userPassword'
+                            placeholder='password'
+                            value={password}
+                            id="userPassword"
+                            onChange={(event) => onChangeHandler(event)}
+                        />
+                    </div>
+
+                    <button 
+                        onClick = {(event) => {signInWithEmailAndPasswordHandler(event, email, password)}} 
+                        className= "input-btn2"
+                    >
+                    Login
+                    </button>
                 </form>
-              </div>
-            </div>
-          </div>
+                    
+                    <p className="forgot-password text-right">
+                        <p><strong>
+                            <NavLink exact activeClassName="active-link" to="/password">
+                                Forgot <a href="#">password?</a>
+                            </NavLink>
+                            </strong>
+                        </p> 
+                    </p>
+                   
+                    <button type="create"  className= "input-btn2">
+                        <NavLink exact activeClassName="active-link" to="/form">
+                            Create Account ? 
+                        </NavLink>
+                    </button>
+
+               
+                    
+            </aside>
         </div>
-      </div>
-    </body>
-  );
+    );
+    
 };
+
 export default Login;
