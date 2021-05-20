@@ -10,6 +10,20 @@ const ControlledCarousel = (props) => {
     setIndex(selectedIndex);
   };
 
+  var list = [
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+  ];
+
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <div
@@ -19,16 +33,7 @@ const ControlledCarousel = (props) => {
           jusitfyContent: "space-between",
           alignItems: "center",
         }}>
-        <ScoreCard />
-        <ScoreCard />
-        <ScoreCard />
-        <ScoreCard />
-        <ScoreCard />
-        <ScoreCard />
-        <ScoreCard />
-        <ScoreCard />
-        <ScoreCard />
-        <ScoreCard />
+        {list}
       </div>
     </Carousel>
   );
