@@ -17,7 +17,10 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+
+
 import reportWebVitals from "./reportWebVitals";
+import ProfilePage from "./Profile/ProfilePage";
 
 const routing = (
   <Router>
@@ -36,6 +39,7 @@ const routing = (
         <Route path="/password" component={Password} />
         <Route path="/forgotpassword" component={ForgotPassword} />
         <Route path="*" component={PageNotFound404} />
+        <Route path="/ProfilePage" component={ProfilePage} />
       </Switch>
     </React.StrictMode>
   </Router>
