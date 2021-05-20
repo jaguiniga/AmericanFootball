@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { NavLink} from "react-router-dom";
 import React, {useState} from "react";
-import { auth, signInWithGoogle, generateUserDocument } from "../Firebase/firebase";
+import { auth, signInWithGoogle, generateUserDocument, signInWithFacebook } from "../Firebase/firebase";
 
 
 function Login () {
@@ -39,15 +39,21 @@ function Login () {
                     
                     <div className= "facebook">
                         {/* <!-- Facebook --> */}
-                        <button class="btn btn-sm btn-facebook btn-block text-uppercase" type="submit">
-                            <i class="fab fa-facebook-f fa-fw"></i>  Facebook
+                        <button 
+                            onClick={() => {
+                                signInWithFacebook();
+                              }}
+                            class="btn btn-sm btn-facebook btn-block text-uppercase" 
+                            type="submit"
+                        >
+                            <i className="fab fa-facebook-f fa-fw"></i>  Facebook
                         </button>
                     </div>
 
                     <div className= "instagram">
                         {/* <!-- Instagram --> */}
                         <button className="btn btn-sm btn-instagram btn-block text-uppercase" type="submit">
-                            <i className="fab fa-instagram fa-fw"></i>  Instagram
+                            <i className="fab fa-instagram mr-2"></i>  Instagram
                         </button>
                     </div>
                    
