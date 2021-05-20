@@ -1,80 +1,122 @@
 import { Component } from "react";
 import { NavLink} from "react-router-dom";
-class Login extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { username: "", email: "", team:"", password:""}
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-    handleChange(evt){
-        this.setState({ 
-            [evt.target.name]: evt.target.value
+import React, {useState} from "react";
+import { auth, signInWithGoogle, generateUserDocument } from "../Firebase/firebase";
+
+
+function Login () {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState(null);
+
+    const signInWithEmailAndPasswordHandler = (event,email, password) => {
+        event.preventDefault();
+        auth.signInWithEmailAndPassword(email, password).catch(error => {
+        setError("Error signing in with password and email!");
+          console.error("Error signing in with password and email", error);
         });
+      };
+      
+      const onChangeHandler = (event) => {
+          const {name, value} = event.currentTarget;
         
-    }
-    handleSubmit(evt){
-        evt.preventDefault();
-        alert(`You Submitted: ${this.state.username}, ${this.state.email}, ${this.state.team}`);
-        this.setState({username: "", email: "", team: "", password: ""});
-        };
-    
-    render() {
-        return (
-            <div >
+          if(name === 'userEmail') {
+              setEmail(value);
+          }
+          else if(name === 'userPassword'){
+            setPassword(value);
+          }
+      };
+
+    return (
+        <div>
                
-                <aside className= "form2" onSubmit={this.handleSubmit}>
-               <div className = "Loginwith"><strong>Login</strong></div>
+            <aside className= "form2">
+                    
+                    <div className = "Loginwith">
+                        <strong>Login</strong>
+                    </div>
+                    
                     <div className= "facebook">
-                    {/* <!-- Facebook --> */}
-                    <button class="btn btn-sm btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f fa-fw"></i>  Facebook</button>
+                        {/* <!-- Facebook --> */}
+                        <button class="btn btn-sm btn-facebook btn-block text-uppercase" type="submit">
+                            <i class="fab fa-facebook-f fa-fw"></i>  Facebook
+                        </button>
                     </div>
-                    {/* <!-- Instagram --> */}
+
                     <div className= "instagram">
-                    <button class="btn btn-sm btn-instagram btn-block text-uppercase" type="submit"><i class="fab fa-instagram fa-fw"></i>  Instagram</button>
+                        {/* <!-- Instagram --> */}
+                        <button className="btn btn-sm btn-instagram btn-block text-uppercase" type="submit">
+                            <i className="fab fa-instagram fa-fw"></i>  Instagram
+                        </button>
                     </div>
-                    {/* <!-- Google --> */}
+                   
                     <div className= "google">
-                    <button class="btn btn-sm btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google fa-fw"></i>  Google</button>
-                      </div>
-                      <div>
-                      <div className= "emailbox">
-                      <label htmlFor='email'>Or Enter Your Email:</label>
-                      </div>
-                      </div>
-                    <div className= "input-btn2">
-                        <label htmlFor='email'>Email</label>
-                        <input
-                            type='email'
-                            name='email'
-                            placeholder='email'
-                            value={this.state.email}
-                            onChange={this.handleChange}
-                        />
+                         {/* <!-- Google --> */}
+                        <button className="btn btn-sm btn-google btn-block text-uppercase" type="submit">
+                            <i className="fab fa-google fa-fw"></i>  Google
+                        </button>
                     </div>
+                    {error !== null && (
+                        <div>
+                            {error}
+                        </div>
+                    )}
+                <form>
+                    
                     <div className= "input-btn2">
-                        <label htmlFor='password'>Password</label>
+                        <label htmlFor='userEmail'>Email</label>
+                            <input
+                                type='email'
+                                name='userEmail'
+                                placeholder='email'
+                                value={email}
+                                id="userEmail"
+                                onChange={event => onChangeHandler(event)}
+                            />
+                    </div>
+
+                    <div className= "input-btn2">
+                        <label htmlFor='userPassword'>Password</label>
                         <input
                             type='password'
-                            name='password'
+                            name='userPassword'
                             placeholder='password'
-                            value={this.state.password}
-                            onChange={this.handleChange}
+                            value={password}
+                            id="userPassword"
+                            onChange={(event) => onChangeHandler(event)}
                         />
                     </div>
+
+                    <button 
+                        onClick = {(event) => {signInWithEmailAndPasswordHandler(event, email, password)}} 
+                        className= "input-btn2"
+                    >
+                    Login
+                    </button>
+                </form>
                     
                     <p className="forgot-password text-right">
-                    <p><strong><NavLink exact activeClassName="active-link" to="/password"> Forgot <a href="#">password?</a>
-                               </NavLink></strong>
-                    </p> 
+                        <p><strong>
+                            <NavLink exact activeClassName="active-link" to="/password">
+                                Forgot <a href="#">password?</a>
+                            </NavLink>
+                            </strong>
+                        </p> 
                     </p>
-                    <button type="submit"  className= "input-btn2">Login</button>
-                    <button type="create"  className= "input-btn2"><NavLink exact activeClassName="active-link" to="/form">Create Account? </NavLink></button>
+                   
+                    <button type="create"  className= "input-btn2">
+                        <NavLink exact activeClassName="active-link" to="/form">
+                            Create Account ? 
+                        </NavLink>
+                    </button>
+
+               
                     
-                </aside>
+            </aside>
         </div>
-        )
-    }
-}
+    );
+    
+};
 
 export default Login;

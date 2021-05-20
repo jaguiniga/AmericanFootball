@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import "./App.css";
 import NavBar from "./components/Navbar/NavBarComponent";
 import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
 import Footer from "./FooterComponent";
 import Headlines from "./components/HeadlinesComponent";
+import "bootstrap/dist/css/bootstrap.css";
+import { UserContext } from './auth/UserProvider';
+import UserProvider from "./auth/UserProvider";
+
 import Login from "./components/LoginComponent";
 import "./App.css";
 
 function App() {
+  
   return (
     <div id="main-page-body">
+    <UserProvider>
       <div id="main-header-scoreboard">
         <CarouselSlider />
       </div>
@@ -39,6 +46,7 @@ function App() {
       <div id="main-footer">
         <Footer />
       </div>
+    </UserProvider>
     </div>
   );
 }
