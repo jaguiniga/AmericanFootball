@@ -3,26 +3,24 @@ import { NavLink } from "react-router-dom";
 import "../css/ScoreCard.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { faBluetooth } from "@fortawesome/free-brands-svg-icons";
-import icon from "../images/NFLteamIcons/Bills.ico";
 
 class ScoreCard extends React.Component {
   styles = {
     color: "blue",
     fontSize: "2px",
-    background: "yellow",
   };
-
-  myIcon = {
-    width: "30px",
-    height: "30px",
-  };
-
   render() {
     return (
       <div className="container">
         <div className="card" style={{ width: "140px", height: "60px" }}>
-          <img src={icon} alt="icon" style={this.myIcon}></img>
-          <img src={icon} alt="icon" style={this.myIcon}></img>
+          <div className="card-body" style={this.styles}>
+            <h6 className="card-title">sore</h6>
+            <p className="card-text">Team 1</p>
+            <p className="card-text">Team 2</p>
+            <button type="button" className="btn btn-warning">
+              Read More
+            </button>
+          </div>
         </div>
       </div>
     );
