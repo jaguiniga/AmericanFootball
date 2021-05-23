@@ -30,7 +30,7 @@ function App() {
           {/* Center */}
           <div className="column_center">
             <WelcomeLogo />
-            <Headlines />
+            <Home />
           </div>
           {/* Right Side */}
           <div className="column_right">
