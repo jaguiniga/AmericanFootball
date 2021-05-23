@@ -11,7 +11,7 @@ import {NavLink} from "react-router-dom";
 function Form () {
     const [displayName, setDisplayName] = useState("");
     const [email, setEmail] = useState('');
-    const [team, SetTeam] = useState("")
+    // const [team, SetTeam] = useState("")
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
     
@@ -25,7 +25,7 @@ function Form () {
           setError('Error Signing up with email and password');
         }
         alert("You just signed up");
-        SetTeam("");
+        //SetTeam("");
         setError(null);
         setEmail("");
         setPassword("");
@@ -91,7 +91,7 @@ function Form () {
                             onChange={event => onChangeHandler(event)}
                         />
                     </div>
-                    <div className= "input-btn">
+                    {/* <div className= "input-btn">
                         <label htmlFor='userTeam'>Team</label>
                         <input
                             type='text'
@@ -101,7 +101,7 @@ function Form () {
                             id="userTeam"
                             onChange={event => onChangeHandler(event)}
                         />
-                    </div>
+                    </div> */}
                     <button 
                         onClick={event => {createUserWithEmailAndPasswordHandler(event, email, password);
                     }} 

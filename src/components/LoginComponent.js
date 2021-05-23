@@ -1,8 +1,7 @@
 import { Component } from "react";
 import { NavLink} from "react-router-dom";
 import React, {useState} from "react";
-import { auth, signInWithGoogle, generateUserDocument } from "../Firebase/firebase";
-
+import { auth, signInWithGoogle, generateUserDocument, signInWithFacebook } from "../Firebase/firebase";
 
 function Login () {
     const [email, setEmail] = useState('');
@@ -29,31 +28,38 @@ function Login () {
       };
 
     return (
-        <div>
-               
-            <aside className= "form2">
-                    
-                    <div className = "Loginwith">
-                        <strong>Login</strong>
-                    </div>
+        <section>
+        <div className="card border-primary mb-3" style = {{maxWidth: "18rem"}}>
+     <div className="card-header"><strong>Login</strong></div>
+     <div className="card-body text-primary">
                     
                     <div className= "facebook">
                         {/* <!-- Facebook --> */}
-                        <button class="btn btn-sm btn-facebook btn-block text-uppercase" type="submit">
-                            <i class="fab fa-facebook-f fa-fw"></i>  Facebook
+                        <button 
+                            onClick={() => {
+                                signInWithFacebook();
+                              }}
+                            class="btn btn-sm btn-facebook btn-block text-uppercase" 
+                            type="submit"
+                        >
+                            <i className="fab fa-facebook-f fa-fw"></i>  Facebook
                         </button>
                     </div>
-
                     <div className= "instagram">
                         {/* <!-- Instagram --> */}
                         <button className="btn btn-sm btn-instagram btn-block text-uppercase" type="submit">
-                            <i className="fab fa-instagram fa-fw"></i>  Instagram
+                            <i className="fab fa-instagram mr-2"></i>  Instagram
                         </button>
                     </div>
-                   
                     <div className= "google">
                          {/* <!-- Google --> */}
-                        <button className="btn btn-sm btn-google btn-block text-uppercase" type="submit">
+                        <button  
+                            onClick={() => {
+                                signInWithGoogle();
+                              }}
+                            className="btn btn-sm btn-google btn-block text-uppercase" 
+                            type="submit"
+                        >
                             <i className="fab fa-google fa-fw"></i>  Google
                         </button>
                     </div>
@@ -63,7 +69,9 @@ function Login () {
                         </div>
                     )}
                 <form>
-                    
+
+                     <p className="Email">Or Enter Email:</p>
+
                     <div className= "input-btn2">
                         <label htmlFor='userEmail'>Email</label>
                             <input
@@ -109,12 +117,73 @@ function Login () {
                         <NavLink exact activeClassName="active-link" to="/form">
                             Create Account ? 
                         </NavLink>
-                    </button>
+                    </button> 
 
-               
-                    
-            </aside>
-        </div>
+
+     </div>
+   </div>
+   <div className="card border-secondary mb-3" style = {{maxWidth: "18rem"}}>
+     <div className="card-header"><strong>Team Rosters</strong></div>
+     <div className="card-body text-secondary">
+         
+     <ul className="links" >
+         <li className = "bullets"><a href="https://www.sbnation.com/nfl-draft">
+                 Dallas Cowboys
+        </a></li>
+       </ul>
+
+        <ul className="links">
+
+       <li className = "bullets"> <a href="https://www.si.com/nfl/dolphins/news/complete-2021-nfl-draft-team-by-team-rundown">
+                  Green Bay Packers
+        </a></li>
+        </ul>
+
+        <ul className="links">
+        <li className = "bullets"><a href="https://www.pff.com/news/draft-film-study-pros-and-cons-2021-nfl-draft">
+                  Jacksonville Jaguars
+                  </a></li>
+        </ul>
+
+     </div>
+   </div>
+   <div className="card border-success mb-3" style = {{maxWidth: "18rem"}}>
+     <div className="card-header">Header</div>
+     <div className="card-body text-success">
+       <h5 className="card-title">Success card title</h5>
+       <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     </div>
+   </div>
+   <div className="card border-danger mb-3" style = {{maxWidth: "18rem"}}>
+     <div className="card-header">Header</div>
+     <div className="card-body text-danger">
+       <h5 className="card-title">Danger card title</h5>
+       <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     </div>
+   </div>
+   <div className="card border-warning mb-3" style = {{maxWidth: "18rem"}}>
+     <div className="card-header">Header</div>
+     <div className="card-body text-warning">
+       <h5 className="card-title">Warning card title</h5>
+       <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     </div>
+   </div>
+   <div className="card border-info mb-3" style = {{maxWidth: "18rem"}}>
+     <div className="card-header">Header</div>
+     <div className="card-body text-info">
+       <h5 className="card-title">Info card title</h5>
+       <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     </div>
+   </div>
+   <div className="card border-light mb-3" style = {{maxWidth: "18rem"}}>
+     <div className="card-header">Header</div>
+     <div className="card-body">
+       <h5 className="card-title">Light card title</h5>
+       <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     </div>
+   </div>
+  
+       </section>
     );
     
 };
