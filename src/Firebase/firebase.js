@@ -5,7 +5,7 @@ import database from "firebase/database";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-const firebaseConfig = {
+const Config = {
   apiKey: process.env.REACT_APP_FIREBASE_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
   databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
@@ -17,7 +17,16 @@ const firebaseConfig = {
 };
 
 // initilaize firebase
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(Config);
+
+/*Tutorial*/
+let firebaseCache;
+
+export const getFirebase = () => {
+  if (firebaseCache) {
+    return firebaseCache;
+  }
+};
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
@@ -66,17 +75,4 @@ const getUserDocument = async (uid) => {
   } catch (error) {
     console.error("Error fetching user", error);
   }
-};
-
-/*Tutorial*/
-let firebaseCache;
-
-export const getFirebase = () => {
-  if (firebaseCache) {
-    return firebaseCache;
-  }
-
-  firebase.initializeApp(firebaseConfig);
-  firebaseCache = firebase;
-  return firebase;
 };
