@@ -8,22 +8,22 @@ const Home = () => {
   const [blogPosts, setBlogPosts] = useState([]);
 
   if (loading && !blogPosts.length) {
-    getFirebase();
-    // .database()
-    // .ref("/posts")
-    // .orderByChild("date")
-    // .once("value")
-    // .then((snapshot) => {
-    //   let posts = [];
-    //   const snapshotVal = snapshot.val();
-    //   for (let slug in snapshotVal) {
-    //     posts.push(snapshotVal[slug]);
-    // }
+    getFirebase()
+      .database()
+      .ref("/posts")
+      .orderByChild("date")
+      .once("value")
+      .then((snapshot) => {
+        let posts = [];
+        const snapshotVal = snapshot.val();
+        for (let slug in snapshotVal) {
+          posts.push(snapshotVal[slug]);
+        }
 
-    //   const newestFirst = posts.reverse();
-    //   setBlogPosts(newestFirst);
-    //   setLoading(false);
-    // });
+        const newestFirst = posts.reverse();
+        setBlogPosts(newestFirst);
+        setLoading(false);
+      });
   }
 
   if (loading) {

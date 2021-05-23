@@ -19,6 +19,9 @@ const Config = {
 // initilaize firebase
 firebase.initializeApp(Config);
 
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
+
 /*Tutorial*/
 let firebaseCache;
 
@@ -26,10 +29,10 @@ export const getFirebase = () => {
   if (firebaseCache) {
     return firebaseCache;
   }
-};
 
-export const auth = firebase.auth();
-export const firestore = firebase.firestore();
+  firebaseCache = firebase;
+  return firebase;
+};
 
 const provider1 = new firebase.auth.FacebookAuthProvider();
 export const signInWithFacebook = () => {
