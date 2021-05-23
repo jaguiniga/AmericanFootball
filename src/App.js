@@ -31,7 +31,7 @@ function App() {
         {/* Center */}
         <div className="column_center">
           <WelcomeLogo />
-          <WelcomeLogo />
+          <Headlines />
         </div>
 
         {/* Right Side */}
