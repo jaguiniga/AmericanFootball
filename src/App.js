@@ -8,10 +8,7 @@ import Headlines from "./components/HeadlinesComponent";
 import "bootstrap/dist/css/bootstrap.css";
 import { UserContext } from './auth/UserProvider';
 import UserProvider from "./auth/UserProvider";
-
 import Login from "./components/LoginComponent";
-import "./App.css";
-
 function App() {
   
   return (
@@ -27,7 +24,7 @@ function App() {
         {/* Left Side */}
         <div className="column_left">
         <Login/>
-          <Headlines />
+        
           
         </div>
 
@@ -39,7 +36,6 @@ function App() {
 
         {/* Right Side */}
         <div className="column_right">
-          <Headlines />
           <Headlines />
         </div>
       </div>
