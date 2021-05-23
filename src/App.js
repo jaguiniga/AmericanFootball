@@ -11,10 +11,7 @@ import Home from "./components/BlogPost/Home";
 import "bootstrap/dist/css/bootstrap.css";
 import { UserContext } from "./auth/UserProvider";
 import UserProvider from "./auth/UserProvider";
-
 import Login from "./components/LoginComponent";
-import "./App.css";
-
 function App() {
   return (
     <div id="main-page-body">
@@ -29,18 +26,14 @@ function App() {
           {/* Left Side */}
           <div className="column_left">
             <Login />
-            <Headlines />
           </div>
-
           {/* Center */}
           <div className="column_center">
             <WelcomeLogo />
-            <Home />
+            <Headlines />
           </div>
-
           {/* Right Side */}
           <div className="column_right">
-            <Headlines />
             <Headlines />
           </div>
         </div>
