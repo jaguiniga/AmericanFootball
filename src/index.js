@@ -15,9 +15,9 @@ import ForgotPassword from "./components/ForgotPassword";
 import PageNotFound404 from "./components/PageNotFound404";
 
 /*Tutorial*/
-import Home from "./component/BlogPost/Home";
-import Post from "./component/BlogPost/Post";
-import NoMatch from "./component/BlogPost/No-match";
+import Home from "./components/BlogPost/Home";
+import Post from "./components/BlogPost/Post";
+import NoMatch from "./components/BlogPost/No-Match";
 
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
