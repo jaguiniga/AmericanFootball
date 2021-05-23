@@ -17,6 +17,11 @@ const ControlledCarousel = (props) => {
     <ScoreCard />,
     <ScoreCard />,
     <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
   ];
 
   return (
@@ -25,7 +30,8 @@ const ControlledCarousel = (props) => {
         className="align-items-center"
         style={{
           display: "flex",
-          justifyContent: "flex-start",
+          jusitfyContent: "space-between",
+          alignItems: "center",
         }}>
         {list}
       </div>

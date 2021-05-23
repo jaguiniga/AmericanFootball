@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "../css/ScoreCard.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { faBluetooth } from "@fortawesome/free-brands-svg-icons";
-import icon from "../images/NFLteamIcons/Bills.ico";
+import icon from "../images/NFLteamIcons/BUF.ico";
 import { faFileExcel } from "@fortawesome/free-regular-svg-icons";
 
 class ScoreCard extends React.Component {
