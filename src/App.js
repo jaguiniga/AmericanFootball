@@ -8,7 +8,8 @@ import Headlines from "./components/HeadlinesComponent";
 import "bootstrap/dist/css/bootstrap.css";
 import { UserContext } from './auth/UserProvider';
 import UserProvider from "./auth/UserProvider";
-import Login from "./components/LoginComponent";
+import Login from "./components/LoginComponent"
+
 function App() {
   
   return (
@@ -31,7 +32,7 @@ function App() {
         {/* Center */}
         <div className="column_center">
           <WelcomeLogo />
-          <Headlines />
+          <Headlines/>
         </div>
 
         {/* Right Side */}
