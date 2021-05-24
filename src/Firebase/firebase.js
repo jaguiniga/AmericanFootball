@@ -1,9 +1,9 @@
+import React, { useState } from "react";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_FIREBASE_KEY,
@@ -15,6 +15,19 @@ const firebaseConfig = {
     appId: process.env.REACT_APP_MESSAGING_APP_ID,
     measurementId: process.env.REACT_APP_MEASUREMENT_ID
   };
+  
+ 
+  let firebaseCache;
+
+export const getFirebase = () => {
+  if (firebaseCache) {
+    return firebaseCache;
+  }
+
+  firebase.initializeApp(firebaseConfig);
+  firebaseCache = firebase;
+  return firebase;
+};
 
   // initilaize firebase
   firebase.initializeApp(firebaseConfig);
