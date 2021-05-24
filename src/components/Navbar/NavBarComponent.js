@@ -63,7 +63,7 @@ function Navbar() {
               </li>
               {/* user profile */}
               <li className="nav-item">
-                <a className="nav-link" href="/ProfilePage">
+                <a className="nav-link" href="UserSignedIn">
                   <i class="fas fa-user" />
                 </a>
               </li>
@@ -73,6 +73,15 @@ function Navbar() {
                   <i class="far fa-list-alt" />
                 </a>
               </li>
+
+               {/* site contact us */}
+               <li className="nav-item">
+                <a className="nav-link" href="ContactUs">
+                  <i class="fas fa-comment-alt" />
+                </a>
+              </li>
+
+
             </ul>
           </div>
         </div>

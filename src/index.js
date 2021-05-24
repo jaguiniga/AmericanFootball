@@ -17,7 +17,8 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-
+import UserSignedIn from "./Profile/UserSignedIn";
+import ContactUs from "./ContactUs";
 
 import reportWebVitals from "./reportWebVitals";
 import ProfilePage from "./Profile/ProfilePage";
@@ -38,8 +39,10 @@ const routing = (
         <Route path="/houserules" component={HouseRules} />
         <Route path="/password" component={Password} />
         <Route path="/forgotpassword" component={ForgotPassword} />
+        <Route path="/UserSignedIn" component={UserSignedIn} />
+        <Route path="/ContactUs" component={ContactUs} />
         <Route path="*" component={PageNotFound404} />
-        <Route path="/ProfilePage" component={ProfilePage} />
+        
       </Switch>
     </React.StrictMode>
   </Router>
