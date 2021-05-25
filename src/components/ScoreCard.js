@@ -28,6 +28,7 @@ import ne from "../images/NFLteamIcons/NE.ico";
 import nfc from "../images/NFLteamIcons/NFC.ico";
 import nfl from "../images/NFLteamIcons/NFC.ico";
 import no from "../images/NFLteamIcons/NO.ico";
+import nyg from "../images/NFLteamIcons/NYG.ico";
 import nyj from "../images/NFLteamIcons/NYJ.ico";
 import phi from "../images/NFLteamIcons/PHI.ico";
 import pit from "../images/NFLteamIcons/PIT.ico";
@@ -82,6 +83,7 @@ class ScoreCard extends React.Component {
       nfcicon: nfc,
       nflicon: nfl,
       noicon: no,
+      nygicon: nyg,
       nyjicon: nyj,
       phiicon: phi,
       piticon: pit,

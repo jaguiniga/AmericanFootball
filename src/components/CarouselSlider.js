@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
 import ScoreCard from "./ScoreCard";
 import "../css/CarouselSliders.css";
-import teamIcon from "../images/NFLteamIcons/BUF.ico";
 
 const ControlledCarousel = (props) => {
   const [index, setIndex] = useState(0);
@@ -13,9 +11,9 @@ const ControlledCarousel = (props) => {
 
   var list1 = [
     <ScoreCard
-      team01="AFC"
+      team01="NYG"
       team02="ARI"
-      iconTeam01="afcicon"
+      iconTeam01="nygicon"
       iconTeam02="ariicon"
     />,
     <ScoreCard
@@ -113,17 +111,12 @@ const ControlledCarousel = (props) => {
       iconTeam02="wasicon"
     />,
     <ScoreCard
-      team01="NFC"
-      team02="NFL"
-      iconTeam01="nfcicon"
-      iconTeam02="nflicon"
-    />,
-    <ScoreCard
-      team01="AFC"
+      team01="NYG"
       team02="ARI"
-      iconTeam01="afcicon"
+      iconTeam01="nygicon"
       iconTeam02="ariicon"
     />,
+    <ScoreCard team01="" team02="" iconTeam01="" iconTeam02="" />,
   ];
 
   return (
