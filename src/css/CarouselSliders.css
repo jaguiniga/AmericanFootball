@@ -1,4 +1,3 @@
-/* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
 }
@@ -10,6 +9,7 @@
 .carousel-control-next-icon {
   filter: invert(100%);
 }
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
