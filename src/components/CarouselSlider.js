@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import ScoreCard from "./ScoreCard";
 import "../css/CarouselSliders.css";
+import teamIcon from "../images/NFLteamIcons/BUF.ico";
 
 const ControlledCarousel = (props) => {
   const [index, setIndex] = useState(0);
@@ -11,28 +12,118 @@ const ControlledCarousel = (props) => {
   };
 
   var list1 = [
-    <ScoreCard />,
-    <ScoreCard />,
-    <ScoreCard />,
-    <ScoreCard />,
-    <ScoreCard />,
-    <ScoreCard />,
+    <ScoreCard
+      team01="AFC"
+      team02="ARI"
+      iconTeam01="afcicon"
+      iconTeam02="ariicon"
+    />,
+    <ScoreCard
+      team01="ATL"
+      team02="BAL"
+      iconTeam01="atlicon"
+      iconTeam02="balicon"
+    />,
+    <ScoreCard
+      team01="BUF"
+      team02="CAR"
+      iconTeam01="buficon"
+      iconTeam02="caricon"
+    />,
+    <ScoreCard
+      team01="CHI"
+      team02="CIN"
+      iconTeam01="chiicon"
+      iconTeam02="cinicon"
+    />,
+    <ScoreCard
+      team01="CLE"
+      team02="DAL"
+      iconTeam01="cleicon"
+      iconTeam02="dalicon"
+    />,
+    <ScoreCard
+      team01="DEN"
+      team02="DET"
+      iconTeam01="denicon"
+      iconTeam02="deticon"
+    />,
   ];
   var list2 = [
-    <ScoreCard />,
-    <ScoreCard />,
-    <ScoreCard />,
-    <ScoreCard />,
-    <ScoreCard />,
-    <ScoreCard />,
+    <ScoreCard
+      team01="GB"
+      team02="HOU"
+      iconTeam01="gbicon"
+      iconTeam02="houicon"
+    />,
+    <ScoreCard
+      team01="IND"
+      team02="JAX"
+      iconTeam01="indicon"
+      iconTeam02="jaxicon"
+    />,
+    <ScoreCard
+      team01="KC"
+      team02="LAC"
+      iconTeam01="kcicon"
+      iconTeam02="lacicon"
+    />,
+    <ScoreCard
+      team01="LAR"
+      team02="LV"
+      iconTeam01="laricon"
+      iconTeam02="lvicon"
+    />,
+    <ScoreCard
+      team01="MIA"
+      team02="MIN"
+      iconTeam01="miaicon"
+      iconTeam02="minicon"
+    />,
+    <ScoreCard
+      team01="NE"
+      team02="NO"
+      iconTeam01="neicon"
+      iconTeam02="noicon"
+    />,
   ];
   var list3 = [
-    <ScoreCard />,
-    <ScoreCard />,
-    <ScoreCard />,
-    <ScoreCard />,
-    <ScoreCard />,
-    <ScoreCard />,
+    <ScoreCard
+      team01="NYJ"
+      team02="PHI"
+      iconTeam01="nyjicon"
+      iconTeam02="phiicon"
+    />,
+    <ScoreCard
+      team01="PIT"
+      team02="SEA"
+      iconTeam01="piticon"
+      iconTeam02="seaicon"
+    />,
+    <ScoreCard
+      team01="SF"
+      team02="TB"
+      iconTeam01="sficon"
+      iconTeam02="tbicon"
+    />,
+    <ScoreCard
+      team01="TEN"
+      team02="WAS"
+      iconTeam01="tenicon"
+      iconTeam02="wasicon"
+    />,
+    <ScoreCard
+      team01="NFC"
+      team02="NFL"
+      iconTeam01="nfcicon"
+      iconTeam02="nflicon"
+    />,
+    <ScoreCard
+      team01="AFC"
+      team02="ARI"
+      iconTeam01="afcicon"
+      iconTeam02="ariicon"
+    />,
   ];
 
   return (

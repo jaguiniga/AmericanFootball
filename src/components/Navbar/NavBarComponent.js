@@ -63,7 +63,7 @@ function Navbar() {
               </li>
               {/* user profile */}
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/ProfilePage">
                   <i class="fas fa-user" />
                 </a>
               </li>

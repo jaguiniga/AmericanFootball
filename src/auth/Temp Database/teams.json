@@ -1,0 +1,122 @@
+{
+  "Dallas Cowboys": [
+    {
+      "player": "Dak Prescott",
+      "number": 4,
+      "positon": "Quarterback",
+      "college": "Mississippi State University",
+      "current year on team": "2021"
+    },
+    {
+      "player":"Ezikiel Elliot",
+      "number": 21,
+      "positon": "Running Back",
+      "college": "University of Ohio State",
+      "current year on team": "2021"
+    },
+    {
+      "player":"Amari Cooper",
+      "number": 19,
+      "positon": "Wide Reciever",
+      "college": "University of  Alabama",
+      "current year on team": "2021"
+    },
+    {
+      "player":"Cee Dee Lamb",
+      "number": 88,
+      "positon": "Wide Reciever",
+      "college": "University of  Oklahoma",
+      "current year on team": "2021"
+    },
+
+
+    {
+      "player":"Michael Gallup",
+      "number": 13,
+      "positon": "Wide Receiver",
+      "college": "Colorado State University",
+      "current year on team": "2021"
+    },
+
+  {
+    "Green Bay Packers": [
+      {
+        "player": "Aaron Rodgers",
+        "number": 12,
+        "positon": "Quarterback",
+        "college": "University of California",
+        "current year on team": "2021"
+      },
+      {
+        "player":"Aaron Jones",
+        "number": 33,
+        "positon": "Running Back",
+        "college": " University of Texas at El Paso ",
+        "current year on team": "2021"
+      },
+      {
+        "player":"Davante Adams",
+        "number": 17,
+        "positon": "Wide Reciever",
+        "College": "Fresno State",
+        "current year on team": "2021"
+      },
+      {
+        "player":"Davante Adams",
+        "number": 19,
+        "positon": "Wide Reciever",
+        "College": "Notre Dame",
+        "current year on team": "2021"
+      },
+      
+      {
+        "player":"Allen Lazard",
+        "number": 13,
+        "positon": "Wide Receiver",
+        "College": "Iowa State",
+        "current year on team": "2021"
+      },
+      {
+        "Jacksonville Jasguars": [
+          {
+            "player": "Gardner Minshew II",
+            "number": 15,
+            "positon": "Quarterback",
+            "college": "Washington State University",
+            "current year on team": "2021"
+          },
+          {
+            "player":"James Robinson",
+            "number": 30,
+            "positon": "Running Back",
+            "college": "Illinios State",
+            "current year on team": "2021"
+          },
+          {
+            "player":"DJ Chark Jr.",
+            "number": 17,
+            "positon": "Wide Reciever",
+            "College": "LSU",
+            "current year on team": "2021"
+          },
+          {
+            "player":"Laviska Shenault Jr.",
+            "number": 10,
+            "positon": "Wide Reciever",
+            "College": "University of Colorado",
+            "current year on team": "2021"
+          },
+          
+          {
+            "player":"Collin Johnson",
+            "number": 13,
+            "positon": "Wide Receiver",
+            "College": "Iowa State",
+            "current year on team": "2021"
+          }
+         ]
+        }
+      ]
+    }
+  ]
+}
