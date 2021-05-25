@@ -40,3 +40,16 @@ const ControlledCarousel = (props) => {
 };
 
 export default ControlledCarousel;
+
+/*
+/* <Carousel activeIndex={index} onSelect={handleSelect}>
+      <div
+        className="align-items-center"
+        style={{
+          display: "flex",
+          justifyContent: "flex-start",
+        }}>
+        {list}
+      </div>
+    </Carousel>
+  ); */

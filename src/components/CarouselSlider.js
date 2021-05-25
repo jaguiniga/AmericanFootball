@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import ScoreCard from "./ScoreCard";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "../css/CarouselSliders.css";
 
 const ControlledCarousel = (props) => {
   const [index, setIndex] = useState(0);
@@ -10,7 +10,23 @@ const ControlledCarousel = (props) => {
     setIndex(selectedIndex);
   };
 
-  var list = [
+  var list1 = [
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+  ];
+  var list2 = [
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+    <ScoreCard />,
+  ];
+  var list3 = [
     <ScoreCard />,
     <ScoreCard />,
     <ScoreCard />,
@@ -20,16 +36,65 @@ const ControlledCarousel = (props) => {
   ];
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <div
+      id="myCarousel"
+      className="carousel slide"
+      data-bs-ride="carousel"
+      style={{ height: "80px" }}>
       <div
-        className="align-items-center"
-        style={{
-          display: "flex",
-          justifyContent: "flex-start",
-        }}>
-        {list}
+        className="carousel-inner"
+        style={{ margin: "auto", height: "80px", width: "60%" }}>
+        <div className="carousel-item active">
+          <div
+            style={{
+              width: "60%",
+              display: "flex",
+              jusitfyContent: "space-around",
+              alignItems: "center",
+            }}>
+            {list1}
+          </div>
+        </div>
+        <div className="carousel-item">
+          <div
+            style={{
+              width: "60%",
+              display: "flex",
+              jusitfyContent: "flex-start",
+              alignItems: "center",
+            }}>
+            {list2}
+          </div>
+        </div>
+        <div className="carousel-item">
+          <div
+            style={{
+              width: "60%",
+              display: "flex",
+              jusitfyContent: "center",
+              alignItems: "center",
+            }}>
+            {list3}
+          </div>
+        </div>
       </div>
-    </Carousel>
+      <button
+        className="carousel-control-prev"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="prev">
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
+      </button>
+      <button
+        className="carousel-control-next"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="next">
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
+      </button>
+    </div>
   );
 };
 
