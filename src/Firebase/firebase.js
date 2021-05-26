@@ -1,26 +1,38 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
-
+import database from "firebase/database";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-const firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
-    databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
-    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
-    appId: process.env.REACT_APP_MESSAGING_APP_ID,
-    measurementId: process.env.REACT_APP_MEASUREMENT_ID
-  };
+const Config = {
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
+  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
+  appId: process.env.REACT_APP_MESSAGING_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
+};
 
-  // initilaize firebase
-  firebase.initializeApp(firebaseConfig);
+// initilaize firebase
+firebase.initializeApp(Config);
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
+
+/*Tutorial*/
+let firebaseCache;
+
+export const getFirebase = () => {
+  if (firebaseCache) {
+    return firebaseCache;
+  }
+
+  firebaseCache = firebase;
+  return firebase;
+};
 
 const provider1 = new firebase.auth.FacebookAuthProvider();
 export const signInWithFacebook = () => {
@@ -45,7 +57,7 @@ export const generateUserDocument = async (user, additionalData) => {
         displayName,
         email,
         photoURL,
-        ...additionalData
+        ...additionalData,
       });
     } catch (error) {
       console.error("Error creating user document", error);
@@ -54,14 +66,14 @@ export const generateUserDocument = async (user, additionalData) => {
   return getUserDocument(user.uid);
 };
 
-const getUserDocument = async uid => {
+const getUserDocument = async (uid) => {
   if (!uid) return null;
   try {
     const userDocument = await firestore.doc(`users/${uid}`).get();
 
     return {
       uid,
-      ...userDocument.data()
+      ...userDocument.data(),
     };
   } catch (error) {
     console.error("Error fetching user", error);

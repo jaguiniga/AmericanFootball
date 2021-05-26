@@ -13,6 +13,13 @@ import HouseRules from "./HouseRulesComponent";
 import Password from "./PasswordComponent";
 import ForgotPassword from "./components/ForgotPassword";
 import PageNotFound404 from "./components/PageNotFound404";
+
+/*Tutorial*/
+import Home from "./components/BlogPost/Home";
+import Post from "./components/BlogPost/Post";
+import NoMatch from "./components/BlogPost/No-Match";
+import Create from "./components/BlogPost/Create";
+
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -39,8 +46,13 @@ const routing = (
         <Route path="/houserules" component={HouseRules} />
         <Route path="/password" component={Password} />
         <Route path="/forgotpassword" component={ForgotPassword} />
-        <Route path="/UserSignedIn" component={UserSignedIn} />
         <Route path="/ContactUs" component={ContactUs} />
+        <Route path="/UserSignedIn" component={UserSignedIn} />
+        
+        <Route exact path="/blogPost" component={Home} />
+        <Route exact path="/create" component={Create} />
+        <Route path="/:slug" component={Post} />
+        <Route path="/404" component={NoMatch} />
         <Route path="*" component={PageNotFound404} />
         
       </Switch>
