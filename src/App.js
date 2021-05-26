@@ -12,6 +12,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { UserContext } from "./auth/UserProvider";
 import UserProvider from "./auth/UserProvider";
 import Login from "./components/LoginComponent";
+import Create from "./components/BlogPost/Create";
 function App() {
   return (
     <div id="main-page-body">
@@ -30,6 +31,7 @@ function App() {
           {/* Center */}
           <div className="column_center">
             <WelcomeLogo />
+            <Create/>
             <Home />
           </div>
           {/* Right Side */}

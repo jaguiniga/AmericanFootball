@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { getFirebase } from "../../Firebase/firebase";
-
+import "../../css/Create.css";
 const labelStyles = {
   display: "block",
   marginBottom: 4,
 };
 
 const inputStyles = {
-  width: "100%",
+  width: "101%",
   height: "2rem",
-  lineHeight: "2rem",
+  lineHeight: "1rem",
   verticalAlign: "middle",
-  fontSize: "1rem",
-  marginBottom: "1.5rem",
-  padding: "0 0.25rem",
+  fontSize: "100%",
+  marginBottom: ".5rem",
+ 
 };
 
 const Create = ({ history }) => {
@@ -65,23 +65,30 @@ const Create = ({ history }) => {
   };
 
   return (
-    <>
-      <h1>Create a new post</h1>
-      <section style={{ margin: "2rem 0" }}>
-        <label style={labelStyles} htmlFor="title-field">
+    <section>
+        
+   <div className="card border-success mb-3" 
+                  style = {{
+                  width: "101.5%", 
+                  marginRight: "300px", 
+                  height: "21.3rem",  
+                  lineHeight: ".55"}} >
+     <div className="card-header"><strong>Create Post</strong></div>
+     <div className="card-body text-success">
+         
+     <label style={labelStyles} htmlFor="title-field">
           Title
         </label>
         <input
-          style={inputStyles}
-          id="title-field"
-          type="text"
-          value={title}
+           style={inputStyles}
+           id="title-field"
+           type="text"
+           value={title} 
           onChange={({ target: { value } }) => {
             setTitle(value);
           }}
         />
-
-        <label style={labelStyles} htmlFor="slug-field">
+         <label style={labelStyles} htmlFor="slug-field">
           Slug
         </label>
         <input
@@ -93,8 +100,7 @@ const Create = ({ history }) => {
             setSlug(value);
           }}
         />
-
-        <label style={labelStyles} htmlFor="cover-image-field">
+         <label style={labelStyles} htmlFor="cover-image-field">
           Cover image
         </label>
         <input
@@ -106,7 +112,6 @@ const Create = ({ history }) => {
             setCoverImage(value);
           }}
         />
-
         <label style={labelStyles} htmlFor="cover-image-alt-field">
           Cover image alt
         </label>
@@ -119,12 +124,11 @@ const Create = ({ history }) => {
             setCoverImageAlt(value);
           }}
         />
-
-        <label style={labelStyles} htmlFor="content-field">
+         <label style={labelStyles} htmlFor="content-field">
           Content
         </label>
         <textarea
-          style={{ ...inputStyles, height: 200, verticalAlign: "top" }}
+          style={{ ...inputStyles, height: 28, verticalAlign: "top" }}
           id="content"
           type="text"
           value={content}
@@ -132,6 +136,8 @@ const Create = ({ history }) => {
             setContent(value);
           }}
         />
+
+
         <div style={{ textAlign: "right" }}>
           <button
             style={{
@@ -146,8 +152,11 @@ const Create = ({ history }) => {
             Create
           </button>
         </div>
-      </section>
-    </>
+     </div>
+   </div>
+  
+  
+       </section>
   );
 };
 

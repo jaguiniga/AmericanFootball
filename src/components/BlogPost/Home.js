@@ -32,10 +32,10 @@ const Home = () => {
 
   return (
     <>
-      <h1>Blog posts</h1>
+      {/* <h1>Blog posts</h1>
       <p>
         Welcome to the starter code! We're showing hard-coded data right now.
-      </p>
+      </p> */}
       {blogPosts.map((blogPost) => (
         <section key={blogPost.slug} className="card">
           <img src={blogPost.coverImage} alt={blogPost.coverImageAlt} />
@@ -44,10 +44,10 @@ const Home = () => {
               {blogPost.title} &mdash;{" "}
               <span style={{ color: "#5e5e5e" }}>{blogPost.datePretty}</span>
             </h2>
-            <p
+            {/* <p
               dangerouslySetInnerHTML={{
                 __html: `${blogPost.content.substring(0, 200)}...`,
-              }}></p>
+              }}></p> */}
             <Link to={`/${blogPost.slug}`}>Continue reading...</Link>
           </div>
         </section>
