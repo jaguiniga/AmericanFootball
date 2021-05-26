@@ -34,19 +34,19 @@ const Headlines = () => {
 <div className="card-header"><strong>This Week's Top Video</strong></div>
   <div className="card-body text-secondary">
   <video controls width="250">
-  <ReactPlayer 
+  {/* <ReactPlayer 
          url = "https://www.sportingnews.com/us/nfl/video/pelissero-nfl-expects-fans-at-training-camps-this-summer/uq0vggi02g581e8u355zlt6zt"
-         /> 
+         />  */}
       {/* <h1>Top Video</h1> */}
       {/* <video controls width="250"> */}
 
-      {/* <iframe width="230" height="315" src="https://www.youtube.com/embed/BP7kUVZW5Gk" title="YouTube video player" frameborder="0" 
+      <iframe width="230" height="315" src="https://www.youtube.com/embed/BP7kUVZW5Gk" title="YouTube video player" frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
               picture-in-picture" allowfullscreen>
-      </iframe> */}
-       <ReactPlayer 
+      </iframe>
+       {/* <ReactPlayer 
         url="https://www.youtube.com/watch?v=ug50zmP9I7s"
-      /> 
+      />  */}
        </video> 
   </div>
 </div>
