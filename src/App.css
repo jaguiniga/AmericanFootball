@@ -23,7 +23,7 @@
 #main-page-wrapper {
   width: 85%;
   max-width: 1250px;
-  background-color: red;
+  background-color: #edeef0;
   margin: 0 auto;
   padding: 1.5%;
   height: 1900px;
@@ -39,7 +39,7 @@
 }
 
 .column_left {
-  background-color: blue;
+  background-color: #edeef0;
   padding: 0.5em;
   display: flex;
   flex-direction: column;
@@ -49,7 +49,7 @@
 }
 
 .column_right {
-  background-color: rebeccapurple;
+  background-color: #edeef0;
   display: flex;
   padding: 0.5em;
   flex-direction: column;
@@ -59,7 +59,7 @@
 }
 
 .column_center {
-  background-color: aqua;
+  background-color: #edeef0;
   width: 650px;
   display: flex;
   flex-direction: column;
