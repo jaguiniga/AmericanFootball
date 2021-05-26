@@ -36,6 +36,7 @@ const routing = (
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/jaguiniga/AmericanFootball.git" component={App} />
+        <Route path="/ContactUs" component={ContactUs} />
         <Route path="/form" component={Form} />
         <Route path="/firstpage" component={FirstPage} />
         <Route path="/login" component={Login} />
@@ -46,7 +47,7 @@ const routing = (
         <Route path="/houserules" component={HouseRules} />
         <Route path="/password" component={Password} />
         <Route path="/forgotpassword" component={ForgotPassword} />
-        <Route path="/ContactUs" component={ContactUs} />
+        
         <Route path="/UserSignedIn" component={UserSignedIn} />
         
         <Route exact path="/blogPost" component={Home} />
