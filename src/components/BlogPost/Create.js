@@ -71,7 +71,7 @@ const Create = ({ history }) => {
                   style = {{
                   width: "101.5%", 
                   marginRight: "300px", 
-                  height: "21.3rem",  
+                  height: "22.3rem",  
                   lineHeight: ".55"}} >
      <div className="card-header"><strong>Create Post</strong></div>
      <div className="card-body text-success">
