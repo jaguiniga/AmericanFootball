@@ -13,7 +13,6 @@ const inputStyles = {
   verticalAlign: "middle",
   fontSize: "100%",
   marginBottom: ".5rem",
- 
 };
 
 const Create = ({ history }) => {
@@ -66,97 +65,98 @@ const Create = ({ history }) => {
 
   return (
     <section>
-        
-   <div className="card border-success mb-3" 
-                  style = {{
-                  width: "101.5%", 
-                  marginRight: "300px", 
-                  height: "22.3rem",  
-                  lineHeight: ".55"}} >
-     <div className="card-header"><strong>Create Post</strong></div>
-     <div className="card-body text-success">
-         
-     <label style={labelStyles} htmlFor="title-field">
-          Title
-        </label>
-        <input
-           style={inputStyles}
-           id="title-field"
-           type="text"
-           value={title} 
-          onChange={({ target: { value } }) => {
-            setTitle(value);
-          }}
-        />
-         <label style={labelStyles} htmlFor="slug-field">
-          Slug
-        </label>
-        <input
-          style={inputStyles}
-          id="slug-field"
-          type="text"
-          value={slug}
-          onChange={({ target: { value } }) => {
-            setSlug(value);
-          }}
-        />
-         <label style={labelStyles} htmlFor="cover-image-field">
-          Cover image
-        </label>
-        <input
-          style={inputStyles}
-          id="cover-image-field"
-          type="text"
-          value={coverImage}
-          onChange={({ target: { value } }) => {
-            setCoverImage(value);
-          }}
-        />
-        <label style={labelStyles} htmlFor="cover-image-alt-field">
-          Cover image alt
-        </label>
-        <input
-          style={inputStyles}
-          id="cover-image-alt-field"
-          type="text"
-          value={coverImageAlt}
-          onChange={({ target: { value } }) => {
-            setCoverImageAlt(value);
-          }}
-        />
-         <label style={labelStyles} htmlFor="content-field">
-          Content
-        </label>
-        <textarea
-          style={{ ...inputStyles, height: 28, verticalAlign: "top" }}
-          id="content"
-          type="text"
-          value={content}
-          onChange={({ target: { value } }) => {
-            setContent(value);
-          }}
-        />
-
-
-        <div style={{ textAlign: "right" }}>
-          <button
-            style={{
-              border: "none",
-              color: "#fff",
-              backgroundColor: "#039be5",
-              borderRadius: "4px",
-              padding: "8px 12px",
-              fontSize: "0.9rem",
-            }}
-            onClick={createPost}>
-            Create
-          </button>
+      <div
+        className="card border-success mb-3"
+        style={{
+          width: "101.5%",
+          marginRight: "300px",
+          height: "21.3rem",
+          lineHeight: ".55",
+          boxShadow:
+            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+        }}>
+        <div className="card-header">
+          <strong>Create Post</strong>
         </div>
-     </div>
-   </div>
-  
-  
-       </section>
+        <div className="card-body text-success">
+          <label style={labelStyles} htmlFor="title-field">
+            Title
+          </label>
+          <input
+            style={inputStyles}
+            id="title-field"
+            type="text"
+            value={title}
+            onChange={({ target: { value } }) => {
+              setTitle(value);
+            }}
+          />
+          <label style={labelStyles} htmlFor="slug-field">
+            Slug
+          </label>
+          <input
+            style={inputStyles}
+            id="slug-field"
+            type="text"
+            value={slug}
+            onChange={({ target: { value } }) => {
+              setSlug(value);
+            }}
+          />
+          <label style={labelStyles} htmlFor="cover-image-field">
+            Cover image
+          </label>
+          <input
+            style={inputStyles}
+            id="cover-image-field"
+            type="text"
+            value={coverImage}
+            onChange={({ target: { value } }) => {
+              setCoverImage(value);
+            }}
+          />
+          <label style={labelStyles} htmlFor="cover-image-alt-field">
+            Cover image alt
+          </label>
+          <input
+            style={inputStyles}
+            id="cover-image-alt-field"
+            type="text"
+            value={coverImageAlt}
+            onChange={({ target: { value } }) => {
+              setCoverImageAlt(value);
+            }}
+          />
+          <label style={labelStyles} htmlFor="content-field">
+            Content
+          </label>
+          <textarea
+            style={{ ...inputStyles, height: 28, verticalAlign: "top" }}
+            id="content"
+            type="text"
+            value={content}
+            onChange={({ target: { value } }) => {
+              setContent(value);
+            }}
+          />
+
+          <div style={{ textAlign: "right" }}>
+            <button
+              style={{
+                border: "none",
+                color: "#fff",
+                backgroundColor: "#039be5",
+                borderRadius: "4px",
+                padding: "8px 12px",
+                fontSize: "0.9rem",
+              }}
+              onClick={createPost}>
+              Create
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

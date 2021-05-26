@@ -16,7 +16,8 @@ const ContactUs = () => {
     e.preventDefault();
     setLoader(true);
 
-    firestore.collection("contacts")
+    firestore
+      .collection("contacts")
       .add({
         name: name,
         email: email,
@@ -37,7 +38,7 @@ const ContactUs = () => {
   };
 
   return (
-      <div>
+    <div background="lightgray">
       <NavBar />
       <div style = {{backgroundImage: `url(${contactusimage})`, backgroundPosition: 'center',
             backgroundSize: 'cover',
@@ -45,26 +46,25 @@ const ContactUs = () => {
     <form className="form" onSubmit={handleSubmit}>
       <h1>Contact Us 🤳</h1>
 
-      <label>Name</label>
-      <input
-        placeholder="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
+        <label>Name</label>
+        <input
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
 
-      <label>Email</label>
-      <input
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
+        <label>Email</label>
+        <input
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
-      <label>Message</label>
-      <textarea
-        placeholder="Message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      ></textarea>
+        <label>Message</label>
+        <textarea
+          placeholder="Message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}></textarea>
 
       <button
         type="submit"

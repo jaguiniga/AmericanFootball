@@ -1,13 +1,9 @@
-
-  
-  body,
-  input,
-  textarea,
-  button {
-    font-family: "Inter", sans-serif;
-  }
-  
-
+body,
+input,
+textarea,
+button {
+  font-family: "Inter", sans-serif;
+}
 
 /* Contact.js */
 .formC {
