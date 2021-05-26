@@ -1,7 +1,7 @@
 .footer {
-  bottom: 0;
+  height: 100px;
   /* padding: 4% 15% 2% 5%;  */
-  background-color: gray;
+  background-color: white;
   text-align: center;
 }
 
@@ -9,12 +9,12 @@
   font-weight: bolder;
   font-size: 1vh;
   line-height: 110%;
-  font-family: "sans-serif";
+  /* font-family: "sans-serif"; */
   padding-left: 5px;
 }
 .ft-text li {
   font-size: 5.5vh;
-  font-family: "sans-serif";
+  /* font-family: "sans-serif"; */
 }
 .col {
   margin-left: 15%;
@@ -22,24 +22,24 @@
 }
 .ft-link {
   text-align: center;
-  font-size: 1.25vh;
-  font-family: "sans-serif";
+  font-size: 1.9vh;
+  /* font-family: "sans-serif"; */
   text-decoration: none;
-  color: #222831;
+  color: black;
   cursor: pointer;
-  background-color: gray;
+  background-color: white;
 }
 .ft-link:hover,
 .ft-link-logo:hover {
   font-weight: 300;
   text-decoration: none;
   color: #222831;
-  font-family: "sans-serif";
+  /* font-family: "sans-serif"; */
   background-color: white;
 }
 .col-lg {
   margin-left: 10%;
   margin-right: 10%;
-  color: skyblue;
+  color: black;
   font-weight: 500;
 }
