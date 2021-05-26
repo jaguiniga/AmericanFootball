@@ -1,4 +1,4 @@
-import Logo from "../images/welcomeLogo.png";
+import stadium from "../images/stadium.jpg";
 import "../css/WelcomeLogo.css";
 
 function WelcomeLogo() {
@@ -11,8 +11,8 @@ function WelcomeLogo() {
       }}>
       {/* <h1>Welcome To American Football</h1> */}
       <div>
-        <img src={Logo} className="image-autoFit" alt="Football Player" />
-        Put some test here
+        <img src={stadium} className="image-autoFit" alt="Football Player" />
+     Football
       </div>
     </div>
   );

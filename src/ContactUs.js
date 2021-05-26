@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import "./App.css";
 import { firestore } from "./Firebase/firebase";
 import "./ContactUs.css";
@@ -45,30 +45,35 @@ const ContactUs = () => {
             backgroundRepeat: 'no-repeat'}}>
     <form className="form" onSubmit={handleSubmit}>
       <h1>Contact Us 🤳</h1>
-
+      <div className= "input-btn">
         <label>Name</label>
         <input
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-
+        </div>
+        
+        <div className= "input-btn">
         <label>Email</label>
         <input
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
+        </div>
 
-        <label>Message</label>
+        <div className= "input-btn">
+        
         <textarea
           placeholder="Message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}></textarea>
+          </div>
 
-      <button
+      <button className= "input-btn"
         type="submit"
-        style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
+        
       >
         Submit
       </button>

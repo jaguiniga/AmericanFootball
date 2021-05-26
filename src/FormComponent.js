@@ -4,7 +4,6 @@ import Footer from './FooterComponent';
 import { auth, generateUserDocument, firestore} from "./Firebase/firebase";
 import {NavLink} from "react-router-dom";
 import NavBar from "./components/Navbar/NavBarComponent";
-import epic from "./images/epic.jpg";
 import hdball from "./images/hdball.webp"
 
 

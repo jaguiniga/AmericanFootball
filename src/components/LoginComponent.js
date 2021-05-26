@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import {
   auth,
   signInWithGoogle,
-  generateUserDocument,
   signInWithFacebook,
 } from "../Firebase/firebase";
 
