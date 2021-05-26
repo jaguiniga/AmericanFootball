@@ -1,94 +1,51 @@
-body {
-    font-family: 'Saira Semi Condensed', sans-serif;
-    background-color: #000 !important
+body{
+    background:#DCDCDC;
+    margin-top:20px;
+}
+.card-box {
+    padding: 20px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    background-color: #fff;
 }
 
-.tick {
-    position: relative;
-    top: 0.5vh
+.social-links li a {
+    border-radius: 50%;
+    color: rgba(121, 121, 121, .8);
+    display: inline-block;
+    height: 30px;
+    line-height: 27px;
+    border: 2px solid rgba(121, 121, 121, .5);
+    text-align: center;
+    width: 30px
 }
 
-.main {
+.social-links li a:hover {
+    color: #797979;
+    border: 2px solid #797979
+}
+.thumb-lg {
+    height: 88px;
+    width: 88px;
+}
+.img-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
     height: auto;
-    width: 35vw;
-    background-color: white;
-    margin: auto;
-    position: relative;
-    top: 15vh;
-    padding: 3vh
 }
-
-.picture img {
-    height: 8vw;
-    width: 8vw;
-    position: relative;
-    top: 1vw
+.text-pink {
+    color: #ff679b!important;
 }
-
-.add {
-    background-color: #43a047;
-    position: relative;
-    top: 3vw;
-    right: 2vw
+.btn-rounded {
+    border-radius: 2em;
 }
-
-.name {
-    font-size: 20px
+.text-muted {
+    color: #98a6ad!important;
 }
-
-.details p {
-    position: relative;
-    top: 1vw
-}
-
-.name i {
-    color: blue
-}
-
-td {
-    text-align: center
-}
-
-tr {
-    border: 2px solid white
-}
-
-.table {
-    margin-top: 2vw
-}
-
-.edit {
-    background-color: #43a047;
-    width: 90%;
-    color: #fff !important
-}
-
-@media only screen and (max-width: 425px) {
-    .main {
-        width: 100vw;
-        height: auto
-    }
-
-    .picture img {
-        height: 40vw;
-        width: 40vw;
-        position: relative;
-        left: 5vw
-    }
-
-    .details p {
-        position: relative;
-        top: 5vw
-    }
-
-    .add {
-        position: relative;
-        top: 8vw
-    }
-}
-
-@media only screen and (max-height: 725px) {
-    .main {
-        height: auto
-    }
+h4 {
+    line-height: 22px;
+    font-size: 18px;
 }

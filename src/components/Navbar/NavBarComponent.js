@@ -1,30 +1,10 @@
 import React, { useState } from "react";
 // import { NavLink } from "react-router-dom";
-// import Dropdown from "./Dropdown";
+
 import "../../css/NavBar.css";
 
 function Navbar() {
-  // const [click, setClick] = useState(false);
-  // const [dropdown, setDropdown] = useState(false);
-
-  // const handleClick = () => setClick(!click);
-  // const closeMobileMenu = () => setClick(false);
-
-  // const onMouseEnter = () => {
-  //   if (window.innerWidth < 960) {
-  //     setDropdown(false);
-  //   } else {
-  //     setDropdown(true);
-  //   }
-  // };
-
-  // const onMouseLeave = () => {
-  //   if (window.innerWidth < 960) {
-  //     setDropdown(false);
-  //   } else {
-  //     setDropdown(false);
-  //   }
-  // };
+  
   return (
     <div>
       <nav className="navbar navbar-expand-md bg-dark navbar-dark">
@@ -63,7 +43,7 @@ function Navbar() {
               </li>
               {/* user profile */}
               <li className="nav-item">
-                <a className="nav-link" href="/ProfilePage">
+                <a className="nav-link" href="UserSignedIn">
                   <i class="fas fa-user" />
                 </a>
               </li>
@@ -73,6 +53,15 @@ function Navbar() {
                   <i class="far fa-list-alt" />
                 </a>
               </li>
+
+               {/* site contact us */}
+               <li className="nav-item">
+                <a className="nav-link" href="ContactUs">
+                  <i class="fas fa-comment-alt" />
+                </a>
+              </li>
+
+
             </ul>
           </div>
         </div>

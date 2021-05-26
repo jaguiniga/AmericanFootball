@@ -3,14 +3,19 @@ import { NavLink } from "react-router-dom";
 import "../css/Headlines.css";
 import "../css/Videos.css";
 import Logo from "../images/NFL_Draft_reglogo.png";
+import ReactPlayer from 'react-player'
+
 const Headlines = () => {
   return (
-    <section>
-     <div className="card border-primary mb-3" style = {{maxWidth: "18rem"}}>
-  <div className="card-header"><strong>Top Headlines</strong></div>
-  <div className="card-body text-primary">
-  <img src={Logo} className="image-autoFit" alt="NFL Logo" />
-  <ul className="links" >
+  <section>
+  <div className="card border-primary mb-3" style = {{maxWidth: "18rem"}}>
+  <div className="card-header"><strong>Johart's businees goes here</strong></div>
+</div>
+<div className="card border-secondary mb-3" style = {{maxWidth: "18rem"}}>
+<div className="card-header"><strong>Top Headlines</strong></div>
+     <div className="card-body text-primary">
+     <img src={Logo} className="image-autoFit" alt="NFL Logo" />
+     <ul className="links" >
          <li><a href="https://www.sbnation.com/nfl-draft">
                  2021 NFL Draft Starts
          </a></li>
@@ -25,25 +30,24 @@ const Headlines = () => {
   </ul>
   </div>
 </div>
-<div className="card border-secondary mb-3" style = {{maxWidth: "18rem"}}>
-  <div className="card-header"><strong>This Week's Top Video</strong></div>
+<div className="card border-success mb-3" style = {{maxWidth: "18rem"}}>
+<div className="card-header"><strong>This Week's Top Video</strong></div>
   <div className="card-body text-secondary">
-  
+  <video controls width="250">
+  <ReactPlayer 
+         url = "https://www.sportingnews.com/us/nfl/video/pelissero-nfl-expects-fans-at-training-camps-this-summer/uq0vggi02g581e8u355zlt6zt"
+         /> 
       {/* <h1>Top Video</h1> */}
       {/* <video controls width="250"> */}
 
-      <iframe width="230" height="315" src="https://www.youtube.com/embed/Yc84nYs_o8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      {/* <ReactPlayer 
+      {/* <iframe width="230" height="315" src="https://www.youtube.com/embed/BP7kUVZW5Gk" title="YouTube video player" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+              picture-in-picture" allowfullscreen>
+      </iframe> */}
+       <ReactPlayer 
         url="https://www.youtube.com/watch?v=ug50zmP9I7s"
-      /> */}
-      {/* </video> */}
-  </div>
-</div>
-<div className="card border-success mb-3" style = {{maxWidth: "18rem"}}>
-  <div className="card-header">Header</div>
-  <div className="card-body text-success">
-    <h5 className="card-title">Success card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      /> 
+       </video> 
   </div>
 </div>
 
