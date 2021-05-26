@@ -28,7 +28,7 @@ import UserSignedIn from "./Profile/UserSignedIn";
 import ContactUs from "./ContactUs";
 
 import reportWebVitals from "./reportWebVitals";
-import ProfilePage from "./Profile/ProfilePage";
+
 
 const routing = (
   <Router>

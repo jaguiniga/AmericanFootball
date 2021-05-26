@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { UserContext } from "../auth/UserProvider";
 import { auth } from "../Firebase/firebase";
-import { NavLink } from "react-router-dom";
 import "../App.css";
 
 const ProfilePage = () => {

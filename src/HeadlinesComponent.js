@@ -1,9 +1,12 @@
 import React from "react";
 import { NavLink} from "react-router-dom";
 import './Headlines.css';
+
+
 const Headlines = () => {
   return (
     <section>
+     
       <div className="headlines"> 
         <h1 ><strong>Top Headlines</strong></h1>
         
