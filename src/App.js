@@ -1,19 +1,53 @@
-import {Route, Switch, NavLink} from "react-router-dom";
-import './App.css';
-import Form from './FormComponent';
-import FirstPage from './FirstPage';
+import React, { useContext } from "react";
+import "./App.css";
+import NavBar from "./components/Navbar/NavBarComponent";
+import CarouselSlider from "./components/CarouselSlider";
+import WelcomeLogo from "./components/WelcomeLogo";
+import Footer from "./FooterComponent";
+import Headlines from "./components/HeadlinesComponent";
+
+import Home from "./components/BlogPost/Home";
+
+import "bootstrap/dist/css/bootstrap.css";
+import { UserContext } from "./auth/UserProvider";
+import UserProvider from "./auth/UserProvider";
+import UserSignedIn from "./Profile/UserSignedIn";
+import Login from "./components/LoginComponent";
+import "./App.css";
+import ProfilePage from "./Profile/ProfilePage";
 
 
-
+import Create from "./components/BlogPost/Create";
 function App() {
   return (
-    <div className="App">
-      <NavLink exact activeClassName="active-link" to="/form"> Sign Up </NavLink>
-      <NavLink exact activeClassName="active-link" to="/"> Main Page </NavLink>
-      <Switch>
-        <Route exact path='/form' component={Form} />
-        <Route exact path='/' component={FirstPage} />
-      </Switch>
+    <div id="main-page-body">
+      <UserProvider>
+        <div id="main-header-scoreboard">
+          <CarouselSlider />
+        </div>
+        <div id="main-page-nav">
+          <NavBar />
+        </div>
+        <div id="main-page-wrapper">
+          {/* Left Side */}
+          <div className="column_left">
+            <Login />
+          </div>
+          {/* Center */}
+          <div className="column_center">
+            <WelcomeLogo />
+            <Create/>
+            <Home />
+          </div>
+          {/* Right Side */}
+          <div className="column_right">
+            <Headlines />
+          </div>
+        </div>
+        <div id="main-footer">
+          <Footer />
+        </div>
+      </UserProvider>
     </div>
   );
 }

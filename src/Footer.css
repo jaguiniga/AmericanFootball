@@ -1,0 +1,45 @@
+.footer {
+  height: 100px;
+  /* padding: 4% 15% 2% 5%;  */
+  background-color: white;
+  text-align: center;
+}
+
+.ft-text {
+  font-weight: bolder;
+  font-size: 1vh;
+  line-height: 110%;
+  /* font-family: "sans-serif"; */
+  padding-left: 5px;
+}
+.ft-text li {
+  font-size: 5.5vh;
+  /* font-family: "sans-serif"; */
+}
+.col {
+  margin-left: 15%;
+  background-color: white;
+}
+.ft-link {
+  text-align: center;
+  font-size: 1.9vh;
+  /* font-family: "sans-serif"; */
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  background-color: white;
+}
+.ft-link:hover,
+.ft-link-logo:hover {
+  font-weight: 300;
+  text-decoration: none;
+  color: #222831;
+  /* font-family: "sans-serif"; */
+  background-color: white;
+}
+.col-lg {
+  margin-left: 10%;
+  margin-right: 10%;
+  color: black;
+  font-weight: 500;
+}
