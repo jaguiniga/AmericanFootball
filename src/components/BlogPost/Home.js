@@ -48,7 +48,7 @@ const Home = () => {
               dangerouslySetInnerHTML={{
                 __html: `${blogPost.content.substring(0, 200)}...`,
               }}></p> */}
-            <Link to={`/${blogPost.slug}`}>Continue reading...</Link>
+            {/* <Link to={`/${blogPost.slug}`}>Continue reading...</Link> */}
           </div>
         </section>
       ))}

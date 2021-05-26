@@ -3,13 +3,14 @@ import { NavLink } from "react-router-dom";
 import "../css/Headlines.css";
 import "../css/Videos.css";
 import Logo from "../images/NFL_Draft_reglogo.png";
-import ReactPlayer from 'react-player'
-
+import ProfilePage from "../Profile/ProfilePage";
 const Headlines = () => {
   return (
   <section>
   <div className="card border-primary mb-3" style = {{maxWidth: "18rem"}}>
-  <div className="card-header"><strong>Johart's businees goes here</strong></div>
+  <div className="card-header"><strong>Profile</strong></div>
+  <ProfilePage/>
+
 </div>
 <div className="card border-secondary mb-3" style = {{maxWidth: "18rem"}}>
 <div className="card-header"><strong>Top Headlines</strong></div>
@@ -33,13 +34,8 @@ const Headlines = () => {
 <div className="card border-success mb-3" style = {{maxWidth: "18rem"}}>
 <div className="card-header"><strong>This Week's Top Video</strong></div>
   <div className="card-body text-secondary">
-  <video controls width="250">
-  {/* <ReactPlayer 
-         url = "https://www.sportingnews.com/us/nfl/video/pelissero-nfl-expects-fans-at-training-camps-this-summer/uq0vggi02g581e8u355zlt6zt"
-         />  */}
-      {/* <h1>Top Video</h1> */}
-      {/* <video controls width="250"> */}
-
+  {/* <video controls width="250"> */}
+  
       <iframe width="230" height="315" src="https://www.youtube.com/embed/BP7kUVZW5Gk" title="YouTube video player" frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
               picture-in-picture" allowfullscreen>
@@ -47,7 +43,7 @@ const Headlines = () => {
        {/* <ReactPlayer 
         url="https://www.youtube.com/watch?v=ug50zmP9I7s"
       />  */}
-       </video> 
+       {/* </video>  */}
   </div>
 </div>
 
