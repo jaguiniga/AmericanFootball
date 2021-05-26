@@ -36,7 +36,8 @@ const routing = (
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/jaguiniga/AmericanFootball.git" component={App} />
-        <Route path="/ContactUs" component={ContactUs} />
+        <Route exact path="/ContactUs" component={ContactUs} />
+        <Route exact path="/jaguiniga/ContactUs" component={ContactUs} />
         <Route path="/form" component={Form} />
         <Route path="/firstpage" component={FirstPage} />
         <Route path="/login" component={Login} />

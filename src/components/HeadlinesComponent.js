@@ -3,40 +3,23 @@ import { NavLink } from "react-router-dom";
 import "../css/Headlines.css";
 import "../css/Videos.css";
 import Logo from "../images/NFL_Draft_reglogo.png";
-import ReactPlayer from "react-player";
-
+import ProfilePage from "../Profile/ProfilePage";
 const Headlines = () => {
   return (
-    <section>
-      <div
-        className="card border-primary mb-3"
-        style={{
-          maxWidth: "18rem",
-          boxShadow:
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        }}>
-        <div className="card-header">
-          <strong>Johart's businees goes here</strong>
-        </div>
-      </div>
-      <div
-        className="card border-secondary mb-3"
-        style={{
-          maxWidth: "18rem",
-          boxShadow:
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        }}>
-        <div className="card-header">
-          <strong>Top Headlines</strong>
-        </div>
-        <div className="card-body text-primary">
-          <img src={Logo} className="image-autoFit" alt="NFL Logo" />
-          <ul className="links">
-            <li>
-              <a href="https://www.sbnation.com/nfl-draft">
-                2021 NFL Draft Starts
-              </a>
-            </li>
+  <section>
+  <div className="card border-primary mb-3" style = {{maxWidth: "18rem"}}>
+  <div className="card-header"><strong>Profile</strong></div>
+  <ProfilePage/>
+
+</div>
+<div className="card border-secondary mb-3" style = {{maxWidth: "18rem"}}>
+<div className="card-header"><strong>Top Headlines</strong></div>
+     <div className="card-body text-primary">
+     <img src={Logo} className="image-autoFit" alt="NFL Logo" />
+     <ul className="links" >
+         <li><a href="https://www.sbnation.com/nfl-draft">
+                 2021 NFL Draft Starts
+         </a></li>
 
             <li>
               <a href="https://www.si.com/nfl/dolphins/news/complete-2021-nfl-draft-team-by-team-rundown">
@@ -44,38 +27,27 @@ const Headlines = () => {
               </a>
             </li>
 
-            <li>
-              <a href="https://www.pff.com/news/draft-film-study-pros-and-cons-2021-nfl-draft">
-                Pros and Cons For The 2021 NFL Draft
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div
-        className="card border-success mb-3"
-        style={{
-          maxWidth: "18rem",
-          boxShadow:
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        }}>
-        <div className="card-header">
-          <strong>This Week's Top Video</strong>
-        </div>
-        <div className="card-body text-secondary">
-          <video controls width="250">
-            <ReactPlayer url="https://www.sportingnews.com/us/nfl/video/pelissero-nfl-expects-fans-at-training-camps-this-summer/uq0vggi02g581e8u355zlt6zt" />
-            {/* <h1>Top Video</h1> */}
-            {/* <video controls width="250"> */}
-
-            {/* <iframe width="230" height="315" src="https://www.youtube.com/embed/BP7kUVZW5Gk" title="YouTube video player" frameborder="0" 
+         <li><a href="https://www.pff.com/news/draft-film-study-pros-and-cons-2021-nfl-draft">
+                  Pros and Cons For The 2021 NFL Draft
+         </a></li>
+  </ul>
+  </div>
+</div>
+<div className="card border-success mb-3" style = {{maxWidth: "18rem"}}>
+<div className="card-header"><strong>This Week's Top Video</strong></div>
+  <div className="card-body text-secondary">
+  {/* <video controls width="250"> */}
+  
+      <iframe width="230" height="315" src="https://www.youtube.com/embed/BP7kUVZW5Gk" title="YouTube video player" frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
               picture-in-picture" allowfullscreen>
-      </iframe> */}
-            <ReactPlayer url="https://www.youtube.com/watch?v=ug50zmP9I7s" />
-          </video>
-        </div>
-      </div>
+      </iframe>
+       {/* <ReactPlayer 
+        url="https://www.youtube.com/watch?v=ug50zmP9I7s"
+      />  */}
+       {/* </video>  */}
+  </div>
+</div>
 
       <div
         className="card border-danger mb-3"

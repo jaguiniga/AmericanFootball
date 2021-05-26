@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState} from 'react';
 import './App.css';
-import catchingfootball from "./images/catchingfootball.jpg";
 import Footer from './FooterComponent';
 import { auth, generateUserDocument, firestore} from "./Firebase/firebase";
 import {NavLink} from "react-router-dom";
 import NavBar from "./components/Navbar/NavBarComponent";
+import epic from "./images/epic.jpg";
+import hdball from "./images/hdball.webp"
 
 
 function Form () {
@@ -58,7 +59,7 @@ function Form () {
         return (
             <div>
               <NavBar />
-            <div style = {{backgroundImage: `url(${catchingfootball})`, backgroundPosition: 'center',
+            <div style = {{backgroundImage: `url(${hdball})`, backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'}}>
             <div>

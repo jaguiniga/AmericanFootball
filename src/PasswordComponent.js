@@ -1,12 +1,14 @@
 
 import Footer from './FooterComponent';
 import './Footer.css';
-import Logo from './images/s.png';
 import React, { useState, useContext } from "react";
 import { auth } from "./Firebase/firebase";
-import { UserContext } from "./auth/UserProvider";
 import {NavLink} from "react-router-dom";
+import NavBar from "./components/Navbar/NavBarComponent";
+import epic from "./images/epic.jpg";
+import './App.css';
 
+import resetpass from "./images/resetpass.jpg";
 
 
 
@@ -38,13 +40,13 @@ const Password = () => {
   };
 
   return (
-    <div className='pages'>
+    <div style = {{backgroundImage: `url(${resetpass})`, backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat'}}>
+      <NavBar />
     <section>
       <div className="password"> 
-
-          <h1 >PJ'S American Football Password Recovery</h1>
-          <img src = {Logo}  alt =""/>
-        <form action="">
+        <form className="formPassword">
           {emailHasBeenSent && (
             <div>
               An email has been sent to you!
@@ -55,8 +57,9 @@ const Password = () => {
               {error}
             </div>
           )}
+           <h4>PJ'S American Football Password Recovery</h4>
             <div className= "input-btn">
-              <label htmlFor="userEmail"> Email:</label>
+              <label htmlFor="userEmail"> Email: </label>
               <input
                 type="email"
                 name="userEmail"
@@ -66,18 +69,19 @@ const Password = () => {
                 onChange={onChangeHandler}
               />
             </div>
-          <button
+          <button className="input-btn"
             onClick={event => {
               sendResetEmail(event);
             }}
           >
             Send me a reset link
           </button>
+          <NavLink to="/">
+            back to sign in page
+          </NavLink>
         </form>
 
-        <NavLink to="/">
-         back to sign in page
-        </NavLink>
+       
       </div>
     
       <div>

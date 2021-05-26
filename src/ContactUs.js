@@ -3,7 +3,8 @@ import "./App.css";
 import { firestore } from "./Firebase/firebase";
 import "./ContactUs.css";
 import NavBar from "./components/Navbar/NavBarComponent";
-
+import contactusimage from "./images/contactusimage.jpg";
+import Footer from './FooterComponent';
 const ContactUs = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -39,8 +40,11 @@ const ContactUs = () => {
   return (
     <div background="lightgray">
       <NavBar />
-      <form className="formC" onSubmit={handleSubmit}>
-        <h1>Contact Us 🤳</h1>
+      <div style = {{backgroundImage: `url(${contactusimage})`, backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'}}>
+    <form className="form" onSubmit={handleSubmit}>
+      <h1>Contact Us 🤳</h1>
 
         <label>Name</label>
         <input
@@ -62,12 +66,17 @@ const ContactUs = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}></textarea>
 
-        <button
-          type="submit"
-          style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}>
-          Submit
-        </button>
-      </form>
+      <button
+        type="submit"
+        style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
+      >
+        Submit
+      </button>
+    </form>
+    <div>
+      <Footer />
+    </div>
+    </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { UserContext } from "../auth/UserProvider";
 import {auth} from "../Firebase/firebase";
 import {NavLink} from "react-router-dom";
+import "../App.css";
 
 
 const ProfilePage = () => {
@@ -24,7 +25,7 @@ const ProfilePage = () => {
         <div> <h2>{`${currentUserDisplayname}`}</h2> </div>
         <div> <h2>{`${currentUserEmail}`}</h2> </div>
         
-          <button className = "w-full py-3 bg-red-600 mt-4 text-white"  onClick = {() => {auth.signOut()}} NavLink to="/">Sign out</button>
+          <button className="input-btn"  onClick = {() => {auth.signOut()}} NavLink to="/">Sign out</button>
         </div>
       ) 
 };
