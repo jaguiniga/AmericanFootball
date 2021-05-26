@@ -7,13 +7,25 @@ import ProfilePage from "../Profile/ProfilePage";
 const Headlines = () => {
   return (
     <section>
-      <div className="card border-primary mb-3" style={{ maxWidth: "18rem" }}>
+      <div
+        className="card border-primary mb-3"
+        style={{
+          maxWidth: "18rem",
+          boxShadow:
+            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+        }}>
         <div className="card-header">
           <strong>Profile</strong>
         </div>
         <ProfilePage />
       </div>
-      <div className="card border-secondary mb-3" style={{ maxWidth: "18rem" }}>
+      <div
+        className="card border-secondary mb-3"
+        style={{
+          maxWidth: "18rem",
+          boxShadow:
+            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+        }}>
         <div className="card-header">
           <strong>Top Headlines</strong>
         </div>
@@ -40,7 +52,13 @@ const Headlines = () => {
           </ul>
         </div>
       </div>
-      <div className="card border-success mb-3" style={{ maxWidth: "18rem" }}>
+      <div
+        className="card border-success mb-3"
+        style={{
+          maxWidth: "18rem",
+          boxShadow:
+            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+        }}>
         <div className="card-header">
           <strong>This Week's Top Video</strong>
         </div>
