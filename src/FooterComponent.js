@@ -6,7 +6,7 @@ export default class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <div className="row">
+        <div className="row" style={{ marginBottom: "5px" }}>
           {/* Column2 */}
           <div className="col-sm">
             <ui className="list-unstyled">
@@ -72,7 +72,7 @@ export default class Footer extends Component {
             </ui>
           </div>
         </div>
-        <div className="row">
+        <div className="row" style={{ marginTop: "20px" }}>
           <p className="col-lg">
             © 2021 All Rights Reserved ~ Authored by PJ'S
           </p>
