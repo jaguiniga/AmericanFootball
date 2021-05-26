@@ -11,7 +11,12 @@ import Home from "./components/BlogPost/Home";
 import "bootstrap/dist/css/bootstrap.css";
 import { UserContext } from "./auth/UserProvider";
 import UserProvider from "./auth/UserProvider";
+import UserSignedIn from "./Profile/UserSignedIn";
 import Login from "./components/LoginComponent";
+import "./App.css";
+import ProfilePage from "./Profile/ProfilePage";
+
+
 import Create from "./components/BlogPost/Create";
 function App() {
   return (

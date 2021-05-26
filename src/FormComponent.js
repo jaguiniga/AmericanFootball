@@ -1,11 +1,10 @@
-import React, { useState, useEffect, Fragment, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './App.css';
 import catchingfootball from "./images/catchingfootball.jpg";
 import Footer from './FooterComponent';
-import { auth, signInWithGoogle, generateUserDocument } from "./Firebase/firebase";
-import { v4 as uuidv4 } from 'uuid';
-import { UserContext } from "./auth/UserProvider";
+import { auth, generateUserDocument, firestore} from "./Firebase/firebase";
 import {NavLink} from "react-router-dom";
+import NavBar from "./components/Navbar/NavBarComponent";
 
 
 function Form () {
@@ -14,12 +13,20 @@ function Form () {
     // const [team, SetTeam] = useState("")
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
+    const [photoURL, setPhotoURL] = useState(null);
+
+    let file = {};
+
+    function chooseFile(e){
+      file = e.target.file[0];
+    }
     
     const createUserWithEmailAndPasswordHandler = async (event, email, password) => {
         event.preventDefault();
         try{
           const {user} = await auth.createUserWithEmailAndPassword(email, password);
-          generateUserDocument(user, {displayName});
+          generateUserDocument(user, {displayName}, {photoURL});
+          firestore.collection("users" + auth.user.id).add(file)
         }
         catch(error){
           setError('Error Signing up with email and password');
@@ -30,6 +37,7 @@ function Form () {
         setEmail("");
         setPassword("");
         setDisplayName("");
+        setPhotoURL(null)
       };
     
 
@@ -42,11 +50,14 @@ function Form () {
           setPassword(value);
         } else if (name === "displayName") {
           setDisplayName(value);
+        } else if (name === "photoURL") {
+          setPhotoURL(value);
         }
       };
 
         return (
             <div>
+              <NavBar />
             <div style = {{backgroundImage: `url(${catchingfootball})`, backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'}}>
@@ -91,15 +102,17 @@ function Form () {
                             onChange={event => onChangeHandler(event)}
                         />
                     </div>
-                    {/* <div className= "input-btn">
+                  {/*   <div className= "input-btn">
+                        <label htmlFor='photoURL'>Upload Image</label>
+                    <div className= "input-btn">
                         <label htmlFor='userTeam'>Team</label>
                         <input
-                            type='text'
-                            name='team'
-                            placeholder='team'
-                            value={team}
-                            id="userTeam"
-                            onChange={event => onChangeHandler(event)}
+                            type='file'
+                            name='photoURL'
+                            placeholder='image'
+                            value={photoURL}
+                            id="photoURL"
+                            onChange={e => chooseFile(e)}
                         />
                     </div> */}
                     <button 

@@ -1,4 +1,4 @@
-import { Component } from "react";
+
 import { NavLink} from "react-router-dom";
 import React, {useState} from "react";
 import { auth, signInWithGoogle, generateUserDocument, signInWithFacebook } from "../Firebase/firebase";
@@ -8,11 +8,19 @@ function Login () {
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
 
+    const resetInput = () => {
+        setEmail("");
+        setPassword("");
+      };
+
     const signInWithEmailAndPasswordHandler = (event,email, password) => {
         event.preventDefault();
-        auth.signInWithEmailAndPassword(email, password).catch(error => {
-        setError("Error signing in with password and email!");
-          console.error("Error signing in with password and email", error);
+        auth.signInWithEmailAndPassword(email, password).then(() => {
+            resetInput();
+          }).catch(error => {
+                setError("Error signing in with password and email!");
+                console.error("Error signing in with password and email", error);
+                setError(null);
         });
       };
       
@@ -33,8 +41,8 @@ function Login () {
      <div className="card-header"><strong>Login</strong></div>
      <div className="card-body text-primary">
                     
+                    {/* <!-- Facebook --> */}
                     <div className= "facebook">
-                        {/* <!-- Facebook --> */}
                         <button 
                             onClick={() => {
                                 signInWithFacebook();
@@ -46,13 +54,11 @@ function Login () {
                         </button>
                     </div>
                     <div className= "instagram">
-                        {/* <!-- Instagram --> */}
                         <button className="btn btn-sm btn-instagram btn-block text-uppercase" type="submit">
                             <i className="fab fa-instagram mr-2"></i>  Instagram
                         </button>
                     </div>
                     <div className= "google">
-                         {/* <!-- Google --> */}
                         <button  
                             onClick={() => {
                                 signInWithGoogle();
@@ -63,6 +69,7 @@ function Login () {
                             <i className="fab fa-google fa-fw"></i>  Google
                         </button>
                     </div>
+                    
                     {error !== null && (
                         <div>
                             {error}
@@ -95,13 +102,14 @@ function Login () {
                             onChange={(event) => onChangeHandler(event)}
                         />
                     </div>
-
+                    <NavLink to="/UserSignedIn">
                     <button 
                         onClick = {(event) => {signInWithEmailAndPasswordHandler(event, email, password)}} 
                         className= "input-btn2"
                     >
                     Login
                     </button>
+                    </NavLink>
                 </form>
                     
                     <p className="forgot-password text-right">
