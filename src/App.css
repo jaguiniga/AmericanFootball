@@ -1,38 +1,132 @@
-.App {
+/*Importing the Bootstrap CSS files*/
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+* {
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#main-page-body {
+  background-color: #edeef0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#main-header-scoreboard {
+  background-color: #edeef0;
+  height: 65px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#main-page-nav {
+  background-color: #48494a;
+}
+
+#main-page-wrapper {
+  width: 85%;
+  max-width: 1250px;
+  background-color: #edeef0;
+  margin: 0 auto;
+  padding: 1.5%;
+  height: 1900px;
+  display: flex;
+  /* flex-direction: row;
+  justify-content: flex-start; */
+}
+
+#main-footer {
+  background-color: white;
+  width: 90%;
+  margin: 0 auto 0 auto;
+}
+
+.column_left {
+  background-color: #edeef0;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+}
+
+.column_right {
+  background-color: #edeef0;
+  display: flex;
+  padding: 0.5em;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+}
+
+.column_center {
+  background-color: #edeef0;
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5em;
+  /* flex: 0; */
+}
+
+/*Need to reveiw the folloing styling classes*/
+.form {
+ 
+  margin-left: 5%;
+  width: fit-content;
+  height: 80vh;
+  padding: 20px;
+  margin-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #272929;
+  border-radius: 25px;
+  border: 2px solid #88032b;
+  color: rgb(60, 57, 245);
 }
 
-.App-link {
-  color: #61dafb;
+.formPassword {
+  margin-left: 5%;
+  width: fit-content;
+  height: 80vh;
+  padding: 20px;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #272929;
+  border-radius: 25px;
+  border: 2px solid #88032b;
+  color: rgb(60, 57, 245);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-btn {
+  padding: 20px 40px;
+  float: center;
+  width: fit-content;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px;
+  outline: 0;
+  border-width: fit-content;
+  border: 2px solid rgb(255, 51, 0);
+  border-bottom: 2px solid rgb(17, 0, 253);
+  font-size: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #faf8f8;
+  color: rgb(20, 23, 24);
+  font-weight: 500;
+  transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
+  border-radius: 25px;
+}
+​ .input-btn:focus {
+  outline: 1px dashed red;
+}
+
+.input-btn:hover {
+  color: rgba(255, 64, 0, 0.993);
+  border: 1px solid #1fec04;
+  box-shadow: 0 0 20px #ffffff;
 }
