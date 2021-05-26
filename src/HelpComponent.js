@@ -3,9 +3,12 @@ import Footer from './FooterComponent';
 import './Footer.css'
 import { NavLink} from "react-router-dom";
 import Logo from './images/s.png';
+import NavBar from "./components/Navbar/NavBarComponent";
 const Help= () => {
+
   return (
     <div className='pages'>
+      <NavBar/>
     <section >
       <h1>HELP CENTER</h1>
       <h2>Last Modified 04/14/2021</h2>

@@ -3,10 +3,12 @@ import Footer from './FooterComponent';
 import './Footer.css';
 import { NavLink} from "react-router-dom";
 import Logo from './images/s.png';
+import NavBar from "./components/Navbar/NavBarComponent";
 
 const Termsrules= () => {
   return (
      <div className='pages'>
+           <NavBar />
     <section >
       <h1>TERMS OF SERVICE/RULES</h1>
       <h2>Last Modified 04/14/2021</h2>

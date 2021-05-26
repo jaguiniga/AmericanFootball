@@ -58,8 +58,8 @@
   margin: 2px;
   outline: 0;
   display: flex;
-  border: 2px solid rgb(179, 255, 0);
-  border-bottom: 2px solid rgb(89, 0, 255);
+  border: 2px solid rgb(255, 51, 0);
+  border-bottom: 2px solid rgb(17, 0, 253);
   font-size: 12px;
   overflow: hidden;
   cursor: pointer;

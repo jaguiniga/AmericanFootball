@@ -2,10 +2,12 @@ import React from "react";
 import Footer from "./FooterComponent";
 import "./Footer.css";
 import Logo from "./images/s.png";
+import NavBar from "./components/Navbar/NavBarComponent";
 
 const About = () => {
   return (
     <div className="pages">
+      <NavBar />
       <section>
         <div className="about-h1">
           <h1>About PJ'S</h1>
