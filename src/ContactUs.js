@@ -3,7 +3,8 @@ import "./App.css";
 import { firestore } from "./Firebase/firebase";
 import "./ContactUs.css";
 import NavBar from "./components/Navbar/NavBarComponent";
-
+import contactusimage from "./images/contactusimage.jpg";
+import Footer from './FooterComponent';
 const ContactUs = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -38,7 +39,10 @@ const ContactUs = () => {
   return (
       <div>
       <NavBar />
-    <form className="formC" onSubmit={handleSubmit}>
+      <div style = {{backgroundImage: `url(${contactusimage})`, backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'}}>
+    <form className="form" onSubmit={handleSubmit}>
       <h1>Contact Us 🤳</h1>
 
       <label>Name</label>
@@ -69,6 +73,10 @@ const ContactUs = () => {
         Submit
       </button>
     </form>
+    <div>
+      <Footer />
+    </div>
+    </div>
     </div>
   );
 };
