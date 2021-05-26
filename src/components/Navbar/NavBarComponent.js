@@ -1,30 +1,10 @@
 import React, { useState } from "react";
 // import { NavLink } from "react-router-dom";
-// import Dropdown from "./Dropdown";
+
 import "../../css/NavBar.css";
 
 function Navbar() {
-  // const [click, setClick] = useState(false);
-  // const [dropdown, setDropdown] = useState(false);
-
-  // const handleClick = () => setClick(!click);
-  // const closeMobileMenu = () => setClick(false);
-
-  // const onMouseEnter = () => {
-  //   if (window.innerWidth < 960) {
-  //     setDropdown(false);
-  //   } else {
-  //     setDropdown(true);
-  //   }
-  // };
-
-  // const onMouseLeave = () => {
-  //   if (window.innerWidth < 960) {
-  //     setDropdown(false);
-  //   } else {
-  //     setDropdown(false);
-  //   }
-  // };
+  
   return (
     <div>
       <nav className="navbar navbar-expand-md bg-dark navbar-dark">

@@ -10,7 +10,7 @@ import NavBar from "./components/Navbar/NavBarComponent";
 function Form () {
     const [displayName, setDisplayName] = useState("");
     const [email, setEmail] = useState('');
-    const [team, SetTeam] = useState("")
+    // const [team, SetTeam] = useState("")
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
     const [photoURL, setPhotoURL] = useState(null);
@@ -32,7 +32,7 @@ function Form () {
           setError('Error Signing up with email and password');
         }
         alert("You just signed up");
-        SetTeam("");
+        //SetTeam("");
         setError(null);
         setEmail("");
         setPassword("");
@@ -102,8 +102,10 @@ function Form () {
                             onChange={event => onChangeHandler(event)}
                         />
                     </div>
-                    <div className= "input-btn">
+                  {/*   <div className= "input-btn">
                         <label htmlFor='photoURL'>Upload Image</label>
+                    <div className= "input-btn">
+                        <label htmlFor='userTeam'>Team</label>
                         <input
                             type='file'
                             name='photoURL'
@@ -112,7 +114,7 @@ function Form () {
                             id="photoURL"
                             onChange={e => chooseFile(e)}
                         />
-                    </div>
+                    </div> */}
                     <button 
                         onClick={event => {createUserWithEmailAndPasswordHandler(event, email, password);
                     }} 

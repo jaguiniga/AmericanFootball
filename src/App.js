@@ -13,6 +13,7 @@ import Login from "./components/LoginComponent";
 import "./App.css";
 import ProfilePage from "./Profile/ProfilePage";
 
+
 function App() {
   
   return (
@@ -29,7 +30,6 @@ function App() {
         <div className="column_left">
         <Login/>
         
-          <Headlines />
           
         </div>
 
@@ -41,7 +41,6 @@ function App() {
 
         {/* Right Side */}
         <div className="column_right">
-          <ProfilePage />
           <Headlines />
         </div>
       </div>

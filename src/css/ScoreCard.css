@@ -1,0 +1,5 @@
+.box_ScoreCard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
