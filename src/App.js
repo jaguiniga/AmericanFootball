@@ -14,7 +14,7 @@ import UserProvider from "./auth/UserProvider";
 import UserSignedIn from "./Profile/UserSignedIn";
 import Login from "./components/LoginComponent";
 import "./App.css";
-import ProfilePage from "./Profile/ProfilePage";
+import ChatRoom from "./Chatroom/ChatRoom";
 
 
 import Create from "./components/BlogPost/Create";
@@ -36,8 +36,9 @@ function App() {
           {/* Center */}
           <div className="column_center">
             <WelcomeLogo />
-            <Create/>
-            <Home />
+            <ChatRoom/>
+            {/* <Create/>
+            <Home /> */}
           </div>
           {/* Right Side */}
           <div className="column_right">
