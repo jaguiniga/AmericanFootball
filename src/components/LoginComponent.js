@@ -150,9 +150,9 @@ function Login() {
         </div>
         <div className="card-body text-secondary">
           <ul className="links">
-            <li className="bullets">
-            <Teams />
-            </li>
+            {/* <li className="bullets"> */}
+            <Teams/>
+            {/* </li> */}
           </ul>
         </div>
       </div>

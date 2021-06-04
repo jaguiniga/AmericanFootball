@@ -31,7 +31,7 @@ const Headlines = () => {
         </div>
         <div className="card-body text-primary">
           <img src={Logo} className="image-autoFit" alt="NFL Logo" />
-          <ul className="headlines">
+          <ul className="links">
             
             <p> 
               <a href="https://www.sbnation.com/nfl-draft">

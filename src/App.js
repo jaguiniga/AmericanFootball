@@ -15,7 +15,7 @@ import UserSignedIn from "./Profile/UserSignedIn";
 import Login from "./components/LoginComponent";
 import "./App.css";
 import ProfilePage from "./Profile/ProfilePage";
-
+import  {Teams}  from "./Teams";
 
 import Create from "./components/BlogPost/Create";
 function App() {
@@ -32,6 +32,7 @@ function App() {
           {/* Left Side */}
           <div className="column_left">
             <Login />
+            <Teams/>
           </div>
           <div className="App">
            
@@ -48,7 +49,7 @@ function App() {
           </div>
         </div>
         <div id="main-footer">
-          <Footer />
+          <Footer/>
         </div>
       </UserProvider>
     </div>

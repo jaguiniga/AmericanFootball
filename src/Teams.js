@@ -1,13 +1,13 @@
 import React from "react";
 import "./css/Headlines.css";
 import { teamRoster } from "./RosterComponent";
-// import { Teams } from "./Teams";
+//import { Teams } from "./Teams";
 export const Teams = () => {
   return (
     <>
       <div className="stock-container">
         {teamRoster.map((data, key) => {
-          return (
+          
             <div key={key}>
           <ul className="links">   
            
@@ -15,7 +15,7 @@ export const Teams = () => {
          
           </ul>
         </div>
-          );
+          
         })}
       </div>
     </>

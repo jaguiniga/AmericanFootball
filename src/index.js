@@ -28,7 +28,7 @@ import UserSignedIn from "./Profile/UserSignedIn";
 import ContactUs from "./ContactUs";
 
 import reportWebVitals from "./reportWebVitals";
-
+import  {Teams}  from "./Teams";
 
 const routing = (
   <Router>
@@ -41,6 +41,7 @@ const routing = (
         <Route path="/form" component={Form} />
         <Route path="/firstpage" component={FirstPage} />
         <Route path="/login" component={Login} />
+        <Route path="/teams" component={Teams} />
         <Route path="/about" component={About} />
         <Route path="/privacy" component={Privacy} />
         <Route path="/help" component={Help} />
