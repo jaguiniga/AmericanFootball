@@ -33,6 +33,9 @@ function App() {
           <div className="column_left">
             <Login />
           </div>
+          <div className="App">
+           
+    </div>
           {/* Center */}
           <div className="column_center">
             <WelcomeLogo />

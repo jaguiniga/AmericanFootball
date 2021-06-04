@@ -30,6 +30,9 @@
 
 .bullets{
   color: rgb(0, 140, 255);
+  list-style: none;
+  margin: 10;
+  padding: 10;
 }
 
 .emailbox{

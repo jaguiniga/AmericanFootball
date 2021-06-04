@@ -31,24 +31,26 @@ const Headlines = () => {
         </div>
         <div className="card-body text-primary">
           <img src={Logo} className="image-autoFit" alt="NFL Logo" />
-          <ul className="links">
-            <li>
+          <ul className="headlines">
+            
+            <p> 
               <a href="https://www.sbnation.com/nfl-draft">
-                2021 NFL Draft Starts
+                2021 NFL Draft Starts <code>&gt;</code>
               </a>
-            </li>
+           </p> 
 
-            <li>
+            <p>
               <a href="https://www.si.com/nfl/dolphins/news/complete-2021-nfl-draft-team-by-team-rundown">
-                Your NFL Team Draft 2021
+                Your NFL Team Draft 2021 <code>&gt;</code>
               </a>
-            </li>
+            </p> 
 
-            <li>
+            <p>
               <a href="https://www.pff.com/news/draft-film-study-pros-and-cons-2021-nfl-draft">
-                Pros and Cons For The 2021 NFL Draft
+                Pros and Cons For The 2021 NFL Draft <code>&gt;</code>
               </a>
-            </li>
+            </p>
+
           </ul>
         </div>
       </div>
