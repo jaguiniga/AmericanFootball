@@ -49,7 +49,7 @@ function App() {
           </div>
         </div>
         <div id="main-footer">
-          <Footer/>
+          <Footer />
         </div>
       </UserProvider>
     </div>

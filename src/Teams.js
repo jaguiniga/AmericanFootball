@@ -11,8 +11,8 @@ export const Teams = () => {
             <div key={key}>
           <ul className="links">   
            
-             <a href = {data.weblink}>{data.team} <code>&gt;</code></a>
-         
+             <a href = {data.weblink}>{data.team}<code>&gt;</code></a>
+         {console.log("You can also log numbers")}
           </ul>
         </div>
           
