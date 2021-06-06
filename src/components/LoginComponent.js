@@ -6,7 +6,13 @@ import {
   signInWithFacebook,
 } from "../Firebase/firebase";
 
-function Login() {
+import "../css/LoginComponent.css";
+
+import facebookIcon from "../images/social/facebook48_48.png";
+import googleIcon from "../images/social/google48_48.png";
+import instagramIcon from "../images/social/instagram48_48.png";
+
+function LoginComponent() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -53,88 +59,100 @@ function Login() {
           <strong>Login</strong>
         </div>
         <div className="card-body text-primary">
-          {/* <!-- Facebook --> */}
-          <div className="facebook">
-            <button
+          <div>
+            <input
+              className="zoom"
+              type="image"
+              src={facebookIcon}
+              alt="Submit"
               onClick={() => {
                 signInWithFacebook();
               }}
-              class="btn btn-sm btn-facebook btn-block text-uppercase"
-              type="submit">
-              <i className="fab fa-facebook-f fa-fw"></i> Facebook
-            </button>
-          </div>
-          <div className="instagram">
-            <button
-              className="btn btn-sm btn-instagram btn-block text-uppercase"
-              type="submit">
-              <i className="fab fa-instagram mr-2"></i> Instagram
-            </button>
-          </div>
-          <div className="google">
-            <button
+              style={{ margin: "10px" }}></input>
+
+            <input
+              className="zoom"
+              type="image"
+              src={instagramIcon}
+              alt="Submit"
+              style={{ margin: "10px" }}></input>
+
+            <input
+              className="zoom"
+              type="image"
+              src={googleIcon}
+              alt="Submit"
               onClick={() => {
                 signInWithGoogle();
               }}
-              className="btn btn-sm btn-google btn-block text-uppercase"
-              type="submit">
-              <i className="fab fa-google fa-fw"></i> Google
-            </button>
+              style={{ margin: "10px" }}></input>
+
+            <form>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </div>
+                <input
+                  type="email"
+                  class="form-control"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="username"></input>
+              </div>
+
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-key"></i>
+                  </span>
+                </div>
+                <input
+                  type="password"
+                  class="form-control"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="password"></input>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="submit"
+                  value="Login"
+                  class="btn float-right login_btn"
+                  onClick={(event) => {
+                    signInWithEmailAndPasswordHandler(event, email, password);
+                  }}></input>
+              </div>
+            </form>
           </div>
 
           {error !== null && <div>{error}</div>}
-          <form>
-            <p className="Email">Or Enter Email:</p>
 
-            <div className="input-btn2">
-              <label htmlFor="userEmail">Email</label>
-              <input
-                type="email"
-                name="userEmail"
-                placeholder="email"
-                value={email}
-                id="userEmail"
-                onChange={(event) => onChangeHandler(event)}
-              />
-            </div>
-
-            <div className="input-btn2">
-              <label htmlFor="userPassword">Password</label>
-              <input
-                type="password"
-                name="userPassword"
-                placeholder="password"
-                value={password}
-                id="userPassword"
-                onChange={(event) => onChangeHandler(event)}
-              />
-            </div>
-            <NavLink to="/UserSignedIn">
-              <button
-                onClick={(event) => {
-                  signInWithEmailAndPasswordHandler(event, email, password);
-                }}
-                className="input-btn2">
-                Login
-              </button>
-            </NavLink>
-          </form>
-
-          <p className="forgot-password text-right">
+          <p
+            className="forgot-password text-right"
+            style={{ fontSize: "14px" }}>
             <p>
               <strong>
                 <NavLink exact activeClassName="active-link" to="/password">
-                  Forgot <a href="#">password?</a>
+                  Forgot password?
                 </NavLink>
               </strong>
             </p>
           </p>
 
-          <button type="create" className="input-btn2">
-            <NavLink exact activeClassName="active-link" to="/form">
-              Create Account ?
-            </NavLink>
-          </button>
+          <p
+            className="forgot-password text-right"
+            style={{ fontSize: "13px" }}>
+            <p>
+              <strong>
+                <NavLink exact activeClassName="active-link" to="/form">
+                  Don't have an account? SignUp
+                </NavLink>
+              </strong>
+            </p>
+          </p>
         </div>
       </div>
       <div
@@ -258,4 +276,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginComponent;
