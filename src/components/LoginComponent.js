@@ -6,6 +6,12 @@ import {
   signInWithFacebook,
 } from "../Firebase/firebase";
 
+import "../css/LoginComponent.css";
+
+import facebookIcon from "../images/social/facebook48_48.png";
+import googleIcon from "../images/social/google48_48.png";
+import instagramIcon from "../images/social/instagram48_48.png";
+
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -53,47 +59,46 @@ function Login() {
           <strong>Login</strong>
         </div>
         <div className="card-body text-primary">
-          {/* <!-- Facebook --> */}
-          <div className="facebook">
-            <button
+          <div>
+            <input
+              className="zoom"
+              type="image"
+              src={facebookIcon}
+              alt="Submit"
               onClick={() => {
                 signInWithFacebook();
               }}
-              class="btn btn-sm btn-facebook btn-block text-uppercase"
-              type="submit">
-              <i className="fab fa-facebook-f fa-fw"></i> Facebook
-            </button>
-          </div>
-          <div className="instagram">
-            <button
-              className="btn btn-sm btn-instagram btn-block text-uppercase"
-              type="submit">
-              <i className="fab fa-instagram mr-2"></i> Instagram
-            </button>
-          </div>
-          <div className="google">
-            <button
+              style={{ margin: "10px" }}></input>
+
+            <input
+              className="zoom"
+              type="image"
+              src={instagramIcon}
+              alt="Submit"
+              style={{ margin: "10px" }}></input>
+
+            <input
+              className="zoom"
+              type="image"
+              src={googleIcon}
+              alt="Submit"
               onClick={() => {
                 signInWithGoogle();
               }}
-              className="btn btn-sm btn-google btn-block text-uppercase"
-              type="submit">
-              <i className="fab fa-google fa-fw"></i> Google
-            </button>
+              style={{ margin: "10px" }}></input>
           </div>
 
           {error !== null && <div>{error}</div>}
           <form>
-            <p className="Email">Or Enter Email:</p>
-
+            <p>Or Enter Email:</p>
             <div className="input-btn2">
               <label htmlFor="userEmail">Email</label>
               <input
+                id="userEmail"
                 type="email"
                 name="userEmail"
                 placeholder="email"
                 value={email}
-                id="userEmail"
                 onChange={(event) => onChangeHandler(event)}
               />
             </div>
