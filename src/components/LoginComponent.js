@@ -12,7 +12,7 @@ import facebookIcon from "../images/social/facebook48_48.png";
 import googleIcon from "../images/social/google48_48.png";
 import instagramIcon from "../images/social/instagram48_48.png";
 
-function Login() {
+function LoginComponent() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -95,8 +95,10 @@ function Login() {
                   </span>
                 </div>
                 <input
-                  type="text"
+                  type="email"
                   class="form-control"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="username"></input>
               </div>
 
@@ -109,6 +111,8 @@ function Login() {
                 <input
                   type="password"
                   class="form-control"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   placeholder="password"></input>
               </div>
 
@@ -116,64 +120,39 @@ function Login() {
                 <input
                   type="submit"
                   value="Login"
-                  class="btn float-right login_btn"></input>
+                  class="btn float-right login_btn"
+                  onClick={(event) => {
+                    signInWithEmailAndPasswordHandler(event, email, password);
+                  }}></input>
               </div>
             </form>
           </div>
 
-          {/* {error !== null && <div>{error}</div>} */}
-
-          {/* <form>
-            <p>Or Enter Email:</p>
-            <div className="input-btn2">
-              <label htmlFor="userEmail">Email</label>
-              <input
-                id="userEmail"
-                type="email"
-                name="userEmail"
-                placeholder="email"
-                value={email}
-              />
-            </div>
-
-            <div className="input-btn2">
-              <label htmlFor="userPassword">Password</label>
-              <input
-                type="password"
-                name="userPassword"
-                placeholder="password"
-                value={password}
-                id="userPassword"
-              />
-            </div>
-            <NavLink to="/UserSignedIn">
-              <button
-                onClick={(event) => {
-                  signInWithEmailAndPasswordHandler(event, email, password);
-                }}
-                className="input-btn2">
-                Login
-              </button>
-            </NavLink>
-          </form> */}
+          {error !== null && <div>{error}</div>}
 
           <p
             className="forgot-password text-right"
-            style={{ fontSize: "15px" }}>
+            style={{ fontSize: "14px" }}>
             <p>
               <strong>
                 <NavLink exact activeClassName="active-link" to="/password">
-                  Forgot <a href="#">password?</a>
+                  Forgot password?
                 </NavLink>
               </strong>
             </p>
           </p>
 
-          <button type="create" className="input-btn2">
-            <NavLink exact activeClassName="active-link" to="/form">
-              Don't have an account? SignUp
-            </NavLink>
-          </button>
+          <p
+            className="forgot-password text-right"
+            style={{ fontSize: "13px" }}>
+            <p>
+              <strong>
+                <NavLink exact activeClassName="active-link" to="/form">
+                  Don't have an account? SignUp
+                </NavLink>
+              </strong>
+            </p>
+          </p>
         </div>
       </div>
       <div
@@ -297,4 +276,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginComponent;
