@@ -1,5 +1,4 @@
 {
-  "homepage": "https://github.com/jaguiniga/AmericanFootball.git",
   "name": "american-football",
   "version": "0.1.0",
   "private": true,
@@ -15,7 +14,7 @@
     "@testing-library/user-event": "^12.8.1",
     "bootstrap": "^4.6.0",
     "bootstrap-4-react": "^0.0.59",
-    "firebase": "^8.5.0",
+    "firebase": "^8.6.3",
     "jquery": "^3.6.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
