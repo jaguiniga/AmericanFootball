@@ -86,10 +86,44 @@ function Login() {
                 signInWithGoogle();
               }}
               style={{ margin: "10px" }}></input>
+
+            <form>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="username"></input>
+              </div>
+
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-key"></i>
+                  </span>
+                </div>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="password"></input>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="submit"
+                  value="Login"
+                  class="btn float-right login_btn"></input>
+              </div>
+            </form>
           </div>
 
-          {error !== null && <div>{error}</div>}
-          <form>
+          {/* {error !== null && <div>{error}</div>} */}
+
+          {/* <form>
             <p>Or Enter Email:</p>
             <div className="input-btn2">
               <label htmlFor="userEmail">Email</label>
@@ -99,7 +133,6 @@ function Login() {
                 name="userEmail"
                 placeholder="email"
                 value={email}
-                onChange={(event) => onChangeHandler(event)}
               />
             </div>
 
@@ -111,7 +144,6 @@ function Login() {
                 placeholder="password"
                 value={password}
                 id="userPassword"
-                onChange={(event) => onChangeHandler(event)}
               />
             </div>
             <NavLink to="/UserSignedIn">
@@ -123,9 +155,11 @@ function Login() {
                 Login
               </button>
             </NavLink>
-          </form>
+          </form> */}
 
-          <p className="forgot-password text-right">
+          <p
+            className="forgot-password text-right"
+            style={{ fontSize: "15px" }}>
             <p>
               <strong>
                 <NavLink exact activeClassName="active-link" to="/password">
@@ -137,7 +171,7 @@ function Login() {
 
           <button type="create" className="input-btn2">
             <NavLink exact activeClassName="active-link" to="/form">
-              Create Account ?
+              Don't have an account? SignUp
             </NavLink>
           </button>
         </div>
