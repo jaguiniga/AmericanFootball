@@ -5,6 +5,7 @@ import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
 import Footer from "./FooterComponent";
 import Headlines from "./components/HeadlinesComponent";
+<<<<<<< Updated upstream
 
 import Home from "./components/BlogPost/Home";
 
@@ -12,6 +13,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import { UserContext } from "./auth/UserProvider";
 import UserProvider from "./auth/UserProvider";
 import UserSignedIn from "./Profile/UserSignedIn";
+=======
+>>>>>>> Stashed changes
 import Login from "./components/LoginComponent";
 import "./App.css";
 import ProfilePage from "./Profile/ProfilePage";
@@ -21,9 +24,23 @@ import Create from "./components/BlogPost/Create";
 function App() {
   return (
     <div id="main-page-body">
+<<<<<<< Updated upstream
       <UserProvider>
         <div id="main-header-scoreboard">
           <CarouselSlider />
+=======
+      <div id="main-header-scoreboard">
+        <CarouselSlider />
+      </div>
+      <div id="main-page-nav">
+        <NavBar />
+      </div>
+      <div id="main-page-wrapper">
+        {/* Left Side */}
+        <div className="column_left">
+          <Login />
+          <Headlines />
+>>>>>>> Stashed changes
         </div>
         <div id="main-page-nav">
           <NavBar />

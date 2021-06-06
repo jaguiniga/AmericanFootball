@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
+import Login from "./components/LoginComponent";
 import Form from "./FormComponent";
 
 import Login from "./components/LoginComponent";
@@ -24,9 +25,12 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+<<<<<<< Updated upstream
 import UserSignedIn from "./Profile/UserSignedIn";
 import ContactUs from "./ContactUs";
 
+=======
+>>>>>>> Stashed changes
 import reportWebVitals from "./reportWebVitals";
 
 const routing = (
@@ -38,8 +42,13 @@ const routing = (
         <Route exact path="/ContactUs" component={ContactUs} />
         <Route exact path="/jaguiniga/ContactUs" component={ContactUs} />
         <Route path="/form" component={Form} />
+<<<<<<< Updated upstream
 
         <Route path="/login" component={Login} />
+=======
+        <Route path="/login" component={Login} />
+        <Route path="/firstpage" component={FirstPage} />
+>>>>>>> Stashed changes
         <Route path="/about" component={About} />
         <Route path="/privacy" component={Privacy} />
         <Route path="/help" component={Help} />

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .active-link {
   color: rgb(94, 255, 0);
   border-bottom: 1px solid white;
@@ -27,10 +28,41 @@
 .emailbox {
   /* background-color: black; */
   font-family: "Robot Mono", monospace;
+=======
+.Body {
+  background: #f9f9f9;
+  width: 880px;
+  text-align: center;
+  margin: auto;
+}  
+ 
+.active-link {
+  color:rgb(94, 255, 0);
+  border-bottom:1px solid white;
+  
+}
+ 
+
+.Loginwith{
+  /* background-color: white; */
+  color: black;
+  /* margin-bottom: 2rem; */
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-align: center;
+ 
+}
+
+
+.emailbox{
+  /* background-color: black; */
+  font-family: 'Robot Mono', monospace;
+>>>>>>> Stashed changes
   color: rgb(238, 27, 27);
 }
 
 .form2 {
+<<<<<<< Updated upstream
   width: 100%;
   padding: 15px;
   flex-direction: column;
@@ -51,6 +83,33 @@
   display: flex;
   border: 1.5px solid black;
   border-bottom: 2px solid rgb(17, 0, 253);
+=======
+  /* margin-right: 99.5%; */
+  width: 100%; 
+  padding: 15px; 
+  /* margin-top: 40em; */
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  background: gray; 
+  border-radius: 25px;
+  border: 1px solid #2b0388;
+  text-align: left;
+  /* float: right; */
+  /* height: 280px;  */
+}
+.input-btn2{
+  /* padding: 1px 10px; */
+  text-align: center;
+  width: 200px; 
+  align-items: flex-start;
+  position: relative;
+  margin: 2px;
+  outline: 0;
+  display: flex;
+  border: 2px solid rgb(179, 255, 0);
+  border-bottom: 2px solid rgb(89, 0, 255);
+>>>>>>> Stashed changes
   font-size: 12px;
   overflow: hidden;
   cursor: pointer;
@@ -59,9 +118,16 @@
   font-weight: 500;
   transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
   border-radius: 25px;
+<<<<<<< Updated upstream
 }
 .facebook {
   padding: 1px 20px;
+=======
+
+}
+.facebook{
+  padding: 1px 20px; 
+>>>>>>> Stashed changes
   text-align: center;
   width: 200px;
   align-items: flex-start;
@@ -81,8 +147,13 @@
   border-radius: 25px;
 }
 
+<<<<<<< Updated upstream
 .instagram {
   padding: 1px 20px;
+=======
+.instagram{
+  padding: 1px 20px; 
+>>>>>>> Stashed changes
   text-align: center;
   width: 200px;
   align-items: flex-start;
@@ -102,8 +173,13 @@
   border-radius: 25px;
 }
 
+<<<<<<< Updated upstream
 .google {
   padding: 2px 40px;
+=======
+.google{
+  padding: 2px 40px; 
+>>>>>>> Stashed changes
   text-align: center;
   width: 200px;
   align-items: flex-start;
@@ -116,13 +192,19 @@
   font-size: 15px;
   overflow: hidden;
   cursor: pointer;
+<<<<<<< Updated upstream
   background: #f36f6f;
   /* color: #1613c2; */
+=======
+  background: #e4e4eb;
+   /* color: #1613c2;  */
+>>>>>>> Stashed changes
   font-weight: 500;
   transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
   border-radius: 25px;
 }
 
+<<<<<<< Updated upstream
 .input-btn2:focus {
   outline: 1px dashed blue;
 }
@@ -149,3 +231,14 @@
   border: 1px solid #1900ff;
   box-shadow: 0 0 20px #14ff3b;
 }
+=======
+.input-btn2:focus{
+  outline: 1px dashed blue;
+}
+
+.input-btn2:hover { 
+  color: rgba(22, 247, 236, 0.993); 
+  border: 1px solid #1900ff;
+  box-shadow: 0 0 20px #14ff3b; 
+} 
+>>>>>>> Stashed changes
