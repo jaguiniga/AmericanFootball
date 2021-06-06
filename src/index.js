@@ -23,6 +23,8 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import UserSignedIn from "./Profile/UserSignedIn";
+import ContactUs from "./ContactUs";
 import reportWebVitals from "./reportWebVitals";
 
 const routing = (
@@ -35,7 +37,6 @@ const routing = (
         <Route exact path="/jaguiniga/ContactUs" component={ContactUs} />
         <Route path="/form" component={Form} />
         <Route path="/login" component={Login} />
-        <Route path="/firstpage" component={FirstPage} />
         <Route path="/about" component={About} />
         <Route path="/privacy" component={Privacy} />
         <Route path="/help" component={Help} />
