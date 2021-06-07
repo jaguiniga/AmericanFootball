@@ -2,9 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
-import Form from "./FormComponent";
-
 import Login from "./components/LoginComponent";
+import Form from "./FormComponent";
 import About from "./AboutComponent";
 import Privacy from "./PrivacyComponent";
 import Help from "./HelpComponent";
@@ -26,7 +25,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import UserSignedIn from "./Profile/UserSignedIn";
 import ContactUs from "./ContactUs";
-
 import reportWebVitals from "./reportWebVitals";
 
 const routing = (
@@ -38,7 +36,6 @@ const routing = (
         <Route exact path="/ContactUs" component={ContactUs} />
         <Route exact path="/jaguiniga/ContactUs" component={ContactUs} />
         <Route path="/form" component={Form} />
-
         <Route path="/login" component={Login} />
         <Route path="/about" component={About} />
         <Route path="/privacy" component={Privacy} />
