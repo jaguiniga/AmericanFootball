@@ -1,35 +1,75 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState,useContext } from 'react';
 import {
     auth,  
+    getFirebase,
     signInWithGoogle,
     signInWithFacebook,
-    analytics, 
-    firestore
+    firestore,
+    timestamp
   } from "../Firebase/firebase";
+  import { UserContext } from "../auth/UserProvider";
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
+import "./ChatRoom.css";
+
+
+
+
+
+
+function App() {
+
+  const [user] = useAuthState(auth);
+
+  return (
+    <div >
+      <header>
+        <h1>🏈 American Football </h1>
+        
+    
+      </header>
+
+      <section>
+        {user ? <ChatRoom /> : <SignInChat />}
+      </section>
+
+    </div>
+  );
+}
+
+function SignInChat() {
+
+  
+  return (
+    <>
+     <h2>Please Sign in to post </h2>
+      <p>Do not violate the community guidelines or you will be banned for life!</p>
+    </>
+  )
+
+}
 
 
 
 function ChatRoom() {
-    const dummy = useRef();
+  const dummy = useRef();
+  const messagesRef = firestore.collection('messages');
+  const query = messagesRef.orderBy('createdAt').limit(15);
 
-    const messagesRef = firestore.collection('messages');
-    const query = messagesRef.orderBy('createdAt').limit(25);
+  const [messages] = useCollectionData(query, { idField: 'id' });
 
-    const [messages] = useCollectionData(query, {idField: 'id'});
+  const [formValue, setFormValue] = useState('');
 
-    const [formValue, setFormValue] = useState('');
 
-    const sendMessage = async (e) => {
-        e.preventDefault();
+  const sendMessage = async (e) => {
+    e.preventDefault();
 
-        const { uid, photoURL } = auth.currentUser;
+    const { uid, photoURL } = auth.currentUser;
 
     await messagesRef.add({
       text: formValue,
-      createdAt: firestore.FieldValue.serverTimestamp(),
+      createdAt: timestamp,
       uid,
       photoURL
     })
@@ -49,9 +89,11 @@ function ChatRoom() {
 
     <form onSubmit={sendMessage}>
 
-      <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
-
-      <button type="submit" disabled={!formValue}>🕊️</button>
+      <input 
+        value={formValue} 
+        onChange={(e) => setFormValue(e.target.value)} 
+        placeholder="say something nice" />
+      <button type="submit" disabled={!formValue}>🏈 </button>
 
     </form>
   </>)
@@ -65,11 +107,11 @@ function ChatMessage(props) {
 
   return (<>
     <div className={`message ${messageClass}`}>
-      <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} />
+      <img2 src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} />
       <p>{text}</p>
     </div>
   </>)
-
 }
 
-export default ChatRoom;
+
+export default App;

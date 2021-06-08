@@ -15,10 +15,12 @@ import UserSignedIn from "./Profile/UserSignedIn";
 import Login from "./components/LoginComponent";
 import "./App.css";
 import ChatRoom from "./Chatroom/ChatRoom";
-
+import SignInChat from "./Chatroom/SignInChat";
 
 import Create from "./components/BlogPost/Create";
 function App() {
+  const user = useContext(UserContext);
+  
   return (
     <div id="main-page-body">
       <UserProvider>
@@ -36,7 +38,7 @@ function App() {
           {/* Center */}
           <div className="column_center">
             <WelcomeLogo />
-            <ChatRoom/>
+            { user ? <ChatRoom/> : <SignInChat />}
             {/* <Create/>
             <Home /> */}
           </div>

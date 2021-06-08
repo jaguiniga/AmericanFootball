@@ -6,6 +6,7 @@ import { auth } from "../Firebase/firebase";
 
 function UserSignedIn() {
   const user = useContext(UserContext);
+  
   const currentUserEmail = user ? user.email : "";
   const currentUserDisplayname = user ? user.displayName : "";
   const currentPhoto = user ? user.photoURL : "";
