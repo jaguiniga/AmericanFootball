@@ -168,7 +168,9 @@ function LoginComponent() {
         <div className="card-body text-secondary">
           <ul className="links">
             <li className="bullets">
-              <a href="https://www.sbnation.com/nfl-draft">Dallas Cowboys</a>
+              <a href="https://www.sbnation.com/nfl-draft">
+                Dallas Cowboys
+                </a>
               <Teams/>
             </li>
           </ul>
