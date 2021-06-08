@@ -13,7 +13,7 @@ import UserSignedIn from "./Profile/UserSignedIn";
 import Login from "./components/LoginComponent";
 import ProfilePage from "./Profile/ProfilePage";
 import Create from "./components/BlogPost/Create";
-import  {Teams}  from "./Teams";
+ import {Teams}   from "./Teams";
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
         {/* Left Side */}
         <div className="column_left">
           <Login />
-          <Teams/>
+         <Teams/> 
         </div>
          {/* Center */}
          <div className="column_center">
