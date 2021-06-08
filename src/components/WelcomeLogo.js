@@ -6,13 +6,15 @@ function WelcomeLogo() {
     <div
       className="autoFit"
       style={{
+        maxWidth: "40rem",
+        minWidth: "30rem",
         boxShadow:
           "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
       }}>
       {/* <h1>Welcome To American Football</h1> */}
       <div>
         <img src={stadium} className="image-autoFit" alt="Football Player" />
-     Football
+        Football
       </div>
     </div>
   );
