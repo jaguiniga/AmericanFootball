@@ -51,7 +51,8 @@ function LoginComponent() {
       <div
         className="card border-primary mb-3"
         style={{
-          maxWidth: "18rem",
+          maxWidth: "17rem",
+          minWidth: "17rem",
           boxShadow:
             "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
         }}>
@@ -120,7 +121,7 @@ function LoginComponent() {
                 <input
                   type="submit"
                   value="Login"
-                  class="btn float-right login_btn"
+                  class="btn login_btn"
                   onClick={(event) => {
                     signInWithEmailAndPasswordHandler(event, email, password);
                   }}>
@@ -132,27 +133,19 @@ function LoginComponent() {
           {error !== null && <div>{error}</div>}
 
           <p
-            className="forgot-password text-right"
-            style={{ fontSize: "14px" }}>
-            <p>
-              <strong>
-                <NavLink exact activeClassName="active-link" to="/password">
-                  Forgot password?
-                </NavLink>
-              </strong>
-            </p>
+            className="forgot-password"
+            style={{ fontSize: "14px", margin: "0" }}>
+            <NavLink exact activeClassName="active-link" to="/password">
+              Forgot password?
+            </NavLink>
           </p>
 
           <p
-            className="forgot-password text-right"
-            style={{ fontSize: "13px" }}>
-            <p>
-              <strong>
-                <NavLink exact activeClassName="active-link" to="/form">
-                  Don't have an account? SignUp
-                </NavLink>
-              </strong>
-            </p>
+            className="forgot-password"
+            style={{ fontSize: "13px", margin: "0" }}>
+            <NavLink exact activeClassName="active-link" to="/form">
+              Don't have an account? SignUp
+            </NavLink>
           </p>
         </div>
       </div>
@@ -178,7 +171,7 @@ function LoginComponent() {
               {" "}
               <a href="https://www.si.com/nfl/dolphins/news/complete-2021-nfl-draft-team-by-team-rundown">
                 Green Bay Packers
-                <teamRoster/>
+                <teamRoster />
               </a>
             </li>
           </ul>
