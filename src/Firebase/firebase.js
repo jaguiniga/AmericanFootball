@@ -2,6 +2,8 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 import database from "firebase/database";
+import "firebase/storage";
+
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
@@ -19,8 +21,11 @@ const Config = {
 // initilaize firebase
 firebase.initializeApp(Config);
 
+export const storage = firebase.storage();
+export const timestamp = firebase.firestore.FieldValue.serverTimestamp();
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
+
 
 /*Tutorial*/
 let firebaseCache;
@@ -79,3 +84,4 @@ const getUserDocument = async (uid) => {
     console.error("Error fetching user", error);
   }
 };
+

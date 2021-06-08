@@ -11,11 +11,16 @@ import { UserContext } from "./auth/UserProvider";
 import UserProvider from "./auth/UserProvider";
 import UserSignedIn from "./Profile/UserSignedIn";
 import Login from "./components/LoginComponent";
-import ProfilePage from "./Profile/ProfilePage";
+import "./App.css";
+import ChatRoom from "./Chatroom/ChatRoom";
+import SignInChat from "./Chatroom/SignInChat";
+
 import Create from "./components/BlogPost/Create";
  import {Teams}   from "./Teams";
 
 function App() {
+  const user = useContext(UserContext);
+  
   return (
     <div id="main-page-body">
       <UserProvider>
@@ -34,8 +39,9 @@ function App() {
          {/* Center */}
          <div className="column_center">
             <WelcomeLogo />
-            <Create/>
-            <Home />
+            { user ? <ChatRoom/> : <SignInChat />}
+            {/* <Create/>
+            <Home /> */}
           </div>
            {/* Right Side */}
            <div className="column_right">

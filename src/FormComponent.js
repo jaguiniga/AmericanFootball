@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import './App.css';
 import Footer from './FooterComponent';
-import { auth, generateUserDocument, firestore} from "./Firebase/firebase";
+import { auth, generateUserDocument, firestore, storage} from "./Firebase/firebase";
 import {NavLink} from "react-router-dom";
 import NavBar from "./components/Navbar/NavBarComponent";
 import hdball from "./images/hdball.webp"
@@ -13,20 +13,19 @@ function Form () {
     // const [team, SetTeam] = useState("")
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
-    const [photoURL, setPhotoURL] = useState(null);
+    const [file, setFile] = useState(null);
 
-    let file = {};
 
-    function chooseFile(e){
-      file = e.target.file[0];
+    const chooseFile = (e) => {
+      setFile( e.target.files[0])
     }
     
     const createUserWithEmailAndPasswordHandler = async (event, email, password) => {
         event.preventDefault();
         try{
           const {user} = await auth.createUserWithEmailAndPassword(email, password);
-          generateUserDocument(user, {displayName}, {photoURL});
-          firestore.collection("users" + auth.user.id).add(file)
+          generateUserDocument(user, {displayName});
+          storage.ref('users/' + auth.user.uid + '/profile.jpg').put(file)
         }
         catch(error){
           setError('Error Signing up with email and password');
@@ -37,7 +36,7 @@ function Form () {
         setEmail("");
         setPassword("");
         setDisplayName("");
-        setPhotoURL(null)
+        
       };
     
 
@@ -50,9 +49,7 @@ function Form () {
           setPassword(value);
         } else if (name === "displayName") {
           setDisplayName(value);
-        } else if (name === "photoURL") {
-          setPhotoURL(value);
-        }
+        } 
       };
 
         return (
@@ -62,13 +59,14 @@ function Form () {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'}}>
             <div>
-            {error !== null && (
-                <div>
-                    {error}
-                </div>
-            )}
+              {error !== null && (
+                  <div>
+                      {error}
+                  </div>
+              )}
                 <form  className= "form">
                 <h1>Sign Up Form</h1>
+                    
                     <div className= "input-btn">
                     <label htmlFor='displayName'>UserName </label>
                         <input
@@ -80,6 +78,7 @@ function Form () {
                             onChange={event => onChangeHandler(event)}
                         />
                     </div>
+                    
                     <div className= "input-btn">
                     <label htmlFor='userEmail'>Email</label>
                         <input
@@ -91,6 +90,7 @@ function Form () {
                             onChange={event => onChangeHandler(event)}
                     />
                     </div>
+                    
                     <div className= "input-btn">
                     <label htmlFor='userPassword'>Password</label>
                         <input
@@ -102,27 +102,29 @@ function Form () {
                             onChange={event => onChangeHandler(event)}
                         />
                     </div>
-                  {/*   <div className= "input-btn">
-                        <label htmlFor='photoURL'>Upload Image</label>
+                    
                     <div className= "input-btn">
-                        <label htmlFor='userTeam'>Team</label>
+                        <label htmlFor='photoURL'>Upload Image</label>
                         <input
                             type='file'
                             name='photoURL'
                             placeholder='image'
-                            value={photoURL}
+                            
                             id="photoURL"
                             onChange={e => chooseFile(e)}
                         />
-                    </div> */}
+                    </div>
                     <button 
                         onClick={event => {createUserWithEmailAndPasswordHandler(event, email, password);
                     }} 
-                        className= "input-btn">Create Account</button>
+                        className= "input-btn">Create Account
+                    </button>
 
               <div>
                 <p>Already Registered ?</p> <NavLink to="/">Login</NavLink>
               </div>
+
+              <div></div>
             </form>
 
             <div>
