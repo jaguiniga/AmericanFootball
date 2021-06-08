@@ -16,35 +16,35 @@ import ChatRoom from "./Chatroom/ChatRoom";
 import SignInChat from "./Chatroom/SignInChat";
 
 import Create from "./components/BlogPost/Create";
-import {Teams}   from "./Teams";
-import TeamRoster from "./components/TeamRoster";
+import { Teams } from "./Teams";
+
 function App() {
   const user = useContext(UserContext);
-  
+
   return (
     <div id="main-page-body">
       <UserProvider>
-      <div id="main-header-scoreboard">
-        <CarouselSlider />
-      </div>
-      <div id="main-page-nav">
-        <NavBar />
-      </div>
-      <div id="main-page-wrapper">
-        {/* Left Side */}
-        <div className="column_left">
-          <Login />
-         <TeamRoster/> 
+        <div id="main-header-scoreboard">
+          <CarouselSlider />
         </div>
-         {/* Center */}
-         <div className="column_center">
+        <div id="main-page-nav">
+          <NavBar />
+        </div>
+        <div id="main-page-wrapper">
+          {/* Left Side */}
+          <div className="column_left">
+            <Login />
+            <Teams />
+          </div>
+          {/* Center */}
+          <div className="column_center">
             <WelcomeLogo />
-            { user ? <ChatRoom/> : <SignInChat />}
+            {user ? <ChatRoom /> : <SignInChat />}
             {/* <Create/>
             <Home /> */}
           </div>
-           {/* Right Side */}
-           <div className="column_right">
+          {/* Right Side */}
+          <div className="column_right">
             <Headlines />
           </div>
         </div>
@@ -52,7 +52,7 @@ function App() {
           <Footer />
         </div>
       </UserProvider>
-   </div>
+    </div>
   );
 }
 
