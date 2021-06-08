@@ -123,7 +123,8 @@ function LoginComponent() {
                   class="btn float-right login_btn"
                   onClick={(event) => {
                     signInWithEmailAndPasswordHandler(event, email, password);
-                  }}></input>
+                  }}>
+                </input>
               </div>
             </form>
           </div>
