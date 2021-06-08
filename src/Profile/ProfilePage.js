@@ -15,6 +15,20 @@ const ProfilePage = () => {
     rel="stylesheet"></link>;
   console.log(user);
 
+  function SignOut() {
+    return auth.currentUser && (
+    <button
+      className="input-btn"
+      onClick={() => {
+        auth.signOut();
+      }}
+      NavLink
+      to="/">
+      Sign out
+    </button>
+  )
+  }
+
   return (
     <div
       className="mx-auto w-11/12 md:w-2/4 py-8 px-4 md:px-8"
@@ -40,16 +54,10 @@ const ProfilePage = () => {
         {" "}
         <h2>{`${currentUserEmail}`}</h2>{" "}
       </div>
+      <SignOut/>
 
-      <button
-        className="input-btn"
-        onClick={() => {
-          auth.signOut();
-        }}
-        NavLink
-        to="/">
-        Sign out
-      </button>
+      
+      
     </div>
   );
 };
