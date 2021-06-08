@@ -13,24 +13,15 @@
  
 
 .Loginwith{
+  /* background-color: white; */
   color: black;
-  margin-bottom: 2rem;
-  font-size: 2.0rem;
+  /* margin-bottom: 2rem; */
+  font-weight: 300;
+  font-size: 1.5rem;
   text-align: center;
  
 }
 
-.Email{
-  color: rgb(252, 19, 19);
-  margin-bottom: .5rem;
-  font-size: 1.0rem;
-  text-align: center;
- 
-}
-
-.bullets{
-  color: rgb(0, 140, 255);
-}
 
 .emailbox{
   /* background-color: black; */
@@ -39,27 +30,31 @@
 }
 
 .form2 {
+  /* margin-right: 99.5%; */
   width: 100%; 
   padding: 15px; 
+  /* margin-top: 40em; */
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
-  background: #e4e4eb; 
+  background: gray; 
   border-radius: 25px;
   border: 1px solid #2b0388;
   text-align: left;
-  
+  /* float: right; */
+  /* height: 280px;  */
 }
 .input-btn2{
-  padding: 1px ; 
+  /* padding: 1px 10px; */
   text-align: center;
   width: 200px; 
   align-items: flex-start;
   position: relative;
-  margin: 4px;
+  margin: 2px;
   outline: 0;
   display: flex;
-  border: 1.5px solid black;
-  border-bottom: 2px solid rgb(17, 0, 253);
+  border: 2px solid rgb(179, 255, 0);
+  border-bottom: 2px solid rgb(89, 0, 255);
   font-size: 12px;
   overflow: hidden;
   cursor: pointer;
@@ -68,7 +63,6 @@
   font-weight: 500;
   transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
   border-radius: 25px;
-  
 
 }
 .facebook{
@@ -127,8 +121,8 @@
   font-size: 15px;
   overflow: hidden;
   cursor: pointer;
-  background: #f36f6f;
-  /* color: #1613c2; */
+  background: #e4e4eb;
+   /* color: #1613c2;  */
   font-weight: 500;
   transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
   border-radius: 25px;
@@ -139,23 +133,6 @@
 }
 
 .input-btn2:hover { 
-  color: rgba(22, 247, 236, 0.993); 
-  border: 1px solid #1900ff;
-  box-shadow: 0 0 20px #14ff3b; 
-} 
-
-.google:hover { 
-  color: rgba(22, 247, 236, 0.993); 
-  border: 1px solid #1900ff;
-  box-shadow: 0 0 20px #14ff3b; 
-} 
-
-.facebook:hover { 
-  color: rgba(22, 247, 236, 0.993); 
-  border: 1px solid #1900ff;
-  box-shadow: 0 0 20px #14ff3b; 
-} 
-.instagram:hover { 
   color: rgba(22, 247, 236, 0.993); 
   border: 1px solid #1900ff;
   box-shadow: 0 0 20px #14ff3b; 

@@ -32,23 +32,25 @@ const Headlines = () => {
         <div className="card-body text-primary">
           <img src={Logo} className="image-autoFit" alt="NFL Logo" />
           <ul className="links">
-            <li>
+            
+            <p> 
               <a href="https://www.sbnation.com/nfl-draft">
-                2021 NFL Draft Starts
+                2021 NFL Draft Starts <code>&gt;</code>
               </a>
-            </li>
+           </p> 
 
-            <li>
+            <p>
               <a href="https://www.si.com/nfl/dolphins/news/complete-2021-nfl-draft-team-by-team-rundown">
-                Your NFL Team Draft 2021
+                Your NFL Team Draft 2021 <code>&gt;</code>
               </a>
-            </li>
+            </p> 
 
-            <li>
+            <p>
               <a href="https://www.pff.com/news/draft-film-study-pros-and-cons-2021-nfl-draft">
-                Pros and Cons For The 2021 NFL Draft
+                Pros and Cons For The 2021 NFL Draft <code>&gt;</code>
               </a>
-            </li>
+            </p>
+
           </ul>
         </div>
       </div>
@@ -65,15 +67,13 @@ const Headlines = () => {
         <div className="card-body text-secondary">
           {/* <video controls width="250"> */}
 
-          <iframe
-            width="230"
-            height="315"
-            src="https://www.youtube.com/embed/BP7kUVZW5Gk"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-              picture-in-picture"
-            allowfullscreen></iframe>
+          <iframe width="230" 
+                 height="315" 
+                 src="https://www.youtube.com/embed/L0kMy8o46uc" 
+                 title="YouTube video player" 
+                 frameborder="0" 
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                 allowfullscreen></iframe>
           {/* <ReactPlayer 
         url="https://www.youtube.com/watch?v=ug50zmP9I7s"
       />  */}

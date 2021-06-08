@@ -5,9 +5,7 @@ import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
 import Footer from "./FooterComponent";
 import Headlines from "./components/HeadlinesComponent";
-
 import Home from "./components/BlogPost/Home";
-
 import "bootstrap/dist/css/bootstrap.css";
 import { UserContext } from "./auth/UserProvider";
 import UserProvider from "./auth/UserProvider";
@@ -18,32 +16,35 @@ import ChatRoom from "./Chatroom/ChatRoom";
 import SignInChat from "./Chatroom/SignInChat";
 
 import Create from "./components/BlogPost/Create";
+import  {Teams}  from "./Teams";
+
 function App() {
   const user = useContext(UserContext);
   
   return (
     <div id="main-page-body">
       <UserProvider>
-        <div id="main-header-scoreboard">
-          <CarouselSlider />
+      <div id="main-header-scoreboard">
+        <CarouselSlider />
+      </div>
+      <div id="main-page-nav">
+        <NavBar />
+      </div>
+      <div id="main-page-wrapper">
+        {/* Left Side */}
+        <div className="column_left">
+          <Login />
+          <Teams/>
         </div>
-        <div id="main-page-nav">
-          <NavBar />
-        </div>
-        <div id="main-page-wrapper">
-          {/* Left Side */}
-          <div className="column_left">
-            <Login />
-          </div>
-          {/* Center */}
-          <div className="column_center">
+         {/* Center */}
+         <div className="column_center">
             <WelcomeLogo />
             { user ? <ChatRoom/> : <SignInChat />}
             {/* <Create/>
             <Home /> */}
           </div>
-          {/* Right Side */}
-          <div className="column_right">
+           {/* Right Side */}
+           <div className="column_right">
             <Headlines />
           </div>
         </div>
@@ -51,7 +52,7 @@ function App() {
           <Footer />
         </div>
       </UserProvider>
-    </div>
+   </div>
   );
 }
 

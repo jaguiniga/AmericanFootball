@@ -70,7 +70,7 @@ const Create = ({ history }) => {
         style={{
           width: "101.5%",
           marginRight: "300px",
-          height: "21.3rem",
+          height: "21.8rem",
           lineHeight: ".55",
           boxShadow:
             "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
