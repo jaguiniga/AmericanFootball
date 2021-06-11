@@ -1,6 +1,6 @@
 .autoFit {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 2px;
   margin: 0.5em auto;
   border: 1px solid black;
 }
@@ -8,3 +8,4 @@
 .image-autoFit {
   width: 100%;
 }
+

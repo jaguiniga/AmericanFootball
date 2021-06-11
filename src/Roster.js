@@ -1,6 +1,6 @@
 
 
-export const teamRoster = [
+export const Roster = [
   
   {
     "weblink":  "https://www.dallascowboys.com/team/players-roster/",

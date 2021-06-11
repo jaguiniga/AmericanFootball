@@ -6,7 +6,7 @@ const TeamRoster = () => {
   return (
     <section>
       
-      <div
+    <div
         className="card border-secondary mb-3"
         style={{
           maxWidth: "18rem",
@@ -17,42 +17,33 @@ const TeamRoster = () => {
           <strong>Team Rosters</strong>
         </div>
         <div className="card-body text-secondary">
+        <div className="card-body text-danger">
+        <h5 className="card-title">View Your Team</h5>
           <ul className="links">
             <li className="bullets">
-              <a href="https://www.sbnation.com/nfl-draft">
-                Dallas Cowboys
-                </a>
-              <TeamRoster/>
+            <h5>  <a href="https://www.sbnation.com/nfl-draft">Dallas Cowboys</a></h5>
             </li>
           </ul>
 
           <ul className="links">
             <li className="bullets">
               {" "}
-              <a href="https://www.si.com/nfl/dolphins/news/complete-2021-nfl-draft-team-by-team-rundown">
+            <h5>  <a href="https://www.si.com/nfl/dolphins/news/complete-2021-nfl-draft-team-by-team-rundown">
                 Green Bay Packers
-              </a>
+              </a></h5>
             </li>
           </ul>
 
           <ul className="links">
             <li className="bullets">
-              <a href="https://www.pff.com/news/draft-film-study-pros-and-cons-2021-nfl-draft">
+            <h5> <a href="https://www.pff.com/news/draft-film-study-pros-and-cons-2021-nfl-draft">
                 Jacksonville Jaguars
-              </a>
+              </a></h5>
             </li>
           </ul>
         </div>
       </div>
-      <div
-        className="card border-success mb-3"
-        style={{
-          maxWidth: "18rem",
-          boxShadow:
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        }}>
-        
-      </div>
+     </div>
     </section>
   );
 

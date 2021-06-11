@@ -16,8 +16,10 @@ import ChatRoom from "./Chatroom/ChatRoom";
 import SignInChat from "./Chatroom/SignInChat";
 
 import Create from "./components/BlogPost/Create";
-import { Teams } from "./Teams";
-
+import TeamRoster from "./components/TeamRoster";
+import Injury from "./components/Injury";
+import MatchUps from "./components/MatchUps";
+import MainMatch from "./components/MainMatch";
 function App() {
   const user = useContext(UserContext);
 
@@ -34,10 +36,13 @@ function App() {
           {/* Left Side */}
           <div className="column_left">
             <Login />
-            <Teams />
+            <TeamRoster/>
+            <Injury/>
+            <MatchUps/>
           </div>
           {/* Center */}
           <div className="column_center">
+            <MainMatch/>
             <WelcomeLogo />
             {user ? <ChatRoom /> : <SignInChat />}
             {/* <Create/>
