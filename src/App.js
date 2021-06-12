@@ -5,18 +5,15 @@ import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
 import Footer from "./FooterComponent";
 import Headlines from "./components/HeadlinesComponent";
-import Home from "./components/BlogPost/Home";
 import "bootstrap/dist/css/bootstrap.css";
 import { UserContext } from "./auth/UserProvider";
 import UserProvider from "./auth/UserProvider";
-import UserSignedIn from "./Profile/UserSignedIn";
 import Login from "./components/LoginComponent";
 import "./App.css";
 import ChatRoom from "./Chatroom/ChatRoom";
 import SignInChat from "./Chatroom/SignInChat";
-
-import Create from "./components/BlogPost/Create";
 import { Teams } from "./Teams";
+
 
 function App() {
   const user = useContext(UserContext);
