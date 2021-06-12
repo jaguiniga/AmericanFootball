@@ -26,10 +26,12 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import UserSignedIn from "./Profile/UserSignedIn";
 import ContactUs from "./ContactUs";
 import reportWebVitals from "./reportWebVitals";
+import UserProvider from "./auth/UserProvider";
 
 const routing = (
   <Router>
     <React.StrictMode>
+   
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/jaguiniga/AmericanFootball.git" component={App} />
@@ -53,6 +55,7 @@ const routing = (
         <Route path="/404" component={NoMatch} />
         <Route path="*" component={PageNotFound404} />
       </Switch>
+     
     </React.StrictMode>
   </Router>
 );

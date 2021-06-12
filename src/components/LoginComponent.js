@@ -124,7 +124,8 @@ function LoginComponent() {
                   class="btn login_btn"
                   onClick={(event) => {
                     signInWithEmailAndPasswordHandler(event, email, password);
-                  }}></input>
+                  }}>
+                </input>
               </div>
             </form>
           </div>

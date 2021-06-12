@@ -22,7 +22,7 @@ const Config = {
 firebase.initializeApp(Config);
 
 export const storage = firebase.storage();
-export const timestamp = firebase.firestore.FieldValue.serverTimestamp();
+export const timestamp1 = firebase.firestore.FieldValue.serverTimestamp();
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
