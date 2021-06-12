@@ -1,12 +1,38 @@
 import React, { useRef, useState,useContext } from 'react';
+import stadium from "../images/stadium.jpg";
 import seahawks  from "../images/NFLHelmetIcons/seahawkshelmet.JPG";
 import cowboys from "../images/NFLHelmetIcons/cowboyhelmet.JPG";
 import vs from "../images/NFLHelmetIcons/vsicon.jpg";
 import fans from "../images/Fans.gif";
 import "../css/MainMatch.css";
-import WelcomeLogo from './WelcomeLogo';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import {
+  auth,  
+  getFirebase,
+  signInWithGoogle,
+  signInWithFacebook,
+  firestore,
+  timestamp
+} from "../Firebase/firebase";
 
-const MainMatch = () => {
+function MasterMainMatch() {
+
+  const [user] = useAuthState(auth);
+
+  return (
+    <div >
+      
+
+      <section>
+        {user ? <MainMatch/> : <WelcomeLogo />}
+      </section>
+
+    </div>
+  );
+}
+function MainMatch() {
+
+  
   return (
     <section>
       
@@ -62,4 +88,23 @@ const MainMatch = () => {
   );
 
 }
-export default MainMatch;
+function WelcomeLogo() {
+  return (
+    <div
+      className="autoFit"
+      style={{
+        maxWidth: "40rem",
+        minWidth: "30rem",
+        boxShadow:
+          "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+      }}>
+      {/* <h1>Welcome To American Football</h1> */}
+      <div>
+        <img src={stadium} className="image-autoFit" alt="Football Player" />
+        Football
+      </div>
+    </div>
+  );
+}
+
+export default MasterMainMatch;

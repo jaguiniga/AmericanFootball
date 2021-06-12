@@ -20,9 +20,11 @@ import TeamRoster from "./components/TeamRoster";
 import Injury from "./components/Injury";
 import MatchUps from "./components/MatchUps";
 import MainMatch from "./components/MainMatch";
+import MasterMainMatch from "./components/MasterMainMatch";
 function App() {
   const user = useContext(UserContext);
-
+  const test = true;
+  console.log(test);
   return (
     <div id="main-page-body">
       <UserProvider>
@@ -42,11 +44,8 @@ function App() {
           </div>
           {/* Center */}
           <div className="column_center">
-            <MainMatch/>
-            <WelcomeLogo />
+            {user ? <MasterMainMatch /> : <WelcomeLogo />}
             {user ? <ChatRoom /> : <SignInChat />}
-            {/* <Create/>
-            <Home /> */}
           </div>
           {/* Right Side */}
           <div className="column_right">

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
-
+import { Roster } from "../Roster";
 const TeamRoster = () => {
 
   return (
@@ -20,8 +20,19 @@ const TeamRoster = () => {
         <div className="card-body text-danger">
         <h5 className="card-title">View Your Team</h5>
           <ul className="links">
-            <li className="bullets">
-            <h5>  <a href="https://www.sbnation.com/nfl-draft">Dallas Cowboys</a></h5>
+            <li style = {{color:"black"}}>
+            {/* <h5>  <a href="https://www.sbnation.com/nfl-draft">Dallas Cowboys</a></h5> */}
+            {Roster.map((data, key) => { 
+              return(
+                <div key = {key}>
+                 <a href = {data.weblink} >{data.team}</a>
+
+                </div>
+              )
+
+
+            })}
+
             </li>
           </ul>
 
