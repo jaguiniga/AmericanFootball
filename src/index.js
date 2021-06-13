@@ -26,8 +26,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import UserSignedIn from "./Profile/UserSignedIn";
 import ContactUs from "./ContactUs";
 import reportWebVitals from "./reportWebVitals";
-import TeamRoster from "./components/TeamRoster";
-import Inury from "./components/Injury";
+
 const routing = (
   <Router>
     <React.StrictMode>
