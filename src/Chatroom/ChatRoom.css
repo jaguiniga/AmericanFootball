@@ -1,47 +1,4 @@
 
-<<<<<<< HEAD
-  p {
-    max-width: 550px;
-    margin-bottom: 12px;
-    line-height: 24px;
-    padding: 10px 20px;
-    border-radius: 25px;
-    position: relative;
-    color:black;
-    text-align: center;
-  }
-  
-  .message {
-    display: flex;
-    align-items: center;
-  }
-  
-  
-  .sent {
-    flex-direction: row-reverse;
-  }
-  
-  .sent p {
-    color: rgb(241, 233, 233);
-    background: #17181a;
-    align-self: flex-end;
-  }
-  
-  .received p {
-    background: #e5e5ea;
-    color: black;
-  }
-
- 
-  
-  
-  button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-
-  
-=======
  .ChatApp {
   padding: 10px;
   height: 250vh;
@@ -50,7 +7,6 @@
   display: flex;
   flex-direction: column;
  }
->>>>>>> f08343c37a3ddb5755ed416b03db5ac0179de756
 
   .ChatApp::-webkit-scrollbar {
     width: 0.25rem;
