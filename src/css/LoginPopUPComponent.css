@@ -1,0 +1,7 @@
+/* Popup style */
+.popup-box {
+  position: fixed;
+  left: 50%;
+  margin-left: -135px;
+  top: calc(100vh - 85vh - 33px);
+}
