@@ -75,10 +75,7 @@ function Form() {
             className="form"
             style={{ backgroundColor: "#edeef0", height: "80vh" }}>
             <h2>
-              <b>
-                American Football
-                <i className="fas fa-football-ball fa-fw" />
-              </b>
+              <b>American Football🏈</b>
             </h2>
             <h3>Create Account</h3>
 
