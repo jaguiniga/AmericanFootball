@@ -23,7 +23,7 @@ function Navbar(props) {
     <div>
       <nav className="navbar navbar-expand-md bg-dark navbar-dark">
         {/*Logo*/}
-        <a className="navbar-brand" href="/">
+        <a className="navbar-brand" style={{ marginLeft: "150px" }} href="/">
           American Football
           <i className="fas fa-football-ball fa-fw" />
         </a>
@@ -37,7 +37,7 @@ function Navbar(props) {
           </button>
 
           <div className="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav" style={{ marginRight: "220px" }}>
               {/* home */}
               <li className="nav-item">
                 <a className="nav-link" href="/">
