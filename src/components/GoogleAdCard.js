@@ -1,28 +1,25 @@
 import React from "react";
+import googleAd from "../images/Advertisement/googleAdsenseLogo.jpg";
 
-import stadium from "../images/stadium.jpg";
-import "../css/WelcomeLogo.css";
-
-function WelcomeLogo() {
+function GoogleAdCard() {
   return (
     <div
-      className="autoFit"
+      classjName="card"
       style={{
-        maxWidth: "40rem",
-        minWidth: "40rem",
+        maxWidth: "18rem",
+        minWidth: "18rem",
         border: "1px solid black",
         borderRadius: "5px",
         boxShadow:
           "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
       }}>
-      {/* <h1>Welcome To American Football</h1> */}
       <div
         className="bg-image hover-overlay ripple"
         data-mdb-ripple-color="light">
         <img
-          src={stadium}
+          src={googleAd}
           className="image-autoFit"
-          alt="welcom Logo"
+          alt="Google Ad Logo"
           style={{ borderRadius: "5px" }}
         />
       </div>
@@ -30,4 +27,4 @@ function WelcomeLogo() {
   );
 }
 
-export default WelcomeLogo;
+export default GoogleAdCard;

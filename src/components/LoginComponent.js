@@ -11,7 +11,9 @@ import "../css/LoginComponent.css";
 import facebookIcon from "../images/social/facebook48_48.png";
 import googleIcon from "../images/social/google48_48.png";
 import instagramIcon from "../images/social/instagram48_48.png";
-function LoginComponent() {
+import { teamRoster } from "../RosterComponent";
+
+function LoginComponent(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -67,6 +69,7 @@ function LoginComponent() {
               alt="Submit"
               onClick={() => {
                 signInWithFacebook();
+                props.popUpToggle(false);
               }}
               style={{ margin: "10px" }}></input>
 
@@ -84,47 +87,48 @@ function LoginComponent() {
               alt="Submit"
               onClick={() => {
                 signInWithGoogle();
+                props.popUpToggle(false);
               }}
               style={{ margin: "10px" }}></input>
 
             <form>
-              <div class="input-group form-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <i class="fas fa-user"></i>
+              <div className="input-group form-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <i className="fas fa-user"></i>
                   </span>
                 </div>
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="username"></input>
               </div>
 
-              <div class="input-group form-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <i class="fas fa-key"></i>
+              <div className="input-group form-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <i className="fas fa-key"></i>
                   </span>
                 </div>
                 <input
                   type="password"
-                  class="form-control"
+                  className="form-control"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="password"></input>
               </div>
 
-              <div class="form-group">
+              <div className="form-group">
                 <input
                   type="submit"
                   value="Login"
-                  class="btn login_btn"
+                  className="btn login_btn"
                   onClick={(event) => {
                     signInWithEmailAndPasswordHandler(event, email, password);
-                  }}>
-                </input>
+                    props.popUpToggle(false);
+                  }}></input>
               </div>
             </form>
           </div>
@@ -148,9 +152,6 @@ function LoginComponent() {
           </p>
         </div>
       </div>
-     
-     
-     
     </section>
   );
 }

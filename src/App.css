@@ -65,26 +65,25 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 0.5em;
-  border-radius: 25px;;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   /* flex: 0; */
 }
 
-/*Need to reveiw the folloing styling classes*/
+/*This is being used for the sign up form, FormComponents.js */
 .form {
   margin-left: 5%;
   width: fit-content;
   height: 80vh;
-  padding: 20px;
+  padding: 10px;
   margin-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #272929;
-  border-radius: 25px;
-  border: 2px solid #88032b;
-  color: rgb(60, 57, 245);
-
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
 .formPassword {
