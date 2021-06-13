@@ -69,6 +69,7 @@ function LoginComponent(props) {
               alt="Submit"
               onClick={() => {
                 signInWithFacebook();
+                props.popUpToggle(false);
               }}
               style={{ margin: "10px" }}></input>
 
@@ -86,6 +87,7 @@ function LoginComponent(props) {
               alt="Submit"
               onClick={() => {
                 signInWithGoogle();
+                props.popUpToggle(false);
               }}
               style={{ margin: "10px" }}></input>
 

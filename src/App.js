@@ -1,19 +1,21 @@
 import React, { useContext, useState } from "react";
+
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+
+import { UserContext } from "./auth/UserProvider";
+import { Teams } from "./Teams";
 import NavBar from "./components/Navbar/NavBarComponent";
 import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
 import Footer from "./FooterComponent";
 import Headlines from "./components/HeadlinesComponent";
-import "bootstrap/dist/css/bootstrap.css";
-import { UserContext } from "./auth/UserProvider";
 import UserProvider from "./auth/UserProvider";
 import Login from "./components/LoginComponent";
-import "./App.css";
 import ChatRoom from "./Chatroom/ChatRoom";
 import SignInChat from "./Chatroom/SignInChat";
-import { Teams } from "./Teams";
 import LoginPopUPComponent from "./components/LoginPopUPComponent";
+import GoogleAdCard from "./components/GoogleAdCard";
 
 function App() {
   const user = useContext(UserContext);
@@ -40,8 +42,8 @@ function App() {
         <div id="main-page-wrapper">
           {/* Left Side */}
           <div className="column_left">
-            <Login />
             <Teams />
+            <GoogleAdCard />
           </div>
           {/* Center */}
           <div className="column_center">
