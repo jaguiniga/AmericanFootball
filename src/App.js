@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./App.css";
 import NavBar from "./components/Navbar/NavBarComponent";
 import CarouselSlider from "./components/CarouselSlider";
@@ -13,10 +13,16 @@ import "./App.css";
 import ChatRoom from "./Chatroom/ChatRoom";
 import SignInChat from "./Chatroom/SignInChat";
 import { Teams } from "./Teams";
-
+import LoginPopUPComponent from "./components/LoginPopUPComponent";
 
 function App() {
   const user = useContext(UserContext);
+  const [isSignIn, setisSignIn] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
+
+  const isSignInToggle = () => {
+    setisSignIn(!isSignIn);
+  };
 
   return (
     <div id="main-page-body">
@@ -25,7 +31,11 @@ function App() {
           <CarouselSlider />
         </div>
         <div id="main-page-nav">
-          <NavBar />
+          <NavBar
+            isSignInButton={() => {
+              isSignInToggle();
+            }}
+          />
         </div>
         <div id="main-page-wrapper">
           {/* Left Side */}
@@ -48,6 +58,14 @@ function App() {
         <div id="main-footer">
           <Footer />
         </div>
+        {/*Popup for Login when using Navbar sign in icon */}
+        {isSignIn && isOpen && (
+          <LoginPopUPComponent
+            popUpToggle2={(isOpen) => {
+              setIsOpen(isOpen);
+            }}
+          />
+        )}
       </UserProvider>
     </div>
   );

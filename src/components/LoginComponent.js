@@ -12,7 +12,8 @@ import facebookIcon from "../images/social/facebook48_48.png";
 import googleIcon from "../images/social/google48_48.png";
 import instagramIcon from "../images/social/instagram48_48.png";
 import { teamRoster } from "../RosterComponent";
-function LoginComponent() {
+
+function LoginComponent(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -89,43 +90,43 @@ function LoginComponent() {
               style={{ margin: "10px" }}></input>
 
             <form>
-              <div class="input-group form-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <i class="fas fa-user"></i>
+              <div className="input-group form-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <i className="fas fa-user"></i>
                   </span>
                 </div>
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="username"></input>
               </div>
 
-              <div class="input-group form-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <i class="fas fa-key"></i>
+              <div className="input-group form-group">
+                <div className="input-group-prepend">
+                  <span className="input-group-text">
+                    <i className="fas fa-key"></i>
                   </span>
                 </div>
                 <input
                   type="password"
-                  class="form-control"
+                  className="form-control"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="password"></input>
               </div>
 
-              <div class="form-group">
+              <div className="form-group">
                 <input
                   type="submit"
                   value="Login"
-                  class="btn login_btn"
+                  className="btn login_btn"
                   onClick={(event) => {
                     signInWithEmailAndPasswordHandler(event, email, password);
-                  }}>
-                </input>
+                    props.popUpToggle(false);
+                  }}></input>
               </div>
             </form>
           </div>
@@ -146,124 +147,6 @@ function LoginComponent() {
             <NavLink exact activeClassName="active-link" to="/form">
               Don't have an account? SignUp
             </NavLink>
-          </p>
-        </div>
-      </div>
-      <div
-        className="card border-secondary mb-3"
-        style={{
-          maxWidth: "18rem",
-          boxShadow:
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        }}>
-        <div className="card-header">
-          <strong>Team Rosters</strong>
-        </div>
-        <div className="card-body text-secondary">
-          <ul className="links">
-            <li className="bullets">
-              <a href="https://www.sbnation.com/nfl-draft">Dallas Cowboys</a>
-            </li>
-          </ul>
-
-          <ul className="links">
-            <li className="bullets">
-              {" "}
-              <a href="https://www.si.com/nfl/dolphins/news/complete-2021-nfl-draft-team-by-team-rundown">
-                Green Bay Packers
-                <teamRoster />
-              </a>
-            </li>
-          </ul>
-
-          <ul className="links">
-            <li className="bullets">
-              <a href="https://www.pff.com/news/draft-film-study-pros-and-cons-2021-nfl-draft">
-                Jacksonville Jaguars
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div
-        className="card border-success mb-3"
-        style={{
-          maxWidth: "18rem",
-          boxShadow:
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        }}>
-        <div className="card-header">
-          <strong>Team Injury update</strong>
-        </div>
-        <div className="card-body text-success">
-          <h5 className="card-title">Success card title</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-        </div>
-      </div>
-      <div
-        className="card border-danger mb-3"
-        style={{
-          maxWidth: "18rem",
-          boxShadow:
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        }}>
-        <div className="card-header">Header</div>
-        <div className="card-body text-danger">
-          <h5 className="card-title">Danger card title</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-        </div>
-      </div>
-      <div
-        className="card border-warning mb-3"
-        style={{
-          maxWidth: "18rem",
-          boxShadow:
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        }}>
-        <div className="card-header">Header</div>
-        <div className="card-body text-warning">
-          <h5 className="card-title">Warning card title</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-        </div>
-      </div>
-      <div
-        className="card border-info mb-3"
-        style={{
-          maxWidth: "18rem",
-          boxShadow:
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        }}>
-        <div className="card-header">Header</div>
-        <div className="card-body text-info">
-          <h5 className="card-title">Info card title</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-        </div>
-      </div>
-      <div
-        className="card border-light mb-3"
-        style={{
-          maxWidth: "18rem",
-          boxShadow:
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        }}>
-        <div className="card-header">Header</div>
-        <div className="card-body">
-          <h5 className="card-title">Light card title</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
           </p>
         </div>
       </div>
