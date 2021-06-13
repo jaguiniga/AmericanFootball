@@ -12,8 +12,10 @@ import Login from "./components/LoginComponent";
 import "./App.css";
 import ChatRoom from "./Chatroom/ChatRoom";
 import SignInChat from "./Chatroom/SignInChat";
-import { Teams } from "./Teams";
-
+import TeamRoster from "./components/TeamRoster";
+import Injury from "./components/Injury";
+import MatchUps from "./components/MatchUps";
+import MasterMainMatch from "./components/MasterMainMatch";
 
 function App() {
   const user = useContext(UserContext);
