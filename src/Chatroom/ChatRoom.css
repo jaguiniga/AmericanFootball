@@ -1,12 +1,5 @@
-img2 {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 2px 5px;
-  }
 
-  
-
+<<<<<<< HEAD
   p {
     max-width: 550px;
     margin-bottom: 12px;
@@ -48,17 +41,27 @@ img2 {
   }
 
   
+=======
+ .ChatApp {
+  padding: 10px;
+  height: 250vh;
+  
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+ }
+>>>>>>> f08343c37a3ddb5755ed416b03db5ac0179de756
 
-  main::-webkit-scrollbar {
+  .ChatApp::-webkit-scrollbar {
     width: 0.25rem;
   }
   
-  main::-webkit-scrollbar-track {
+  .ChatApp::-webkit-scrollbar-track {
     background: #1e1e24;
   }
   
-  main::-webkit-scrollbar-thumb {
-    background: #6649b8;
+  .ChatApp::-webkit-scrollbar-thumb {
+    background: #382866;
   }
   
   

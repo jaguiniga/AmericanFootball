@@ -1,7 +1,10 @@
-import React, { Component, createContext } from "react";
+import React, { Component, createContext, useReducer, useContext } from "react";
 import { auth, generateUserDocument } from "../Firebase/firebase";
 
+
 export const UserContext = createContext({ user: null });
+
+
 
 class UserProvider extends Component {
   state = {
