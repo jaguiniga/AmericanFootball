@@ -7,12 +7,14 @@ const LoginPopUPComponent = (props) => {
 
   return (
     <div className="popup-box">
-      <LoginComponent
-        popUpToggle={(isPopUpToggle) => {
-          setPopUpToggle(isPopUpToggle);
-          props.popUpToggle2(false);
-        }}
-      />
+      <div className="box">
+        <LoginComponent
+          popUpToggle={(isPopUpToggle) => {
+            setPopUpToggle(isPopUpToggle);
+            props.popUpToggle2(false);
+          }}
+        />
+      </div>
     </div>
   );
 };
