@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "../images/NFL_Draft_reglogo.png";
 import googleAd from "../images/Advertisement/googleAdsenseLogo.jpg";
 
 function GoogleAdCard() {
@@ -8,6 +7,7 @@ function GoogleAdCard() {
       classjName="card"
       style={{
         maxWidth: "18rem",
+        minWidth: "18rem",
         border: "1px solid black",
         borderRadius: "5px",
         boxShadow:

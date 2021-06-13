@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
@@ -22,8 +22,12 @@ function App() {
   const [isSignIn, setisSignIn] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
 
-  const isSignInToggle = () => {
-    setisSignIn(!isSignIn);
+  const isSignInToggle = (isSignIn) => {
+    setisSignIn(isSignIn);
+  };
+
+  const isOpenToggle = (isOpen) => {
+    setIsOpen(isOpen);
   };
 
   return (
@@ -34,8 +38,11 @@ function App() {
         </div>
         <div id="main-page-nav">
           <NavBar
-            isSignInButton={() => {
-              isSignInToggle();
+            isSignInButton={(isSignIn) => {
+              isSignInToggle(isSignIn);
+            }}
+            isOpenButton={(isOpen) => {
+              isOpenToggle(isOpen);
             }}
           />
         </div>

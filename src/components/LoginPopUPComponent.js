@@ -10,7 +10,6 @@ const LoginPopUPComponent = (props) => {
       <LoginComponent
         popUpToggle={(isPopUpToggle) => {
           setPopUpToggle(isPopUpToggle);
-          console.log("lcP" + isPopUpToggle);
           props.popUpToggle2(false);
         }}
       />

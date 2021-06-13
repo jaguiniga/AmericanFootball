@@ -58,7 +58,8 @@ function Navbar(props) {
                   dataToggle="modal"
                   dataTtarget="#signInModal"
                   onClick={() => {
-                    props.isSignInButton();
+                    props.isSignInButton(true);
+                    props.isOpenButton(true);
                   }}>
                   <i
                     className="fas fa-sign-in-alt"
@@ -76,6 +77,8 @@ function Navbar(props) {
                   className="btn "
                   onClick={() => {
                     auth.signOut();
+
+                    props.isSignInButton();
                   }}>
                   <i
                     className="fas fa-sign-out-alt"
