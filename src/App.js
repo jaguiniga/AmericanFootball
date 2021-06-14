@@ -4,7 +4,6 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 import { UserContext } from "./auth/UserProvider";
-import { Teams } from "./Teams";
 import NavBar from "./components/Navbar/NavBarComponent";
 import CarouselSlider from "./components/CarouselSlider";
 import WelcomeLogo from "./components/WelcomeLogo";
@@ -16,7 +15,11 @@ import ChatRoom from "./Chatroom/ChatRoom";
 import SignInChat from "./Chatroom/SignInChat";
 import LoginPopUPComponent from "./components/LoginPopUPComponent";
 import GoogleAdCard from "./components/GoogleAdCard";
-
+import TeamRoster from "./components/TeamRoster";
+import MasterMainMatch from "./components/MasterMainMatch";
+import Injury from "./components/Injury";
+import MatchUps from "./components/MatchUps";
+import Statistics from "./components/Statistics";
 function App() {
   const user = useContext(UserContext);
   const [isSignIn, setisSignIn] = useState(false);
@@ -49,15 +52,16 @@ function App() {
         <div id="main-page-wrapper">
           {/* Left Side */}
           <div className="column_left">
-            <Teams />
+            <TeamRoster />
+            <Injury />
+            <MatchUps />
+            <Statistics />
             <GoogleAdCard />
           </div>
           {/* Center */}
           <div className="column_center">
-            <WelcomeLogo />
+            {user ? <MasterMainMatch /> : <WelcomeLogo />}
             {user ? <ChatRoom /> : <SignInChat />}
-            {/* <Create/>
-            <Home /> */}
           </div>
           {/* Right Side */}
           <div className="column_right">

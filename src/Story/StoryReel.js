@@ -16,7 +16,7 @@ function StoryReel() {
                 title="Poul"
             />
             <Story 
-                image="https://i.pinimg.com/originals/ce/0b/a7/ce0ba7a13352c324d88a14de8444a939.gif"
+                image="https://media.giphy.com/media/l2JhrXyftPX4nPOQ8/giphy.gif"
                 profileSrc="https://cdn.shopify.com/s/files/1/0152/7713/products/football_fire_web_2_grande.jpg?v=1349364392"
                 title="Sherrod"
             />
