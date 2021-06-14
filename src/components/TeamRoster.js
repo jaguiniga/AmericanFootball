@@ -6,11 +6,9 @@ import seahawks from "../images/NFLteamIcons/SEA.ico";
 import jax from "../images/NFLteamIcons/JAX.ico";
 
 const TeamRoster = () => {
-
   return (
     <section>
-      
-    <div
+      <div
         className="card border-secondary mb-3"
         style={{
           maxWidth: "18rem",
@@ -21,40 +19,21 @@ const TeamRoster = () => {
         <div className="card-header">
           <strong>Team Rosters</strong>
         </div>
-        <div className="card-body text-secondary">
-        <div className="card-body text-danger">
-        <div className="card-title">View Your Team</div>
-          <ul className="links">
-
-            <li>
-            
-            {Roster.map((data, key) => { 
-              return(
-                <div key = {key}>
-                
-                 <a href = {data.weblink}><img src = {data.image}></img>{data.team} </a>
-                
-    
-                 
-                           
-                   
-                </div>
-                
-                
-              )
-
-
-            })}
-            
-
+        <div className="card-body ">
+          <ul style={{ listStyleType: "none" }}>
+            <li style={{ textAlign: "left" }}>
+              {Roster.map((data, key) => {
+                return (
+                  <div key={key}>
+                    <a href={data.weblink}>{data.team} </a>
+                  </div>
+                );
+              })}
             </li>
           </ul>
-        
         </div>
       </div>
-     </div>
     </section>
   );
-
-}
+};
 export default TeamRoster;
