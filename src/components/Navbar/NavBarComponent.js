@@ -90,22 +90,11 @@ function Navbar(props) {
                   />
                 </button>
               </li>
-              {/* search */}
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  <i className="fas fa-search" />
-                </a>
-              </li>
+
               {/* user profile */}
               <li className="nav-item">
                 <a className="nav-link" href="UserSignedIn">
                   <i className="fas fa-user" />
-                </a>
-              </li>
-              {/* site menu list */}
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  <i className="far fa-list-alt" />
                 </a>
               </li>
 

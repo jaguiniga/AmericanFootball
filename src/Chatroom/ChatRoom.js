@@ -4,7 +4,7 @@ import { UserContext } from "../auth/UserProvider";
 import { useAuthState } from "react-firebase-hooks/auth";
 import "./ChatRoom.css";
 import Feed from "./Feed";
-import Widgets from "./Widgets";
+import Widgets from "./Widgets1";
 
 // message sender
 function ChatApp() {
