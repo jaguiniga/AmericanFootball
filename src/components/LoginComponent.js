@@ -11,7 +11,6 @@ import "../css/LoginComponent.css";
 import facebookIcon from "../images/social/facebook48_48.png";
 import googleIcon from "../images/social/google48_48.png";
 import instagramIcon from "../images/social/instagram48_48.png";
-import { teamRoster } from "../RosterComponent";
 
 function LoginComponent(props) {
   const [email, setEmail] = useState("");
