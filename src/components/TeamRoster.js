@@ -4,7 +4,6 @@ import { Roster } from "../Roster";
 import cowboys from "../images/NFLteamIcons/DAL.ico";
 import seahawks from "../images/NFLteamIcons/SEA.ico";
 import jax from "../images/NFLteamIcons/JAX.ico";
-
 const TeamRoster = () => {
 
   return (
@@ -15,6 +14,7 @@ const TeamRoster = () => {
         style={{
           maxWidth: "18rem",
           minWidth: "18rem",
+        
           boxShadow:
             "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
         }}>
@@ -32,7 +32,7 @@ const TeamRoster = () => {
               return(
                 <div key = {key}>
                 
-                 <a href = {data.weblink}><img src = {data.image}></img>{data.team} </a>
+                 <a href = {data.weblink}><img src = {() =>{ require (`../images/NFLteamIcons/${data.image}`)}} ></img>{data.team} </a>
                 
     
                  
