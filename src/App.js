@@ -21,6 +21,7 @@ import Injury from "./components/Injury";
 import MatchUps from "./components/MatchUps";
 import Statistics from "./components/Statistics";
 import Widgets1 from "./Chatroom/Widgets1";
+import UserProfileMain from "./components/UserProfileMain";
 
 function App() {
   const user = useContext(UserContext);
@@ -67,6 +68,7 @@ function App() {
           </div>
           {/* Right Side */}
           <div className="column_right">
+            <UserProfileMain />
             <Headlines />
             <Widgets1 />
           </div>

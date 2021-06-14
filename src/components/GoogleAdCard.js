@@ -6,6 +6,7 @@ function GoogleAdCard() {
     <div
       classjName="card"
       style={{
+        marginBottom: "15px",
         maxWidth: "18rem",
         minWidth: "18rem",
         border: "1px solid black",

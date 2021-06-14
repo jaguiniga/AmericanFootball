@@ -3,7 +3,11 @@ import "./Widgets.css";
 function Widgets1() {
   return (
     <div className="widgets">
-      <iframe src="https://twitframe.com/show?url=https%3A%2F%2Ftwitter.com%2Fjack%2Fstatus%2F20"></iframe>
+      <iframe
+        title="wid"
+        id="wid"
+        src="https://twitter.com/i/topics/689566315669905408"
+        name="wid"></iframe>
     </div>
   );
 }
