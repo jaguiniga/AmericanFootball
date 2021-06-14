@@ -80,7 +80,9 @@ function Form() {
             <h3>Create Account</h3>
 
             <div className="input-btn">
-              <label htmlFor="displayName">UserName </label>
+              <label htmlFor="displayName" style={{ marginRight: "10px" }}>
+                UserName
+              </label>
               <input
                 type="text"
                 name="displayName"
@@ -92,7 +94,9 @@ function Form() {
             </div>
 
             <div className="input-btn">
-              <label htmlFor="userEmail">Email</label>
+              <label htmlFor="userEmail" style={{ marginRight: "10px" }}>
+                Email
+              </label>
               <input
                 type="email"
                 name="userEmail"
@@ -104,7 +108,9 @@ function Form() {
             </div>
 
             <div className="input-btn">
-              <label htmlFor="userPassword">Password</label>
+              <label htmlFor="userPassword" style={{ marginRight: "10px" }}>
+                Password
+              </label>
               <input
                 type="password"
                 name="userPassword"
@@ -116,20 +122,22 @@ function Form() {
             </div>
 
             <div className="input-btn">
-              <label htmlFor="photoURL">Upload Image</label>
+              <label for="photoURL" style={{ marginRight: "10px" }}>
+                Upload Image
+              </label>
               <input
                 type="file"
                 name="photoURL"
-                placeholder="image"
                 id="photoURL"
                 onChange={(e) => chooseFile(e)}
               />
             </div>
             <button
+              className="input-btn"
+              style={{ width: "300px" }}
               onClick={(event) => {
                 createUserWithEmailAndPasswordHandler(event, email, password);
-              }}
-              className="input-btn">
+              }}>
               Create Account
             </button>
 
