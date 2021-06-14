@@ -4,7 +4,7 @@ import googleAd from "../images/Advertisement/googleAdsenseLogo.jpg";
 function GoogleAdCard() {
   return (
     <div
-      classjName="card"
+      className="card"
       style={{
         marginBottom: "15px",
         maxWidth: "18rem",

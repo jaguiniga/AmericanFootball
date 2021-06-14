@@ -6,7 +6,7 @@ import { auth } from "../Firebase/firebase";
 
 function UserSignedIn() {
   const user = useContext(UserContext);
-  
+
   const currentUserEmail = user ? user.email : "";
   const currentUserDisplayname = user ? user.displayName : "";
   const currentPhoto = user ? user.photoURL : "";
@@ -23,7 +23,7 @@ function UserSignedIn() {
         boxShadow:
           "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
       }}>
-        <NavBar/>
+      <NavBar />
       <div class="thumb-lg member-thumb mx-auto">
         <img
           src="https://bootdey.com/img/Content/avatar/avatar2.png"
@@ -31,19 +31,19 @@ function UserSignedIn() {
           alt="avatar"
         />
       </div>
-      <div>
+      {/* <div>
         <h1>{`${currentPhoto}`}</h1>
-      </div>
-      <div>
-        {" "}
-        <h2>{`${currentUserDisplayname}`}</h2>{" "}
-      </div>
-      <div>
+      </div> */}
+      {/* <div>
+        
+        <h2>{`${currentUserDisplayname}`}</h2>
+      </div> */}
+      {/* <div>
         {" "}
         <h2>{`${currentUserEmail}`}</h2>{" "}
-      </div>
+      </div> */}
 
-      <button
+      {/* <button
         className="input-btn"
         onClick={() => {
           auth.signOut();
@@ -51,9 +51,9 @@ function UserSignedIn() {
         NavLink
         to="/">
         Sign out
-      </button>
+      </button> */}
     </div>
   );
-};
+}
 
 export default UserSignedIn;
