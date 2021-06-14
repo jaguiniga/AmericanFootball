@@ -34,7 +34,7 @@ const TeamRoster = () => {
                 
                  <a href = {data.weblink}><img src = {data.image}></img>{data.team} </a>
                 
-                 {console.log("ware" + data.image)}
+    
                  
                            
                    
