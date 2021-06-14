@@ -39,11 +39,13 @@ export const getFirebase = () => {
   return firebase;
 };
 
+// Facebook Sign
 const provider1 = new firebase.auth.FacebookAuthProvider();
 export const signInWithFacebook = () => {
   auth.signInWithPopup(provider1);
 };
 
+// Google Sign
 const provider = new firebase.auth.GoogleAuthProvider();
 export const signInWithGoogle = () => {
   auth.signInWithPopup(provider);

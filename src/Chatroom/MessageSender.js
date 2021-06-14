@@ -9,10 +9,12 @@ import Avatar from '@material-ui/core/Avatar';
 import Widgets from "./Widgets";
 import { timestamp1, firestore, auth} from "../Firebase/firebase";
 
+
 function MessageSender() {
     const user = useContext(UserContext);
     const currentUserDisplayname = user ? user.displayName : "";
     const currentPhoto = user ? user.photoURL : "";
+    const [noLikes, setnoLikes] = useState("");
 
 
     const [input, setInput] = useState("");
@@ -22,12 +24,14 @@ function MessageSender() {
       e.preventDefault();
   
       // some database stuff
+      
       firestore.collection("posts").add({
           message: input,
           timestamp: timestamp1,
           profilePic: user.photoURL,
           username: user.displayName,
-          image: imageUrl
+          image: imageUrl,
+          noLikes: noLikes
       })
   
   
@@ -68,7 +72,8 @@ function MessageSender() {
       </div>
 
       <div className="messageSender__option">
-        <PhotoLibraryIcon style={{color: "green" }} />
+      <PhotoLibraryIcon style={{color: "green" }} 
+        />
         <h3>Photo/Video</h3>
       
       </div>

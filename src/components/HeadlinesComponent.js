@@ -4,6 +4,7 @@ import "../css/Headlines.css";
 import "../css/Videos.css";
 import Logo from "../images/NFL_Draft_reglogo.png";
 import ProfilePage from "../Profile/ProfilePage";
+import Widgets from "../Chatroom/Widgets";
 const Headlines = () => {
   return (
     <section>
@@ -28,6 +29,7 @@ const Headlines = () => {
         }}>
         <div className="card-header">
           <strong>Top Headlines</strong>
+          <Widgets/>
         </div>
         <div className="card-body text-primary">
           <img src={Logo} className="image-autoFit" alt="NFL Logo" />

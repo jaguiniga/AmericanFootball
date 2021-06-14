@@ -4,15 +4,22 @@ import MessageSender from "./MessageSender";
 import Post from "./Post"
 import StoryReel from "../Story/StoryReel";
 import { timestamp1, firestore, auth} from "../Firebase/firebase";
+import { useHistory } from 'react-router-dom';
+import ImageUpload from './ImageUpload';
+import { data } from "jquery";
 
 function Feed() {
     const [posts, setPosts] = useState([]);
+  
+
+ 
 
     useEffect(() => {
         firestore.collection("posts")
         .orderBy("timestamp", "desc")
         .onSnapshot((snapshot) => 
-            setPosts(snapshot.docs.map((doc) => ({ id: doc.id, 
+            setPosts(snapshot.docs.map((doc) => ({ 
+                id: doc.id, 
                 data: doc.data() })))
         );
     }, []);
@@ -30,6 +37,12 @@ function Feed() {
                 timestamp={post.data.timestamp}
                 username={post.data.username}
                 image={post.data.image}
+
+                //postId={id}
+                //origuser={user?.displayName}
+                //userId={user.uid}
+                //imageUrl={post.data.imageUrl} 
+                //noLikes={post.data.noLikes}
                 />
 
             ))}
