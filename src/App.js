@@ -56,9 +56,10 @@ function App() {
           {/* Left Side */}
           <div className="column_left">
             <TeamRoster />
+            <Widgets1 />
             <Injury />
             <MatchUps />
-            <Statistics />
+
             <GoogleAdCard />
           </div>
           {/* Center */}
@@ -70,7 +71,8 @@ function App() {
           <div className="column_right">
             <UserProfileMain />
             <Headlines />
-            <Widgets1 />
+            <GoogleAdCard />
+            <Statistics />
           </div>
         </div>
         <div id="main-footer">
