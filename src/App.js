@@ -20,6 +20,8 @@ import MasterMainMatch from "./components/MasterMainMatch";
 import Injury from "./components/Injury";
 import MatchUps from "./components/MatchUps";
 import Statistics from "./components/Statistics";
+import Widgets1 from "./Chatroom/Widgets1";
+
 function App() {
   const user = useContext(UserContext);
   const [isSignIn, setisSignIn] = useState(false);
@@ -66,6 +68,7 @@ function App() {
           {/* Right Side */}
           <div className="column_right">
             <Headlines />
+            <Widgets1 />
           </div>
         </div>
         <div id="main-footer">
