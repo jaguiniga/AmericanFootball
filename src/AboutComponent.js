@@ -23,8 +23,8 @@ const About = () => {
             who share your same favorite team. You will be able to post to the
             main page and you may reply to others post. You will be able to see
             the weekly matchups, statistics, injuries, and more. WE finally
-            decided to own that role and be intentional about it. I started
-            writing about my passions. We founded PJ'S with a mission to give
+            decided to own that role and be intentional about it. We started
+            writing about our passions. We founded PJ'S with a mission to give
             others a taste of what goes on in American Footbal and we have been
             at it ever since. With football fans stuck at home, we wanted to build 
             a fun messaging and blogging website on the current NFL Football season 
@@ -41,7 +41,7 @@ const About = () => {
             that compliments the array of colorful featured images in the blog
             posts. Another way that engagement is encouraged is through our
             Feed, as well as the use of the Member’s Area for allowing visitors
-            to comment and “heart” favored posts. Our company includes many
+            to comment and “like” favored posts. Our company includes many
             different brands. When you visit, create an account with us, or use
             sites and applications, your information is controlled by a member
             of PJ'S.
