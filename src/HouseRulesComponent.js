@@ -58,7 +58,7 @@ const HouseRules = () => {
           </p>
 
           <p>7.  Impersonation of others, including but not limited to, a PJ'S.com 
-                 employee or representative, a ESPN.com host or chat jockey, or another PJ'S.com 
+                 employee or representative, a PJ'S.com host or chat jockey, or another PJ'S.com 
                  member is forbidden.  Member names or handles 
                  that impersonate will be blocked.
           </p>

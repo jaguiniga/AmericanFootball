@@ -8,7 +8,8 @@ import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import Avatar from "@material-ui/core/Avatar";
 import Widgets from "./Widgets1";
 import { timestamp1, firestore, auth } from "../Firebase/firebase";
-
+import firebase from 'firebase';
+var TimeStamp = firebase.firestore.FieldValue.serverTimestamp();
 function MessageSender() {
   const user = useContext(UserContext);
   const currentUserDisplayname = user ? user.displayName : "";
