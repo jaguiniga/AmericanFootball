@@ -5,7 +5,6 @@ import "../App.css";
 
 const ProfilePage = () => {
   const user = useContext(UserContext);
-
   const currentUserEmail = user ? user.email : "";
   const currentUserDisplayname = user ? user.displayName : "";
   const currentPhoto = user ? user.photoURL : "";
@@ -16,48 +15,48 @@ const ProfilePage = () => {
   console.log(user);
 
   function SignOut() {
-    return auth.currentUser && (
-    <button
-      className="input-btn"
-      onClick={() => {
-        auth.signOut();
-      }}
-      NavLink
-      to="/">
-      Sign out
-    </button>
-  )
+    return (
+      auth.currentUser && (
+        <button
+          className="input-btn"
+          onClick={() => {
+            auth.signOut();
+          }}
+          NavLink
+          to="/">
+          Sign out
+        </button>
+      )
+    );
   }
 
   return (
     <div
-      className="mx-auto w-11/12 md:w-2/4 py-8 px-4 md:px-8"
+      className="mx-auto"
       style={{
-        boxShadow:
-          "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+        width: "260px",
+        background: "#f8f9fa",
       }}>
-      <div class="thumb-lg member-thumb mx-auto">
+      <div>
         <img
           src="https://bootdey.com/img/Content/avatar/avatar2.png"
-          class="rounded-circle img-thumbnail"
+          className="rounded-circle img-thumbnail"
+          style={{ height: "70px", width: "70px", float: "left" }}
           alt="avatar"
         />
       </div>
-      <div>
-        <h1>{`${currentPhoto}`}</h1>
+      <div
+        style={{
+          height: "80px",
+          width: "150px",
+          display: "table-cell",
+          textAlign: "center",
+          verticalAlign: "middle",
+        }}>
+        <h3>
+          <b>{`${currentUserDisplayname}`}</b>
+        </h3>
       </div>
-      <div>
-        {" "}
-        <h2>{`${currentUserDisplayname}`}</h2>{" "}
-      </div>
-      <div>
-        {" "}
-        <h2>{`${currentUserEmail}`}</h2>{" "}
-      </div>
-      <SignOut/>
-
-      
-      
     </div>
   );
 };

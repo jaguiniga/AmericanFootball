@@ -65,24 +65,25 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 0.5em;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   /* flex: 0; */
 }
 
-/*Need to reveiw the folloing styling classes*/
+/*This is being used for the sign up form, FormComponents.js */
 .form {
   margin-left: 5%;
   width: fit-content;
   height: 80vh;
-  padding: 20px;
+  padding: 10px;
   margin-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #272929;
-  border-radius: 25px;
-  border: 2px solid #88032b;
-  color: rgb(60, 57, 245);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
 .formPassword {
@@ -102,18 +103,16 @@
 
 .input-btn {
   padding: 20px 40px;
-  float: center;
-  width: fit-content;
+  float: left;
+  width: 600px;
   flex-direction: column;
   align-items: flex-start;
-  margin: 20px;
+  margin: 10px;
   outline: 0;
   border-width: fit-content;
-  border: 2px solid rgb(255, 51, 0);
-  border-bottom: 2px solid rgb(17, 0, 253);
+  border: 2px solid #9e3623;
   font-size: 20px;
   overflow: hidden;
-  cursor: pointer;
   background: #faf8f8;
   color: rgb(20, 23, 24);
   font-weight: 500;
@@ -124,8 +123,8 @@
   outline: 1px dashed red;
 }
 
-.input-btn:hover {
+/* .input-btn:hover {
   color: rgba(255, 64, 0, 0.993);
   border: 1px solid #1fec04;
   box-shadow: 0 0 20px #ffffff;
-}
+} */

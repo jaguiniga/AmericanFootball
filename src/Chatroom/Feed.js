@@ -3,10 +3,7 @@ import "./Feed.css";
 import MessageSender from "./MessageSender";
 import Post from "./Post"
 import StoryReel from "../Story/StoryReel";
-import { timestamp1, firestore, auth} from "../Firebase/firebase";
-import { useHistory } from 'react-router-dom';
-import ImageUpload from './ImageUpload';
-import { data } from "jquery";
+import { firestore } from "../Firebase/firebase";
 
 function Feed() {
     const [posts, setPosts] = useState([]);
@@ -16,7 +13,7 @@ function Feed() {
 
     useEffect(() => {
         firestore.collection("posts")
-        .orderBy("timestamp", "desc")
+        //.orderBy('timestamp', 'desc')
         .onSnapshot((snapshot) => 
             setPosts(snapshot.docs.map((doc) => ({ 
                 id: doc.id, 
@@ -34,7 +31,7 @@ function Feed() {
                 key={post.id}
                 profilePic={post.data.profilePic}
                 message={post.data.message}
-                timestamp={post.data.timestamp}
+                // timestamp={post.data.timestamp}
                 username={post.data.username}
                 image={post.data.image}
 
@@ -44,7 +41,6 @@ function Feed() {
                 //imageUrl={post.data.imageUrl} 
                 //noLikes={post.data.noLikes}
                 />
-
             ))}
         </div>
     );
