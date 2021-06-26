@@ -23,10 +23,10 @@ function MessageSender() {
     // some database stuff
     firestore.collection("posts").add({
       message: input,
-      timestamp: timestamp1,
+      //timestamp: timestamp1,
       profilePic: user.photoURL,
       username: user.displayName,
-      image: imageUrl,
+      image: imageUrl
     });
 
     setInput("");

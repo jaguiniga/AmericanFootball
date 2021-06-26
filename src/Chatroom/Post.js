@@ -7,14 +7,7 @@ import NearMeIcon from "@material-ui/icons/NearMe";
 import {ExpandMoreOutlined} from "@material-ui/icons";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
-function Post({profilePic, image, username, timestamp, message}) {
-    
-    const [like, setLike] = useState(false);
-    
-    function toggleLike() {
-        setLike(true)
-      };
-
+function Post({profilePic, image, username,  message}) {
 
     return (
      <div className="post">
@@ -23,7 +16,7 @@ function Post({profilePic, image, username, timestamp, message}) {
              className="post__avatar" />
              <div className="post__topInfo">
                  <h3>{username}</h3>
-                 <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
+                 {/* <p>{new Date(timestamp?.toDate()).toUTCString()}</p> */}
              </div>
          </div>
 
@@ -36,9 +29,10 @@ function Post({profilePic, image, username, timestamp, message}) {
          </div>
 
             <div className="post__options">
+                
                 <div className="post__option">
                     <ThumbUpIcon
-                        onclick={toggleLike} />
+                       />
                     <p>Like</p>
                 </div>
          
