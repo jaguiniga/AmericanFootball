@@ -104,6 +104,13 @@ function Navbar(props) {
                   <i className="fas fa-comment-alt" />
                 </a>
               </li>
+
+              {/* search */}
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  <i className="fas fa-search" />
+                </a>
+              </li>
             </ul>
           </div>
         </div>
