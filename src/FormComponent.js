@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./App.css";
 import Footer from "./FooterComponent";
 import {
@@ -11,13 +11,21 @@ import { NavLink } from "react-router-dom";
 import NavBar from "./components/Navbar/NavBarComponent";
 import hdball from "./images/hdball.webp";
 
+
 function Form() {
+  const userEmailRef = useRef();
+  const displayNameRef = useRef();
+
+  const userPassword = useRef()
+  const userPasswordconfirm = useRef()
   const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
   // const [team, SetTeam] = useState("")
   const [password, setPassword] = useState("");
+  const [confirmPassword, setconfirmPassword] = useState("");
   const [error, setError] = useState(null);
   const [file, setFile] = useState(null);
+  const [formErrors, setFormErrors] = useState({});
 
   const chooseFile = (e) => {
     setFile(e.target.files[0]);
@@ -29,33 +37,42 @@ function Form() {
     password
   ) => {
     event.preventDefault();
+    
+    if (userEmailRef.current.value ==="" || displayNameRef.current.value ==="") {
+      return  alert("Please fill all the fields")
+    } else if (userPassword.current.value !== userPasswordconfirm.current.value || userPassword.current.value === ""){
+      return alert("Passwords do not match")
+    }
     try {
       const { user } = await auth.createUserWithEmailAndPassword(
         email,
         password
       );
       generateUserDocument(user, { displayName });
-      storage.ref("users/" + auth.user.uid + "/profile.jpg").put(file);
+      //storage.ref("users/" + auth.user.uid + "/profile.jpg").put(file);
     } catch (error) {
       setError("Error Signing up with email and password");
     }
-    alert("You just signed up");
+    alert("You Created your account");
     //SetTeam("");
     setError(null);
     setEmail("");
     setPassword("");
+    setconfirmPassword("");
     setDisplayName("");
   };
 
   const onChangeHandler = (event) => {
     const { name, value } = event.currentTarget;
-
+    
     if (name === "userEmail") {
       setEmail(value);
     } else if (name === "userPassword") {
       setPassword(value);
     } else if (name === "displayName") {
       setDisplayName(value);
+    } else if (name === "userPasswordconfirm") {
+      setconfirmPassword(value);
     }
   };
 
@@ -89,6 +106,7 @@ function Form() {
                 placeholder="username"
                 value={displayName}
                 id="displayName"
+                ref={displayNameRef}
                 onChange={(event) => onChangeHandler(event)}
               />
             </div>
@@ -104,6 +122,7 @@ function Form() {
                 value={email}
                 id="userEmail"
                 onChange={(event) => onChangeHandler(event)}
+                ref={userEmailRef}
               />
             </div>
 
@@ -117,6 +136,22 @@ function Form() {
                 placeholder="password"
                 value={password}
                 id="userPassword"
+                ref={userPassword}
+                onChange={(event) => onChangeHandler(event)}
+              />
+            </div>
+
+            <div className="input-btn">
+              <label htmlFor="userPasswordconfirm" style={{ marginRight: "10px" }}>
+               Confirm Password
+              </label>
+              <input
+                type="password"
+                name="userPasswordconfirm"
+                placeholder="confirm password"
+                value={confirmPassword}
+                id="userPasswordconfirm"
+                ref={userPasswordconfirm}
                 onChange={(event) => onChangeHandler(event)}
               />
             </div>

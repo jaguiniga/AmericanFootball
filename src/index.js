@@ -22,6 +22,7 @@ import UserSignedIn from "./Profile/UserSignedIn";
 import ContactUs from "./ContactUs";
 import reportWebVitals from "./reportWebVitals";
 import UserProvider from "./auth/UserProvider";
+import ProfilePage from "./Profile/ProfilePage";
 
 const routing = (
   <Router>
@@ -32,17 +33,18 @@ const routing = (
         <Route path="/jaguiniga/AmericanFootball.git" component={App} />
         <Route exact path="/ContactUs" component={ContactUs} />
         <Route exact path="/jaguiniga/ContactUs" component={ContactUs} />
-        <Route path="/form" component={Form} />
-        <Route path="/login" component={Login} />
-        <Route path="/about" component={About} />
-        <Route path="/privacy" component={Privacy} />
-        <Route path="/help" component={Help} />
-        <Route path="/termsrules" component={TermsRules} />
-        <Route path="/houserules" component={HouseRules} />
-        <Route path="/password" component={Password} />
-        <Route path="/forgotpassword" component={ForgotPassword} />
+        <Route exact path="/form" component={Form} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/privacy" component={Privacy} />
+        <Route exact path="/help" component={Help} />
+        <Route exact path="/termsrules" component={TermsRules} />
+        <Route exact path="/houserules" component={HouseRules} />
+        <Route exact path="/password" component={Password} />
+        <Route exact path="/forgotpassword" component={ForgotPassword} />
+        <Route exact path="/ProfilePage" component={ProfilePage} />
 
-        <Route path="/UserSignedIn" component={UserSignedIn} />
+        <Route exact path="/UserSignedIn" component={UserSignedIn} />
 
        
         
