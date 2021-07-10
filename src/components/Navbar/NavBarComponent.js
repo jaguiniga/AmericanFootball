@@ -93,7 +93,7 @@ function Navbar(props) {
 
               {/* user profile */}
               <li className="nav-item">
-                <a className="nav-link" href="UserSignedIn">
+                <a className="nav-link" href="ProfilePage">
                   <i className="fas fa-user" />
                 </a>
               </li>
